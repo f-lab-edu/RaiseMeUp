@@ -12,5 +12,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fatalError("크래쉬 보고 잘 가나? ")
     }
 }
