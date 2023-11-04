@@ -99,13 +99,8 @@
 		3563A74E2AF085270037C029 /* RaiseMeUp */ = {
 			isa = PBXGroup;
 			children = (
-				3563A74F2AF085270037C029 /* AppDelegate.swift */,
-				3563A7512AF085270037C029 /* SceneDelegate.swift */,
-				3563A7532AF085270037C029 /* ViewController.swift */,
-				3563A75B2AF085270037C029 /* Assets.xcassets */,
-				3563A75D2AF085270037C029 /* LaunchScreen.storyboard */,
-				3563A7602AF085270037C029 /* Info.plist */,
-				3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */,
+				35F90B6C2AF624D6003C96D7 /* Resources */,
+				35F90B6E2AF62579003C96D7 /* Sources */,
 			);
 			path = RaiseMeUp;
 			sourceTree = "<group>";
@@ -125,6 +120,43 @@
 				3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */,
 			);
 			path = RaiseMeUpUITests;
+			sourceTree = "<group>";
+		};
+		35F90B6C2AF624D6003C96D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */,
+				3563A75B2AF085270037C029 /* Assets.xcassets */,
+				3563A75D2AF085270037C029 /* LaunchScreen.storyboard */,
+				3563A7602AF085270037C029 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		35F90B6D2AF62566003C96D7 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				3563A74F2AF085270037C029 /* AppDelegate.swift */,
+				3563A7512AF085270037C029 /* SceneDelegate.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		35F90B6E2AF62579003C96D7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				35F90B6D2AF62566003C96D7 /* Entry */,
+				35F90B6F2AF62697003C96D7 /* Main */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		35F90B6F2AF62697003C96D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3563A7532AF085270037C029 /* ViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
