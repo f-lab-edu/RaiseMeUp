@@ -34,10 +34,6 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
 # Swift Package Manager
 #
 # Add this line if you want to avoid checking in source code from Swift 
@@ -54,11 +50,3 @@ file to your project
 # .swiftpm
 
 .build/
-
-# Code Injection
-#
-# After new code Injection tools there's a generated folder 
-/iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
