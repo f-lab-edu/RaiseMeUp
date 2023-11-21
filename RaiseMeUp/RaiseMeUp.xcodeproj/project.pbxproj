@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
-		3563A7542AF085270037C029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7532AF085270037C029 /* ViewController.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
 		3563A75C2AF085270037C029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75B2AF085270037C029 /* Assets.xcassets */; };
 		3563A75F2AF085270037C029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75D2AF085270037C029 /* LaunchScreen.storyboard */; };
 		3563A76A2AF085270037C029 /* RaiseMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7692AF085270037C029 /* RaiseMeUpTests.swift */; };
 		3563A7742AF085270037C029 /* RaiseMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */; };
 		3563A7762AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */; };
+		35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
+		35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
 		35F90B712AF63171003C96D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
 		35F90B7B2AF6329A003C96D7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 35F90B7A2AF6329A003C96D7 /* FirebaseAnalytics */; };
 		35F90B7D2AF6329A003C96D7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 35F90B7C2AF6329A003C96D7 /* FirebaseAppCheck */; };
@@ -45,7 +46,6 @@
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3563A7532AF085270037C029 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3563A7592AF085270037C029 /* RaiseMeUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RaiseMeUp.xcdatamodel; sourceTree = "<group>"; };
 		3563A75B2AF085270037C029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3563A75E2AF085270037C029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,9 @@
 		3563A76F2AF085270037C029 /* RaiseMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITests.swift; sourceTree = "<group>"; };
 		3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		35B0BCD92B0CEE8000F6F99B /* RaiseMeUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaiseMeUp.entitlements; sourceTree = "<group>"; };
 		35F90B702AF63171003C96D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +114,7 @@
 		3563A74E2AF085270037C029 /* RaiseMeUp */ = {
 			isa = PBXGroup;
 			children = (
+				35B0BCD92B0CEE8000F6F99B /* RaiseMeUp.entitlements */,
 				35F90B6C2AF624D6003C96D7 /* Resources */,
 				35F90B6E2AF62579003C96D7 /* Sources */,
 			);
@@ -132,6 +136,22 @@
 				3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */,
 			);
 			path = RaiseMeUpUITests;
+			sourceTree = "<group>";
+		};
+		35B0BCD32B0CEA9700F6F99B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				35B0BCD42B0CEAAB00F6F99B /* Login */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		35B0BCD42B0CEAAB00F6F99B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		35F90B6C2AF624D6003C96D7 /* Resources */ = {
@@ -159,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				35F90B6D2AF62566003C96D7 /* Entry */,
+				35B0BCD32B0CEA9700F6F99B /* Root */,
 				35F90B6F2AF62697003C96D7 /* Main */,
 			);
 			path = Sources;
@@ -167,7 +188,7 @@
 		35F90B6F2AF62697003C96D7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3563A7532AF085270037C029 /* ViewController.swift */,
+				35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -341,10 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3563A7542AF085270037C029 /* ViewController.swift in Sources */,
 				3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
+				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
+				35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,9 +535,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96H5TT55S4;
+				DEVELOPMENT_TEAM = DD8KP9C4KQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -540,9 +563,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96H5TT55S4;
+				DEVELOPMENT_TEAM = DD8KP9C4KQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
