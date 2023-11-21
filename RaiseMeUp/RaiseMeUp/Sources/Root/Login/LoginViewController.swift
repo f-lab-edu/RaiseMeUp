@@ -10,11 +10,11 @@ import AuthenticationServices
 
 final class LoginViewController: UIViewController {
     
-    let appleLoginButton: ASAuthorizationAppleIDButton = {
+    private lazy var appleLoginButton: ASAuthorizationAppleIDButton = {
         let button = ASAuthorizationAppleIDButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addAction(UIAction(handler: { action in
-            
+        button.addAction(UIAction(handler: { [weak self] action in
+            self?.handleAuthorizationAppleIDButtonPress()
         }), for: .touchUpInside)
         return button
     }()
@@ -26,6 +26,17 @@ final class LoginViewController: UIViewController {
         
     }
     
+    private func handleAuthorizationAppleIDButtonPress() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
     // MARK: - Layout
     private func layout() {
         self.view.addSubview(appleLoginButton)
@@ -35,5 +46,19 @@ final class LoginViewController: UIViewController {
             appleLoginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             appleLoginButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
+    }
+}
+
+extension LoginViewController: ASAuthorizationControllerDelegate {
+//    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+//        switch authorization.credential {
+//        case let
+//        }
+//    }
+}
+
+extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
     }
 }
