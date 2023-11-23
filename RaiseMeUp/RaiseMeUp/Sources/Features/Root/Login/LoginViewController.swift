@@ -7,11 +7,25 @@
 
 import UIKit
 import AuthenticationServices
+import Combine
 
 final class LoginViewController: UIViewController {
     
+    private var cancellables = Set<AnyCancellable>()
+    
     private var mainView: LoginMainView {
         return self.view as! LoginMainView
+    }
+    
+    private let viewModel: LoginViewModel
+    
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func loadView() {
@@ -22,23 +36,29 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setUp()
+        bind()
     }
     
-    func setUp() {
+    private func bind() {
+        self.viewModel.$loginResult
+            .sink { result in
+                switch result {
+                case .success(let user):
+                    print(user)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .none: 
+                    break
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func setUp() {
         mainView.appleLoginButton.addAction(UIAction(handler: { [weak self] _ in
-            self?.handleAuthorizationAppleIDButtonPress()
+            guard let self = self else { return }
+            self.viewModel.presentAppleAuthorizationController(delegate: self)
         }), for: .touchUpInside)
-    }
-    
-    private func handleAuthorizationAppleIDButtonPress() {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.presentationContextProvider = self
-        authorizationController.performRequests()
     }
 }
 
@@ -47,13 +67,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         switch authorization.credential {
             // 비밀번호 및 페이스ID 인증 같은 경우
         case let appleIdCredential as ASAuthorizationAppleIDCredential:
-            let userIdentifier = appleIdCredential.user
-            let fullName = appleIdCredential.fullName
-            let email = appleIdCredential.email
-            // iCloud의 패스워드를 연동
-        case let passwordCredential as ASPasswordCredential:
-            let username = passwordCredential.user
-            let password = passwordCredential.password
+            viewModel.requestAppleLogin(credential: appleIdCredential)
         default:
             break
         }
