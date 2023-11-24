@@ -65,7 +65,6 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
-            // 비밀번호 및 페이스ID 인증 같은 경우
         case let appleIdCredential as ASAuthorizationAppleIDCredential:
             viewModel.requestAppleLogin(credential: appleIdCredential)
         default:
