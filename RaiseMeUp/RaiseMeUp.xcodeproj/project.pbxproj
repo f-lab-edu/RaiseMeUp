@@ -15,6 +15,8 @@
 		3563A76A2AF085270037C029 /* RaiseMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7692AF085270037C029 /* RaiseMeUpTests.swift */; };
 		3563A7742AF085270037C029 /* RaiseMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */; };
 		3563A7762AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */; };
+		357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
+		357A35722B13803400F991B6 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
 		35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
 		35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
 		35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
@@ -58,6 +60,8 @@
 		3563A76F2AF085270037C029 /* RaiseMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITests.swift; sourceTree = "<group>"; };
 		3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		357A356E2B137D0000F991B6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		357A35712B13803400F991B6 /* KeychainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainType.swift; sourceTree = "<group>"; };
 		35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		35B0BCD92B0CEE8000F6F99B /* RaiseMeUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaiseMeUp.entitlements; sourceTree = "<group>"; };
@@ -144,6 +148,22 @@
 			path = RaiseMeUpUITests;
 			sourceTree = "<group>";
 		};
+		357A356D2B137CF100F991B6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				357A356E2B137D0000F991B6 /* KeychainManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		357A35702B13802200F991B6 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				357A35712B13803400F991B6 /* KeychainType.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		35B0BCD32B0CEA9700F6F99B /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +214,8 @@
 		35C90D002B0ED5250055FA62 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				357A35702B13802200F991B6 /* Constant */,
+				357A356D2B137CF100F991B6 /* Manager */,
 				35C90D092B0EDBB90055FA62 /* Protocol */,
 			);
 			path = Core;
@@ -460,9 +482,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */,
+				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
+				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
 				35C90D0B2B0EE2A90055FA62 /* User.swift in Sources */,
 				35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */,
 				35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */,
