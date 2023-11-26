@@ -9,26 +9,19 @@ import Foundation
 import AuthenticationServices
 
 final class LoginViewModel {
+    private let useCase: AuthUseCase
     @Published var loginResult: Result<User, Error>?
     
+    init(
+        useCase: AuthUseCase,
+        loginResult: Result<User, Error>? = nil
+    ) {
+        self.useCase = useCase
+    }
+    
     func requestAppleLogin(credential: ASAuthorizationAppleIDCredential) {
-        let familyName = credential.fullName?.familyName ?? String()
-        let givenName = credential.fullName?.givenName ?? String()
-        let fullName = familyName + givenName
-        let email = credential.email ?? String()
-        
-        guard let appleIDToken = credential.identityToken else {
-            print("Unable to fetch identity token")
-            return
-        }
-        
-        guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-            print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
-            return
-        }
-        
-        let user = User(name: fullName, email: email)
-        self.loginResult = Result.success(user)
+        let result = self.useCase.saveAppleIDToken(with: credential)
+        self.loginResult = result
     }
     
     func presentAppleAuthorizationController(delegate: ASAuthorizationControllerDelegate & ASAuthorizationControllerPresentationContextProviding) {
