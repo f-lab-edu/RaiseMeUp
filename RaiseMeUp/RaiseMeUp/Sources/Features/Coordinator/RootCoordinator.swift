@@ -12,6 +12,8 @@ final class RootCoordinator: RootCoordinatorProtocol {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var finishDelegate: CoordinatorFinishDelegate?
+    
+    var type: CoordinatorType { .root }
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -34,15 +36,27 @@ final class RootCoordinator: RootCoordinatorProtocol {
         self.childCoordinators.append(mainCoordinator)
         mainCoordinator.start()
     }
+    
+    func openLoginCoordinator() {
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.finishDelegate = self
+        self.childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
+    }
 }
 
 extension RootCoordinator: CoordinatorFinishDelegate {
     func coordinatorDidFinish(childCoordinator: Coordinator) {
+        self.navigationController.viewControllers.removeAll()
+        self.childCoordinators.removeAll()
         
-        if let _ = childCoordinator as? LoginCoordinator {
-            self.childCoordinators.removeAll()
-            self.navigationController.viewControllers = []
+        switch childCoordinator.type {
+        case .login:
             self.openMainCoordinator()
+        case .main:
+            self.openLoginCoordinator()
+        default:
+            break
         }
     }
 }

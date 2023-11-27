@@ -14,6 +14,8 @@ final class MainCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     
+    var type: CoordinatorType { .main }
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }

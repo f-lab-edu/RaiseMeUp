@@ -11,6 +11,7 @@ protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }
     var finishDelegate: CoordinatorFinishDelegate? { get set }
     var childCoordinators: [Coordinator] { get set }
+    var type: CoordinatorType { get }
 
     func start()
     func finish()
