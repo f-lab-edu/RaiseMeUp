@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
-        coordinator.start()
+        rootCoordinator?.start()
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {

@@ -8,26 +8,41 @@
 import UIKit
 
 final class RootCoordinator: RootCoordinatorProtocol {
-    
-    var childCoordinator: [Coordinator] = []
+
+    var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
-    
+    weak var finishDelegate: CoordinatorFinishDelegate?
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        let loginViewModel = LoginViewModel(
-            useCase: Auth(),
-            coordinator: RootCoordinator(navigationController: navigationController)
-        )
-        let viewController = LoginViewController(viewModel: loginViewModel)
-        self.navigationController.pushViewController(viewController, animated: true)
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.finishDelegate = self
+        self.childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
     
+    func finish() {
+        
+    }
+
     func openMainCoordinator() {
         let mainCoordinator = MainCoordinator(navigationController: navigationController)
-        self.childCoordinator.append(mainCoordinator)
+        self.finishDelegate = self
+        self.childCoordinators.append(mainCoordinator)
         mainCoordinator.start()
+    }
+}
+
+extension RootCoordinator: CoordinatorFinishDelegate {
+    func coordinatorDidFinish(childCoordinator: Coordinator) {
+        
+        if let _ = childCoordinator as? LoginCoordinator {
+            self.childCoordinators.removeAll()
+            self.navigationController.viewControllers = []
+            self.openMainCoordinator()
+        }
     }
 }

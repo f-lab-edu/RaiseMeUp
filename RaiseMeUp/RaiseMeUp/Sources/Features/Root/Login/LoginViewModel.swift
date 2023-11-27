@@ -10,12 +10,12 @@ import AuthenticationServices
 
 final class LoginViewModel {
     private let useCase: AuthUseCase
-    private let coordinator: RootCoordinatorProtocol?
+    private let coordinator: LoginCoordinatorProtocol?
 //    @Published var loginResult: Result<User, KeychainError>?
     
     init(
         useCase: AuthUseCase,
-        coordinator: RootCoordinatorProtocol?
+        coordinator: LoginCoordinatorProtocol?
     ) {
         self.useCase = useCase
         self.coordinator = coordinator
@@ -27,7 +27,8 @@ final class LoginViewModel {
         
         switch result {
         case .success(let _):
-            self.coordinator?.openMainCoordinator()
+            guard let coordinator = coordinator else { return }
+            self.coordinator?.finishDelegate?.coordinatorDidFinish(childCoordinator: coordinator)
         case .failure(let error):
             print(error.localizedDescription)
         }

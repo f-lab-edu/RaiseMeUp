@@ -24,6 +24,9 @@
 		357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35802B1417D300F991B6 /* RootCoordinator.swift */; };
 		357A35832B142D3300F991B6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35822B142D3300F991B6 /* MainCoordinator.swift */; };
 		357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
+		357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */; };
+		357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
+		357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
 		35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
 		35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
 		35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
@@ -76,6 +79,9 @@
 		357A35802B1417D300F991B6 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		357A35822B142D3300F991B6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
+		357A358B2B1431A200F991B6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		35B0BCD92B0CEE8000F6F99B /* RaiseMeUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaiseMeUp.entitlements; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 			children = (
 				357A35842B142DA600F991B6 /* Protocol */,
 				357A35802B1417D300F991B6 /* RootCoordinator.swift */,
+				357A358B2B1431A200F991B6 /* LoginCoordinator.swift */,
 				357A35822B142D3300F991B6 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */,
+				357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -320,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				357A357D2B14176200F991B6 /* Coordinator.swift */,
+				357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -536,10 +545,12 @@
 			files = (
 				357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */,
 				3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */,
+				357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
+				357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */,
 				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
 				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
@@ -551,6 +562,7 @@
 				35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */,
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,
 				357A35782B13821F00F991B6 /* Auth.swift in Sources */,
+				357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

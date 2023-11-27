@@ -8,8 +8,10 @@
 import UIKit
 
 protocol Coordinator: AnyObject {
-    var childCoordinator: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
-    
+    var finishDelegate: CoordinatorFinishDelegate? { get set }
+    var childCoordinators: [Coordinator] { get set }
+
     func start()
+    func finish()
 }
