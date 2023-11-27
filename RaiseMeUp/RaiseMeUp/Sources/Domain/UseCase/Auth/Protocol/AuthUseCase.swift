@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import AuthenticationServices
 
 protocol AuthUseCase {
-    func saveAppleIDToken(with idToken: String) -> Result<  User, KeychainError>
+    func saveAppleIDToken(with credential: ASAuthorizationAppleIDCredential) -> Result<  User, KeychainError>
 }

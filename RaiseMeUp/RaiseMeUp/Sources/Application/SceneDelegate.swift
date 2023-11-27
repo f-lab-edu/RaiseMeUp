@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    var rootCoordinator: RootCoordinator?
     
     func scene(
         _ scene: UIScene,
@@ -17,11 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let navigationController = UINavigationController()
+        let coordinator = RootCoordinator(navigationController: navigationController)
+        self.rootCoordinator = coordinator
+        
         let window = UIWindow(windowScene: windowScene)
-        let viewController = LoginViewController(viewModel: LoginViewModel())
-        window.rootViewController = viewController
+        
+        window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
+        coordinator.start()
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {

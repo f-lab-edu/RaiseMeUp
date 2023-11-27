@@ -40,18 +40,18 @@ final class LoginViewController: UIViewController {
     }
     
     private func bind() {
-        self.viewModel.$loginResult
-            .sink { result in
-                switch result {
-                case .success(let user):
-                    print(user)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                case .none: 
-                    break
-                }
-            }
-            .store(in: &cancellables)
+//        self.viewModel.$loginResult
+//            .sink { result in
+//                switch result {
+//                case .success(let user):
+//                    print("다음 뷰로 가시오")
+//                case .failure(let error):
+//                    print("에러가 떨어졌소")
+//                case .none:
+//                    break
+//                }
+//            }
+//            .store(in: &cancellables)
     }
     
     private func setUp() {
