@@ -15,6 +15,7 @@
 		3563A76A2AF085270037C029 /* RaiseMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7692AF085270037C029 /* RaiseMeUpTests.swift */; };
 		3563A7742AF085270037C029 /* RaiseMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */; };
 		3563A7762AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */; };
+		3568E3242B156B230026F6FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
 		357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
 		357A35722B13803400F991B6 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
 		357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
@@ -75,6 +76,7 @@
 		3563A76F2AF085270037C029 /* RaiseMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITests.swift; sourceTree = "<group>"; };
 		3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3568E3232B156B230026F6FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		357A356E2B137D0000F991B6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		357A35712B13803400F991B6 /* KeychainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainType.swift; sourceTree = "<group>"; };
 		357A35742B13821000F991B6 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		35F90B6F2AF62697003C96D7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3568E3232B156B230026F6FD /* MainView.swift */,
 				35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */,
 			);
 			path = Main;
@@ -570,6 +573,7 @@
 				357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */,
 				3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */,
 				357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */,
+				3568E3242B156B230026F6FD /* MainView.swift in Sources */,
 				357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,

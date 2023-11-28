@@ -9,12 +9,13 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = UITableView.automaticDimension
-        return tableView
-    }()
+    private var mainView: MainView = {
+        return self.view as! MainView
+    }
+    
+    override func loadView() {
+        self.view = MainView()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
