@@ -9,11 +9,37 @@ import Foundation
 
 struct PullUpProgramDTO: Decodable {
     var programs: [ProgramDTO]
+}
 
+extension PullUpProgramDTO {
+    func toDomain() -> PullUpTrainingPlan {
+        return PullUpTrainingPlan(
+            levels: programs.map { $0.toDomain() }
+        )
+    }
 }
 
 struct ProgramDTO: Decodable {
-    var name: String
-    var description: String
-    var schedule: [[Int?]]
+    let id: String
+    let name: String
+    let description: String
+    let schedule: [[Int?]]
 }
+
+extension ProgramDTO {
+    func toDomain() -> TrainingLevel {
+        let routine = self.schedule.enumerated().map { day, program in
+            return DailyRoutine(
+                level: "Day \(day + 1)",
+                program: program.compactMap { $0 }
+            )
+        }
+        return TrainingLevel(
+            id: self.id,
+            name: self.name,
+            description: self.description,
+            routine: routine
+        )
+    }
+}
+

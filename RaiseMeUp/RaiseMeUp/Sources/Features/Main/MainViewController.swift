@@ -9,8 +9,19 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    private var mainView: MainView = {
+    private var mainView: MainView {
         return self.view as! MainView
+    }
+    
+    private let viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func loadView() {
@@ -19,5 +30,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.loadData()
     }
 }

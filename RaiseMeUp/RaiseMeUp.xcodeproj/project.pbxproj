@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */; };
+		350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */; };
+		350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
+		350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
+		350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -33,6 +38,9 @@
 		357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
 		357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
 		357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
+		358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
+		358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
+		358673172B15B83600AAE6C7 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
 		35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
 		35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
 		35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
@@ -64,6 +72,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRepositoryProtocol.swift; sourceTree = "<group>"; };
+		350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRepository.swift; sourceTree = "<group>"; };
+		350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSourceProtocol.swift; sourceTree = "<group>"; };
+		350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSource.swift; sourceTree = "<group>"; };
+		350FCFB12B15C93500B4738A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +107,9 @@
 		357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgramDTO.swift; sourceTree = "<group>"; };
 		357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		357F1DBA2B14872D006F9CFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUseCase.swift; sourceTree = "<group>"; };
+		358673142B15B06A00AAE6C7 /* PullUpProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgram.swift; sourceTree = "<group>"; };
+		358673162B15B83600AAE6C7 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		35B0BCD92B0CEE8000F6F99B /* RaiseMeUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaiseMeUp.entitlements; sourceTree = "<group>"; };
@@ -133,6 +149,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350FCFA72B15BAE600B4738A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				350FCFAC2B15C6B400B4738A /* Protocol */,
+				350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		350FCFAC2B15C6B400B4738A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		3563A7432AF085270037C029 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +276,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		358673102B15B01E00AAE6C7 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				358673112B15B02A00AAE6C7 /* Protocol */,
+				358673162B15B83600AAE6C7 /* Training.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		358673112B15B02A00AAE6C7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		35B0BCD32B0CEA9700F6F99B /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +363,7 @@
 		35C90D022B0ED55A0055FA62 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				350FCFA72B15BAE600B4738A /* Local */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -320,6 +371,7 @@
 		35C90D032B0ED5730055FA62 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -328,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				35C90D0A2B0EE2A90055FA62 /* User.swift */,
+				358673142B15B06A00AAE6C7 /* PullUpProgram.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -335,6 +388,7 @@
 		35C90D052B0ED5B30055FA62 /* RepositoryProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */,
 			);
 			path = RepositoryProtocol;
 			sourceTree = "<group>";
@@ -343,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				357A35732B1381FA00F991B6 /* Auth */,
+				358673102B15B01E00AAE6C7 /* Program */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -396,6 +451,7 @@
 			children = (
 				3568E3232B156B230026F6FD /* MainView.swift */,
 				35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */,
+				350FCFB12B15C93500B4738A /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -575,10 +631,13 @@
 				357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */,
 				3568E3242B156B230026F6FD /* MainView.swift in Sources */,
 				357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */,
+				358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
+				358673172B15B83600AAE6C7 /* Training.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
+				350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */,
 				357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */,
 				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
@@ -590,11 +649,16 @@
 				35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */,
 				357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */,
 				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
+				358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */,
 				35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */,
+				350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */,
+				350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */,
+				350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */,
 				35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */,
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,
 				357A35782B13821F00F991B6 /* Auth.swift in Sources */,
 				357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */,
+				350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
