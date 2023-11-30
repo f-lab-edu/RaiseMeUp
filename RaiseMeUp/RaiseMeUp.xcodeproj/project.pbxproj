@@ -12,6 +12,7 @@
 		350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
 		350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
 		350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
+		350FCFB42B15CCDA00B4738A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -77,6 +78,7 @@
 		350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSource.swift; sourceTree = "<group>"; };
 		350FCFB12B15C93500B4738A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,15 @@
 				350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		350FCFB52B15CDDF00B4738A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3568E3232B156B230026F6FD /* MainView.swift */,
+				350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3563A7432AF085270037C029 = {
@@ -449,7 +460,7 @@
 		35F90B6F2AF62697003C96D7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3568E3232B156B230026F6FD /* MainView.swift */,
+				350FCFB52B15CDDF00B4738A /* View */,
 				35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */,
 				350FCFB12B15C93500B4738A /* MainViewModel.swift */,
 			);
@@ -639,6 +650,7 @@
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
 				350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */,
 				357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */,
+				350FCFB42B15CCDA00B4738A /* ProgramTableViewCell.swift in Sources */,
 				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
 				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
