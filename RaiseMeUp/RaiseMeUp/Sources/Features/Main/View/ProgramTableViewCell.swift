@@ -24,7 +24,7 @@ final class ProgramTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let titleLabel: UILabel = {
+    private let routineLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false 
         label.textColor = .black
@@ -53,19 +53,16 @@ final class ProgramTableViewCell: UITableViewCell {
         super.init(coder: coder)
     }
     
-    func bind(_ dayTitle: String, routineTitle: String) {
-        self.dayLabel.text = dayTitle
+    public func bind(_ cellModel: ProgramTableViewCellModel) {
+        self.dayLabel.text = cellModel.day
+        self.routineLabel.text = cellModel.routine
         
-        if routineTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            self.titleLabel.text = "오늘은 쉬는 날"
-        } else {
-            self.titleLabel.text = routineTitle
-        }
+        self.routineLabel.textColor = cellModel.isRestDay ? .green : .black
     }
     
     // MARK: - Add Subviews
     private func addSubviews() {
-        [dayLabel, titleLabel]
+        [dayLabel, routineLabel]
             .forEach {
                 self.titleStackView.addArrangedSubview($0)
             }
@@ -77,11 +74,12 @@ final class ProgramTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             dayLabel.topAnchor.constraint(equalTo: self.titleStackView.topAnchor),
             dayLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor),
+            dayLabel.widthAnchor.constraint(equalToConstant: Metric.dayLabelWidth)
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.titleStackView.topAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor),
+            routineLabel.topAnchor.constraint(equalTo: self.titleStackView.topAnchor),
+            routineLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor),
         ])
         
         NSLayoutConstraint.activate([

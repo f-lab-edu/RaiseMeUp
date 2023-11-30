@@ -19,6 +19,6 @@ struct TrainingLevel {
 }
 
 struct DailyRoutine {
-    let level: String
+    let day: String
     let program: [Int]
 }

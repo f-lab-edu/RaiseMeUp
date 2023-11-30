@@ -56,11 +56,10 @@ extension MainViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgramTableViewCell.defaultReuseIdentifier) as? ProgramTableViewCell else { return UITableViewCell() }
         let section = viewModel.section(at: indexPath)
         let item = section.routine[indexPath.row]
-        let routine = item.program.reduce(" ") { partialResult, value in
-            partialResult + " \(value)"
-        }
+        let cellModel = ProgramTableViewCellModel(item)
         
-        cell.bind(item.level, routineTitle: routine)
+        cell.bind(cellModel)
+        
         return cell
     }
 }

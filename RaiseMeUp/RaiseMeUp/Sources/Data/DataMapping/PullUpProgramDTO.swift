@@ -30,7 +30,7 @@ extension ProgramDTO {
     func toDomain() -> TrainingLevel {
         let routine = self.schedule.enumerated().map { day, program in
             return DailyRoutine(
-                level: "Day \(day + 1)",
+                day: "Day \(day + 1)",
                 program: program.compactMap { $0 }
             )
         }
