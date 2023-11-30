@@ -36,10 +36,11 @@ final class MainViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = ProgramTableHeaderView()
-        let section = viewModel.section(at: IndexPath(row: 0, section: section))
+        let section = viewModel.section(at: section)
         headerView.bind(section.name, subTitle: section.description)
         return headerView
     }
@@ -53,6 +54,7 @@ extension MainViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSection()
@@ -64,7 +66,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgramTableViewCell.defaultReuseIdentifier) as? ProgramTableViewCell else { return UITableViewCell() }
-        let section = viewModel.section(at: indexPath)
+        let section = viewModel.section(at: indexPath.section)
         let item = section.routine[indexPath.row]
         let cellModel = ProgramTableViewCellModel(item)
         

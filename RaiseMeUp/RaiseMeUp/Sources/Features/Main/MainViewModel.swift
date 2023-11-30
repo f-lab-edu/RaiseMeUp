@@ -36,8 +36,8 @@ final class MainViewModel {
         return program[section].routine.count
     }
     
-    func section(at indexPath: IndexPath) -> TrainingLevel {
-        let section = program[indexPath.section]
+    func section(at section: Int) -> TrainingLevel {
+        let section = program[section]
         return section
     }
 }
