@@ -44,6 +44,13 @@ final class ProgramTableViewCell: UITableViewCell {
         return stack
     }()
     
+    private let separatorView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -69,6 +76,7 @@ final class ProgramTableViewCell: UITableViewCell {
                 self.titleStackView.addArrangedSubview($0)
             }
         self.contentView.addSubview(titleStackView)
+        self.contentView.addSubview(separatorView)
     }
     
     // MARK: - Layout
@@ -85,10 +93,35 @@ final class ProgramTableViewCell: UITableViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            titleStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: Metric.verticalMargin),
-            titleStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Metric.verticalMargin),
-            titleStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Metric.horizontalMargin),
-            titleStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Metric.horizontalMargin),
+            titleStackView.topAnchor.constraint(
+                equalTo: self.topAnchor,
+                constant: Metric.verticalMargin
+            ),
+            titleStackView.bottomAnchor.constraint(
+                equalTo: self.bottomAnchor,
+                constant: -Metric.verticalMargin
+            ),
+            titleStackView.leftAnchor.constraint(
+                equalTo: self.leftAnchor,
+                constant: Metric.horizontalMargin
+            ),
+            titleStackView.rightAnchor.constraint(
+                equalTo: self.rightAnchor,
+                constant: -Metric.horizontalMargin
+            ),
+        ])
+        
+        NSLayoutConstraint.activate([
+            separatorView.leftAnchor.constraint(
+                equalTo: self.leftAnchor,
+                constant: Metric.horizontalMargin
+            ),
+            separatorView.rightAnchor.constraint(
+                equalTo: self.rightAnchor, 
+                constant: -Metric.horizontalMargin
+            ),
+            separatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            separatorView.heightAnchor.constraint(equalToConstant: 0.5)
         ])
     }
 }

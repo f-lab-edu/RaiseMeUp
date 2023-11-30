@@ -14,7 +14,7 @@ final class MainView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        tableView.separatorStyle = .none
         tableView.register(ProgramTableViewCell.self)
         return tableView
     }()

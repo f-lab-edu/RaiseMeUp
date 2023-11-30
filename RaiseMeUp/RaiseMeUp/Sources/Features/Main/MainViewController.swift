@@ -37,9 +37,19 @@ final class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sectionTitle = viewModel.section(at: IndexPath(row: 0, section: section)).name
-        return sectionTitle
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = ProgramTableHeaderView()
+        let section = viewModel.section(at: IndexPath(row: 0, section: section))
+        headerView.bind(section.name, subTitle: section.description)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 }
 
