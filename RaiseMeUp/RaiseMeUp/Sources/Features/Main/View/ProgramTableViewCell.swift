@@ -13,14 +13,16 @@ final class ProgramTableViewCell: UITableViewCell {
         static let horizontalMargin = 16.0
         static let verticalMargin = 8.0
         static let spacing = 4.0
+        static let dayLabelWidth = 44.0
     }
     
     private let dayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = .systemFont(ofSize: 20)
+        label.font = .preferredFont(forTextStyle: .caption1)
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        label.textAlignment = .center
         return label
     }()
     
@@ -28,7 +30,7 @@ final class ProgramTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false 
         label.textColor = .black
-        label.font = .systemFont(ofSize: 20)
+        label.font = .preferredFont(forTextStyle: .body)
         return label
     }()
     
