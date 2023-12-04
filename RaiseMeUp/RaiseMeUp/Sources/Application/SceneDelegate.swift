@@ -17,21 +17,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let navigationController = UINavigationController()
-        let coordinator = RootCoordinator(navigationController: navigationController)
-        self.rootCoordinator = coordinator
-        
-        let window = UIWindow(windowScene: windowScene)
-        
-        window.rootViewController = navigationController
-        self.window = window
-        window.makeKeyAndVisible()
-        rootCoordinator?.start()
+        let rootNavigationController = self.setUpRootNavigationController(in: scene)
+        self.startRootCoordinator(rootNavigationController)
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+}
+
+extension SceneDelegate {
+    private func startRootCoordinator(_ navigationController: UINavigationController) {
+        let coordinator = RootCoordinator(navigationController: navigationController)
+        self.rootCoordinator = coordinator
+        rootCoordinator?.start()
+    }
+    
+    private func setUpRootNavigationController(in scene: UIScene) -> UINavigationController {
+        guard let windowScene = (scene as? UIWindowScene) else {
+            return UINavigationController()
+        }
+        let navigationController = UINavigationController()
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = navigationController
+        self.window = window
+        window.makeKeyAndVisible()
+        
+        return navigationController
     }
 }
 
