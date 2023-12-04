@@ -56,7 +56,7 @@ final class LoginViewController: UIViewController {
     
     private func setUp() {
         mainView.appleLoginButton.addAction(UIAction(handler: { [weak self] _ in
-            guard let self = self else { return }
+            guard let self else { return }
             self.viewModel.presentAppleAuthorizationController(delegate: self)
         }), for: .touchUpInside)
     }
