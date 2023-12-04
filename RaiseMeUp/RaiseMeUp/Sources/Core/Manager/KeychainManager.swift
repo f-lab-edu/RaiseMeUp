@@ -17,12 +17,22 @@ struct KeychainManager {
             kSecAttrAccount as String: key.keychainIdentifier,
             kSecValueData as String: data.data(using: .utf8, allowLossyConversion: false) as Any
         ]
-        
-        // Keychain은 Key값에 중복이 생기면, 저장할 수 없기 때문에 먼저 Delete해줌
-        SecItemDelete(query as CFDictionary)
-        
+
         let status = SecItemAdd(query as CFDictionary, nil)
-        return status == errSecSuccess ? true : false
+
+        // 중복 item일 경우
+        if status == errSecDuplicateItem {
+            // 기존 항목 업데이트
+            let updateQuery: [String: Any] = [
+                kSecValueData as String: data.data(using: .utf8, allowLossyConversion: false) as Any
+            ]
+            
+            // 기존 항목을 업데이트
+            let updateStatus = SecItemUpdate(query as CFDictionary, updateQuery as CFDictionary)
+            return updateStatus == errSecSuccess
+        }
+        
+        return status == errSecSuccess
     }
     
     public func load(key: KeychainType) -> String? {
