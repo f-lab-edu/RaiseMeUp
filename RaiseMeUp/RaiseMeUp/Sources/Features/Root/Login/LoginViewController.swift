@@ -9,6 +9,8 @@ import UIKit
 import AuthenticationServices
 import Combine
 
+import OSLog
+
 final class LoginViewController: UIViewController {
     
     private var cancellables = Set<AnyCancellable>()
@@ -74,7 +76,8 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     
     // TODO: - 인증 실패 처리
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print(error.localizedDescription)
+        let message = error.localizedDescription
+        os_log(.info, log: .ui, "%@", message)
     }
 }
 
