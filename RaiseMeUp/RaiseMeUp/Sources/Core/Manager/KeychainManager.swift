@@ -25,11 +25,11 @@ struct KeychainManager {
         return status == errSecSuccess ? true : false
     }
     
-    public func load(key: String) -> String? {
+    public func load(key: KeychainType) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: serviceName,
-            kSecAttrAccount as String: key,
+            kSecAttrAccount as String: key.keychainIdentifier,
             kSecReturnData as String: true,  // CFData 타입으로 불러오라는 의미
             kSecMatchLimit as String: kSecMatchLimitOne       // 중복되는 경우, 하나의 값만 불러오라는 의미
         ]
@@ -58,11 +58,11 @@ struct KeychainManager {
         return status == errSecSuccess ? true : false
     }
     
-    public func delete(key: String) -> Bool {
+    public func delete(key: KeychainType) -> Bool {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: serviceName,
-            kSecAttrAccount as String: key
+            kSecAttrAccount as String: key.keychainIdentifier
         ]
         
         let status = SecItemDelete(query as CFDictionary)
