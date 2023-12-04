@@ -10,7 +10,7 @@ import Foundation
 enum KeychainType {
     case accessToken
     
-    var toString: String {
+    var keychainIdentifier: String {
         switch self {
         case .accessToken:
             return "accessToken"

@@ -14,7 +14,7 @@ struct KeychainManager {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: serviceName,
-            kSecAttrAccount as String: key.toString,
+            kSecAttrAccount as String: key.keychainIdentifier,
             kSecValueData as String: data.data(using: .utf8, allowLossyConversion: false) as Any
         ]
         
@@ -46,11 +46,11 @@ struct KeychainManager {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: serviceName,
-            kSecAttrAccount as String: key.toString
+            kSecAttrAccount as String: key.keychainIdentifier
         ]
         
         let attributes: [String: Any] = [
-            kSecAttrAccount as String: key.toString,
+            kSecAttrAccount as String: key.keychainIdentifier,
             kSecValueData as String: data
         ]
 
