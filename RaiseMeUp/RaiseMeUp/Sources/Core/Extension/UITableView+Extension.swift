@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 extension UITableViewCell: ReusableView { }
 
@@ -18,9 +19,11 @@ extension UITableView {
     /// Get cell with the default reuse cell identifier
     public func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
-            fatalError("Could not dequeue cell: \(T.self) with identifier: \(T.defaultReuseIdentifier)")
+            OSLog.message(.error, log: .error, "Could not dequeue cell: \(T.self) with identifier: \(T.defaultReuseIdentifier)")
+            return ErrorTableViewCell() as! T
         }
         
         return cell
     }
 }
+

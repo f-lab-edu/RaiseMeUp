@@ -77,7 +77,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     // TODO: - 인증 실패 처리
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         let message = error.localizedDescription
-        os_log(.info, log: .ui, "%@", message)
+        OSLog.message(.info, log: .ui, message)
     }
 }
 

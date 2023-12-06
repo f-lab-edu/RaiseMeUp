@@ -32,7 +32,7 @@ final class LoginViewModel {
             self.coordinator?.finishDelegate?.coordinatorDidFinish(childCoordinator: coordinator)
         case .failure(let error):
             let message = error.localizedDescription
-            os_log(.info, log: .ui, "%@", message)
+            OSLog.message(.info, log: .ui, message)
         }
     }
     
