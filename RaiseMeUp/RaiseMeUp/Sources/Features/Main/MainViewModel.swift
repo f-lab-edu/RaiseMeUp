@@ -15,10 +15,13 @@ final class MainViewModel {
     
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
-        
+
+        initializeData()
+    }
+    
+    private func initializeData() {
         guard case let .success(plan) = useCase.getProgramList() else { return }
         self.program = plan.levels
-        
     }
     
     func loadData() -> [TrainingLevel] {
