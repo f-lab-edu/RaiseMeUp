@@ -1,0 +1,24 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "MAIN_TITLE_LABEL" : {
+      "comment" : "메인 화면의 타이틀 텍스트",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Just Do It!"
+          }
+        },
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일단 당기세요!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -15,9 +15,14 @@ final class MainViewController: UIViewController {
     
     private let viewModel: MainViewModel
     
+    private let titleLocalized = String(localized: "MAIN_TITLE_LABEL",
+    defaultValue: "Just Do It!",
+    comment: "메인 화면의 타이틀 텍스트")
+    
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.title = titleLocalized
     }
     
     required init?(coder: NSCoder) {
