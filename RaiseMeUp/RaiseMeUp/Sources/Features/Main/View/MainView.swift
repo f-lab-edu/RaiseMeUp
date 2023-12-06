@@ -8,7 +8,7 @@
 import UIKit
 
 final class MainView: UIView {
-    
+
     let programTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
