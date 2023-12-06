@@ -8,8 +8,8 @@
 import Foundation
 
 enum KeychainError: Error {
-    case noPassword
+    case noIdentityToken
     case unexpectedPasswordData
-    case unexpectedItemData
+    case invalidTokenEncoding
     case unhandledError
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import AuthenticationServices
+import OSLog
 
 final class LoginViewModel {
     private let useCase: AuthUseCase
@@ -30,7 +31,8 @@ final class LoginViewModel {
             guard let coordinator = coordinator else { return }
             self.coordinator?.finishDelegate?.coordinatorDidFinish(childCoordinator: coordinator)
         case .failure(let error):
-            print(error.localizedDescription)
+            let message = error.localizedDescription
+            os_log(.info, log: .ui, "%@", message)
         }
     }
     

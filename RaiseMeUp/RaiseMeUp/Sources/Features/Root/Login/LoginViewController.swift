@@ -9,6 +9,8 @@ import UIKit
 import AuthenticationServices
 import Combine
 
+import OSLog
+
 final class LoginViewController: UIViewController {
     
     private var cancellables = Set<AnyCancellable>()
@@ -56,7 +58,7 @@ final class LoginViewController: UIViewController {
     
     private func setUp() {
         mainView.appleLoginButton.addAction(UIAction(handler: { [weak self] _ in
-            guard let self = self else { return }
+            guard let self else { return }
             self.viewModel.presentAppleAuthorizationController(delegate: self)
         }), for: .touchUpInside)
     }
@@ -74,7 +76,8 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     
     // TODO: - 인증 실패 처리
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print(error.localizedDescription)
+        let message = error.localizedDescription
+        os_log(.info, log: .ui, "%@", message)
     }
 }
 

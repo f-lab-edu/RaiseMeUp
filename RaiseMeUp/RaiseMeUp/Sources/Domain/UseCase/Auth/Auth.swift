@@ -16,11 +16,11 @@ struct Auth: AuthUseCase {
         let email = credential.email ?? String()
         
         guard let appleIDToken = credential.identityToken else {
-            return .failure(.noPassword)
+            return .failure(.noIdentityToken)
         }
         
         guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-            return .failure(.unexpectedItemData)
+            return .failure(.invalidTokenEncoding)
         }
         
         guard KeychainManager().save(key: .accessToken, data: idTokenString) else {
