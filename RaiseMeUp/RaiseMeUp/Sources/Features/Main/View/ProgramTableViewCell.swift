@@ -19,7 +19,7 @@ final class ProgramTableViewCell: UITableViewCell {
     private let dayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .label
         label.font = .preferredFont(forTextStyle: .caption1)
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         label.textAlignment = .center
@@ -29,7 +29,7 @@ final class ProgramTableViewCell: UITableViewCell {
     private let routineLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false 
-        label.textColor = .black
+        label.textColor = .label
         label.font = .preferredFont(forTextStyle: .body)
         return label
     }()
@@ -47,7 +47,7 @@ final class ProgramTableViewCell: UITableViewCell {
     private let separatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .separator
         return view
     }()
     
@@ -66,7 +66,7 @@ final class ProgramTableViewCell: UITableViewCell {
         self.dayLabel.text = cellModel.day
         self.routineLabel.text = cellModel.routine
         
-        self.routineLabel.textColor = cellModel.isRestDay ? .green : .black
+        self.routineLabel.textColor = cellModel.isRestDay ? .systemGreen : .label
     }
     
     // MARK: - Add Subviews
