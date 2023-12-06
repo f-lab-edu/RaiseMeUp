@@ -16,7 +16,7 @@ struct TrainingRepository: TrainingRepositoryProtocol {
     }
     
     func trainingProgram() -> Result<PullUpTrainingPlan, LocalError> {
-        return trainingDataSource.trainingProgram()
+        self.trainingDataSource.trainingProgram()
             .map { $0.toDomain() }
     }
 }
