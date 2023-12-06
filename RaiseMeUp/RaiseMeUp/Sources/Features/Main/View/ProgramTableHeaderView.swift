@@ -19,6 +19,7 @@ final class ProgramTableHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .label
+        label.numberOfLines = 1
         label.font = .preferredFont(forTextStyle: .headline)
         return label
     }()
@@ -27,6 +28,7 @@ final class ProgramTableHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .secondaryLabel
+        label.numberOfLines = 1
         label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
