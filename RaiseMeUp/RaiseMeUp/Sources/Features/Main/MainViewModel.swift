@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 final class MainViewModel {
     private let useCase: TrainingUseCase
@@ -25,7 +26,14 @@ final class MainViewModel {
         guard case let .success(data) = result else {
             return []
         }
-        return data.levels
+        
+        switch result {
+        case .success(let data):
+            return data.levels
+        case .failure(let error):
+            OSLog.message(.error, error.localizedDescription)
+            return []
+        }
     }
     
     func numberOfSection() -> Int {
