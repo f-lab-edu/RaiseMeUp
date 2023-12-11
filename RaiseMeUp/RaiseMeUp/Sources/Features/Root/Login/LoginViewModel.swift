@@ -27,12 +27,12 @@ final class LoginViewModel {
 //        self.loginResult = result
         
         switch result {
-        case .success(let _):
+        case .success:
             guard let coordinator = coordinator else { return }
             self.coordinator?.finishDelegate?.coordinatorDidFinish(childCoordinator: coordinator)
         case .failure(let error):
             let message = error.localizedDescription
-            os_log(.info, log: .ui, "%@", message)
+            OSLog.message(.info, log: .ui, message)
         }
     }
     

@@ -21,7 +21,11 @@ final class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = MainViewController()
+        let dataSource = TrainingDataSource()
+        let repository = TrainingRepository(trainingDataSource: dataSource)
+        let useCase = Training(repository: repository)
+        let viewModel = MainViewModel(useCase: useCase)
+        let viewController = MainViewController(viewModel: viewModel)
         self.navigationController.viewControllers = [viewController]
     }
     
