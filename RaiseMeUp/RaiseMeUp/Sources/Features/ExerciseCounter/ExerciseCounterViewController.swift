@@ -14,58 +14,48 @@ import UIKit
 
 protocol ExerciseCounterDisplayLogic: class
 {
-  func displaySomething(viewModel: ExerciseCounter.Something.ViewModel)
+    func displaySomething(viewModel: ExerciseCounter.Something.ViewModel)
 }
 
 class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLogic
 {
-  var interactor: ExerciseCounterBusinessLogic?
-  var router: (NSObjectProtocol & ExerciseCounterRoutingLogic & ExerciseCounterDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = ExerciseCounterInteractor()
-    let presenter = ExerciseCounterPresenter()
-    let router = ExerciseCounterRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    var interactor: ExerciseCounterBusinessLogic?
+    var router: (NSObjectProtocol & ExerciseCounterRoutingLogic & ExerciseCounterDataPassing)?
     
     var mainView: ExerciseCounterMainView {
         return self.view as! ExerciseCounterMainView
     }
     
+    // MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = ExerciseCounterInteractor()
+        let presenter = ExerciseCounterPresenter()
+        let router = ExerciseCounterRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: Routing
     
     // MARK: View lifecycle
     
@@ -73,29 +63,22 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.view = ExerciseCounterMainView()
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        doSomething()
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = ExerciseCounter.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: ExerciseCounter.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    
+    // MARK: Do something
+    
+    func doSomething()
+    {
+        let request = ExerciseCounter.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: ExerciseCounter.Something.ViewModel)
+    {
+        //nameTextField.text = viewModel.name
+    }
 }
