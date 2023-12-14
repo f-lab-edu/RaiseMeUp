@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol ExerciseCounterRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    
 }
 
 protocol ExerciseCounterDataPassing

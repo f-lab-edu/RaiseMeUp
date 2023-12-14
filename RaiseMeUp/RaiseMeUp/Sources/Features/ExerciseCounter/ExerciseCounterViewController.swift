@@ -61,6 +61,18 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
       if let router = router, router.responds(to: selector) {
         router.perform(selector, with: segue)
       }
+    
+    var mainView: ExerciseCounterMainView {
+        return self.view as! ExerciseCounterMainView
+    }
+    
+    
+    // MARK: View lifecycle
+    
+    override func loadView() {
+        self.view = ExerciseCounterMainView()
+    }
+    
     }
   }
   
