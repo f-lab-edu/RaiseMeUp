@@ -53,7 +53,7 @@ final class MainViewModel {
         return section
     }
     
-    func didSelectRowAt() {
-        self.coordinator?.presentExerciseCounter()
+    func didSelectRowAt(at indexPath: IndexPath) {
+        self.coordinator?.presentExerciseCounter(routine: program[indexPath.section].routine[indexPath.row].program)
     }
 }

@@ -12,13 +12,11 @@
 
 import UIKit
 
-protocol ExerciseCounterDisplayLogic: class
-{
-    func displaySomething(viewModel: ExerciseCounter.Something.ViewModel)
+protocol ExerciseCounterDisplayLogic: AnyObject {
+    func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel)
 }
 
-class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLogic
-{
+class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLogic {
     var interactor: ExerciseCounterBusinessLogic?
     var router: (NSObjectProtocol & ExerciseCounterRoutingLogic & ExerciseCounterDataPassing)?
     
@@ -27,26 +25,26 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
     }
     
     // MARK: Object lifecycle
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
     // MARK: Setup
     
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let interactor = ExerciseCounterInteractor()
         let presenter = ExerciseCounterPresenter()
         let router = ExerciseCounterRouter()
+        
+        interactor.routine = router.dataStore?.routine ?? []
+        
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -61,24 +59,37 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
     
     override func loadView() {
         self.view = ExerciseCounterMainView()
+        self.mainView.lister = self
     }
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        
+        bind()
     }
     
-    // MARK: Do something
-    
-    func doSomething()
-    {
-        let request = ExerciseCounter.Something.Request()
-        interactor?.doSomething(request: request)
+    private func bind() {
+        self.mainView.startButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.startButtonTapped()
+        }), for: .touchUpInside)
     }
     
-    func displaySomething(viewModel: ExerciseCounter.Something.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+    // MARK: Start Button Tapped
+    
+    func startButtonTapped() {
+        self.mainView.startButton.isHidden = true
+        self.mainView.countLabel.isHidden = false
+        
+        interactor?.startButtonTapped()
+    }
+    
+    func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel) {
+        self.mainView.countLabel.text = "\(viewModel.rep)"
+    }
+}
+
+extension ExerciseCounterViewController: ExerciseCounterMainViewLister {
+    func backgroundViewTapped() {
+        interactor?.countOnePullUp()
     }
 }

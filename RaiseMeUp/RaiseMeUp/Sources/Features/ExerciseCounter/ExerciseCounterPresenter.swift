@@ -12,20 +12,17 @@
 
 import UIKit
 
-protocol ExerciseCounterPresentationLogic
-{
-  func presentSomething(response: ExerciseCounter.Something.Response)
+protocol ExerciseCounterPresentationLogic {
+    func presentCurrentRep(response: ExerciseCounter.CountRep.Response)
 }
 
-class ExerciseCounterPresenter: ExerciseCounterPresentationLogic
-{
-  weak var viewController: ExerciseCounterDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: ExerciseCounter.Something.Response)
-  {
-    let viewModel = ExerciseCounter.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+class ExerciseCounterPresenter: ExerciseCounterPresentationLogic {
+    weak var viewController: ExerciseCounterDisplayLogic?
+    
+    // MARK: Do something
+    
+    func presentCurrentRep(response: ExerciseCounter.CountRep.Response) {
+        let viewModel = ExerciseCounter.CountRep.ViewModel(rep: response.currentRep)
+        viewController?.displayNextExercise(viewModel: viewModel)
+    }
 }

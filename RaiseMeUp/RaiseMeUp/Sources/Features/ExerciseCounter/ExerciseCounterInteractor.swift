@@ -12,30 +12,42 @@
 
 import UIKit
 
-protocol ExerciseCounterBusinessLogic
-{
-  func doSomething(request: ExerciseCounter.Something.Request)
+protocol ExerciseCounterBusinessLogic {
+    func pullNextRep(request: ExerciseCounter.CountRep.Request)
+    func startButtonTapped()
+    func countOnePullUp()
 }
 
-protocol ExerciseCounterDataStore
-{
-  //var name: String { get set }
+protocol ExerciseCounterDataStore {
+    var routine: [Int] { get set }
 }
 
-class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDataStore
-{
-  var presenter: ExerciseCounterPresentationLogic?
-  var worker: ExerciseCounterWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: ExerciseCounter.Something.Request)
-  {
-    worker = ExerciseCounterWorker()
-    worker?.doSomeWork()
+class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDataStore {
+    var routine: [Int] = [] 
     
-    let response = ExerciseCounter.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    var presenter: ExerciseCounterPresentationLogic?
+    var worker: ExerciseCounterWorker?
+    // MARK: Do something
+    private var currentRep: Int = 0
+    
+    func pullNextRep(request: ExerciseCounter.CountRep.Request) {
+        currentRep = routine.removeFirst()
+        let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
+        presenter?.presentCurrentRep(response: response)
+    }
+    
+    func startButtonTapped() {
+        currentRep = routine.removeFirst()
+        let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
+        presenter?.presentCurrentRep(response: response)
+    }
+    
+    func countOnePullUp() {
+        currentRep -= 1
+        if currentRep <= 0 {
+            pullNextRep(request: ExerciseCounter.CountRep.Request())
+        }
+        let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
+        presenter?.presentCurrentRep(response: response)
+    }
 }

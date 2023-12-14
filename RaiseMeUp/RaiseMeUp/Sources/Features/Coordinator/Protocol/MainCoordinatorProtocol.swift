@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainCoordinatorProtocol: Coordinator {
-    func presentExerciseCounter() 
+    func presentExerciseCounter(routine: [Int]) 
 }

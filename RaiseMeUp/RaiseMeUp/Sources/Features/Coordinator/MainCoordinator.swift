@@ -30,8 +30,11 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
         self.navigationController.viewControllers = [viewController]
     }
     
-    func presentExerciseCounter() {
-        let coordinator = ExerciseCounterCoordinator(navigationController: navigationController)
+    func presentExerciseCounter(routine: [Int]) {
+        let coordinator = ExerciseCounterCoordinator(
+            navigationController: navigationController,
+            routine: routine
+        )
         childCoordinators.append(coordinator)
         coordinator.finishDelegate = self
         coordinator.start()

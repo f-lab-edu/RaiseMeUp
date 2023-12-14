@@ -59,7 +59,7 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectRowAt()
+        viewModel.didSelectRowAt(at: indexPath)
     }
 }
 

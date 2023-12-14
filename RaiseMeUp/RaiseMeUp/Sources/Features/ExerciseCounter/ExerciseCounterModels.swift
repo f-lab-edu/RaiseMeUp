@@ -14,18 +14,20 @@ import UIKit
 
 enum ExerciseCounter
 {
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum CountRep
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            let currentRep: Int
+        }
+        struct ViewModel
+        {
+            let rep: Int
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }

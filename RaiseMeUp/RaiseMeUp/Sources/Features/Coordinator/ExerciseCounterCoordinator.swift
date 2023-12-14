@@ -15,13 +15,20 @@ final class ExerciseCounterCoordinator: ExerciseCounterCoordinatorProtocol {
     var childCoordinators: [Coordinator] = []
     
     var type: CoordinatorType { .exerciseCounter }
+    private var routine: [Int]
     
-    init(navigationController: UINavigationController) {
+    init(
+        navigationController: UINavigationController,
+        routine: [Int]
+    ) {
         self.navigationController = navigationController
+        self.routine = routine
     }
     
     func start() {
         let viewController = ExerciseCounterViewController()
+        var dataStore = viewController.router?.dataStore
+        dataStore?.routine = self.routine
         self.navigationController.pushViewController(viewController, animated: true)
     }
     

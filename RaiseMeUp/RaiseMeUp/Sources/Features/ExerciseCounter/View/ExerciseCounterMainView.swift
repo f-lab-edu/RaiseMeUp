@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol ExerciseCounterMainViewLister: AnyObject {
+    func backgroundViewTapped()
+}
+
 final class ExerciseCounterMainView: UIView {
+    
+    weak var lister: ExerciseCounterMainViewLister?
+    
     let startButton: UIButton = {
         var config = UIButton.Configuration.plain()
         config.title = "Start"
@@ -20,10 +27,19 @@ final class ExerciseCounterMainView: UIView {
         return button
     }()
     
+    let countLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .preferredFont(forTextStyle: .largeTitle)
+        label.text = "2"
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .systemBackground
         addSubviews()
+        setBackgroundTappedAction()
     }
     
     required init?(coder: NSCoder) {
@@ -39,13 +55,26 @@ final class ExerciseCounterMainView: UIView {
     // MARK: - Add Subviews
     private func addSubviews() {
         self.addSubview(startButton)
+        self.addSubview(countLabel)
     }
     
     // MARK: - Layout
     private func layout() {
         NSLayoutConstraint.activate([
             startButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            startButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
+            countLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
+    }
+    
+    private func setBackgroundTappedAction() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundViewTapped))
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func backgroundViewTapped() {
+        lister?.backgroundViewTapped()
     }
 }
