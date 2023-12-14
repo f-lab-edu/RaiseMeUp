@@ -22,6 +22,10 @@
 		355744152B2A7DBB00ED2637 /* ExerciseCounterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */; };
 		355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */; };
 		355744172B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */; };
+		3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
+		3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
+		3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
+		355744202B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441F2B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -100,6 +104,10 @@
 		3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterModels.swift; sourceTree = "<group>"; };
 		355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterViewController.swift; sourceTree = "<group>"; };
 		355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterInteractor.swift; sourceTree = "<group>"; };
+		355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterMainView.swift; sourceTree = "<group>"; };
+		3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		3557441F2B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinator.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 		3557440B2B2A7CB700ED2637 /* ExerciseCounter */ = {
 			isa = PBXGroup;
 			children = (
+				355744182B2A852200ED2637 /* View */,
 				3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */,
 				3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */,
 				3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */,
@@ -213,6 +222,14 @@
 				355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */,
 			);
 			path = ExerciseCounter;
+			sourceTree = "<group>";
+		};
+		355744182B2A852200ED2637 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3563A7432AF085270037C029 = {
@@ -304,6 +321,7 @@
 				357A35802B1417D300F991B6 /* RootCoordinator.swift */,
 				357A358B2B1431A200F991B6 /* LoginCoordinator.swift */,
 				357A35822B142D3300F991B6 /* MainCoordinator.swift */,
+				3557441F2B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -313,6 +331,8 @@
 			children = (
 				357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */,
 				357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */,
+				3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */,
+				3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -691,11 +711,13 @@
 				3568E3242B156B230026F6FD /* MainView.swift in Sources */,
 				357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */,
 				358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */,
+				3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */,
 				356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */,
 				355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				358673172B15B83600AAE6C7 /* Training.swift in Sources */,
+				355744202B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
 				350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */,
@@ -719,6 +741,8 @@
 				350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */,
 				350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */,
 				350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */,
+				3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */,
+				3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
 				35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */,
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,
 				355744142B2A7DBB00ED2637 /* ExerciseCounterRouter.swift in Sources */,

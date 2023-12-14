@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainCoordinator: Coordinator {
+final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate {
     var finishDelegate: CoordinatorFinishDelegate?
 
     var childCoordinators: [Coordinator] = []
@@ -25,8 +25,24 @@ final class MainCoordinator: Coordinator {
         let repository = TrainingRepository(trainingDataSource: dataSource)
         let useCase = Training(repository: repository)
         let viewModel = MainViewModel(useCase: useCase)
+        viewModel.coordinator = self
         let viewController = MainViewController(viewModel: viewModel)
         self.navigationController.viewControllers = [viewController]
+    }
+    
+    func presentExerciseCounter() {
+        let coordinator = ExerciseCounterCoordinator(navigationController: navigationController)
+        childCoordinators.append(coordinator)
+        coordinator.finishDelegate = self
+        coordinator.start()
+    }
+    
+    func coordinatorDidFinish(childCoordinator: Coordinator) {
+        guard case .exerciseCounter = childCoordinator.type else {
+            return
+        }
+        self.childCoordinators.removeAll()
+        self.navigationController.popViewController(animated: true)
     }
     
     func finish() {
