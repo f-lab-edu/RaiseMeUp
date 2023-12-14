@@ -12,6 +12,7 @@ final class MainViewModel {
     private let useCase: TrainingUseCase
     
     private var program: [TrainingLevel] = []
+    public weak var coordinator: MainCoordinatorProtocol?
     
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
@@ -50,5 +51,9 @@ final class MainViewModel {
     func section(at section: Int) -> TrainingLevel {
         let section = program[section]
         return section
+    }
+    
+    func didSelectRowAt() {
+        self.coordinator?.presentExerciseCounter()
     }
 }
