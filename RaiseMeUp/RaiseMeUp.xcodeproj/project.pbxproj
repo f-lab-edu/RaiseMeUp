@@ -25,7 +25,6 @@
 		3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
 		3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
 		3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
-		355744202B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441F2B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -108,7 +107,6 @@
 		355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterMainView.swift; sourceTree = "<group>"; };
 		3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		3557441F2B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinator.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -324,7 +322,6 @@
 				357A35802B1417D300F991B6 /* RootCoordinator.swift */,
 				357A358B2B1431A200F991B6 /* LoginCoordinator.swift */,
 				357A35822B142D3300F991B6 /* MainCoordinator.swift */,
-				3557441F2B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -721,7 +718,6 @@
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				358673172B15B83600AAE6C7 /* Training.swift in Sources */,
-				355744202B2AA2D200ED2637 /* ExerciseCounterCoordinator.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
 				350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */,

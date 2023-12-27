@@ -15,6 +15,7 @@ import UIKit
 protocol ExerciseCounterPresentationLogic {
     func presentCurrentRep(response: ExerciseCounter.CountRep.Response)
     func presentCurrentRestTime(response: ExerciseCounter.Timer.Response)
+    func presentEndExercise()
 }
 
 class ExerciseCounterPresenter: ExerciseCounterPresentationLogic {
@@ -31,5 +32,9 @@ class ExerciseCounterPresenter: ExerciseCounterPresentationLogic {
     func presentCurrentRestTime(response: ExerciseCounter.Timer.Response) {
         let viewModel = ExerciseCounter.Timer.ViewModel(currentTime: response.currentTime)
         viewController?.displayRemainingRestTime(viewModel: viewModel)
+    }
+    
+    func presentEndExercise() {
+        viewController?.displayEndExercise()
     }
 }

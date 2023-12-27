@@ -31,7 +31,7 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
     }
     
     func presentExerciseCounter(routine: [Int]) {
-        let coordinator = ExerciseCounterCoordinator(
+        let coordinator = ExerciseCounterRouter(
             navigationController: navigationController,
             routine: routine
         )

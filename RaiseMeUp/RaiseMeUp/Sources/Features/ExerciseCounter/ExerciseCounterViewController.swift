@@ -15,10 +15,11 @@ import UIKit
 protocol ExerciseCounterDisplayLogic: AnyObject {
     func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel)
     func displayRemainingRestTime(viewModel: ExerciseCounter.Timer.ViewModel)
+    func displayEndExercise()
 }
 
 class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLogic {
-    var interactor: ExerciseCounterBusinessLogic?
+    var interactor: (ExerciseCounterBusinessLogic & ExerciseCounterDataStore)?
     var router: (NSObjectProtocol & ExerciseCounterRoutingLogic & ExerciseCounterDataPassing)?
     
     var mainView: ExerciseCounterMainView {
@@ -42,18 +43,13 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         let viewController = self
         let interactor = ExerciseCounterInteractor()
         let presenter = ExerciseCounterPresenter()
-        let router = ExerciseCounterRouter()
         
-        interactor.routine = router.dataStore?.routine ?? []
         let timer = RestTimer()
 
         viewController.interactor = interactor
-        viewController.router = router
         interactor.presenter = presenter
         interactor.timer = timer
         presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
         
         timer.output = interactor
     }
@@ -77,6 +73,10 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.mainView.startButton.addAction(UIAction(handler: { [weak self] _ in
             self?.startButtonTapped()
         }), for: .touchUpInside)
+        
+        self.mainView.endButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.endButtonTapped()
+        }), for: .touchUpInside)
     }
     
     // MARK: Start Button Tapped
@@ -87,6 +87,10 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.mainView.timerLabel.isHidden = true
         
         interactor?.startButtonTapped()
+    }
+    
+    func endButtonTapped() {
+        router?.dismiss()
     }
     
     func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel) {
@@ -101,6 +105,14 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.mainView.timerLabel.isHidden = false
         
         self.mainView.timerLabel.text = viewModel.currentTime
+    }
+    
+    func displayEndExercise() {
+        self.mainView.countLabel.isHidden = true
+        self.mainView.timerLabel.isHidden = true
+        self.mainView.endButton.isHidden = false
+        
+        
     }
 }
 

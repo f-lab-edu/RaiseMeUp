@@ -31,11 +31,14 @@ class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDa
     private var currentRep: Int = 0
     
     func pullNextRep(request: ExerciseCounter.CountRep.Request) {
-        guard routine.isEmpty == false else { return }
-        
-        currentRep = routine.removeFirst()
-        let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
-        presenter?.presentCurrentRep(response: response)
+        if routine.isEmpty == false {
+            
+            currentRep = routine.removeFirst()
+            let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
+            presenter?.presentCurrentRep(response: response)
+        } else {
+            presenter?.presentEndExercise()
+        }
     }
     
     func startButtonTapped() {

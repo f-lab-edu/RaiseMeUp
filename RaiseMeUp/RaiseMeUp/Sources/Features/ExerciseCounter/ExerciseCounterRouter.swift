@@ -12,49 +12,55 @@
 
 import UIKit
 
-@objc protocol ExerciseCounterRoutingLogic
-{
-    
+protocol ExerciseCounterRoutingLogic {
+    func dismiss()
 }
 
 protocol ExerciseCounterDataPassing
 {
-  var dataStore: ExerciseCounterDataStore? { get }
+    var dataStore: ExerciseCounterDataStore? { get }
 }
 
-class ExerciseCounterRouter: NSObject, ExerciseCounterRoutingLogic, ExerciseCounterDataPassing
+class ExerciseCounterRouter: NSObject, ExerciseCounterRoutingLogic, ExerciseCounterDataPassing, ExerciseCounterCoordinatorProtocol
 {
-  weak var viewController: ExerciseCounterViewController?
-  var dataStore: ExerciseCounterDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: ExerciseCounterViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: ExerciseCounterDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    
+    weak var viewController: ExerciseCounterViewController?
+    var dataStore: ExerciseCounterDataStore?
+    
+    var navigationController: UINavigationController
+    
+    var finishDelegate: CoordinatorFinishDelegate?
+    
+    var childCoordinators: [Coordinator] = []
+    
+    var type: CoordinatorType { .exerciseCounter }
+    private var routine: [Int]
+    
+    init(
+        navigationController: UINavigationController,
+        routine: [Int]
+    ) {
+        self.navigationController = navigationController
+        self.routine = routine
+    }
+    
+    func start() {
+        let viewController = ExerciseCounterViewController()
+        let router = self
+        viewController.router = self
+        dataStore?.routine = router.routine
+        router.viewController = viewController
+        router.dataStore = viewController.interactor
+        viewController.interactor?.routine = routine
+        
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func finish() {
+        self.finishDelegate?.coordinatorDidFinish(childCoordinator: self)
+    }
+    
+    func dismiss() {
+        finish()
+    }
 }

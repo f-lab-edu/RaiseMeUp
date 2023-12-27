@@ -32,7 +32,7 @@ final class ExerciseCounterMainView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .largeTitle)
         label.text = "2"
-        label.isHidden = true 
+        label.isHidden = true
         return label
     }()
     
@@ -41,8 +41,21 @@ final class ExerciseCounterMainView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 50, weight: .semibold)
         label.text = "00:00"
-        label.isHidden = true 
+        label.isHidden = true
         return label
+    }()
+    
+    let endButton: UIButton = {
+        var config = UIButton.Configuration.plain()
+        config.title = "End"
+        config.contentInsets = .init(top: 8, leading: 16, bottom: 8, trailing: 16)
+        let button = UIButton(configuration: config)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.darkGray, for: .normal)
+        button.titleLabel?.font = .preferredFont(forTextStyle: .largeTitle)
+        button.backgroundColor = .blue
+        button.isHidden = true
+        return button
     }()
     
     override init(frame: CGRect) {
@@ -67,6 +80,7 @@ final class ExerciseCounterMainView: UIView {
         self.addSubview(startButton)
         self.addSubview(countLabel)
         self.addSubview(timerLabel)
+        self.addSubview(endButton)
     }
     
     // MARK: - Layout
@@ -79,7 +93,10 @@ final class ExerciseCounterMainView: UIView {
             countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
             timerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            timerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            timerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
+            endButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            endButton.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
     

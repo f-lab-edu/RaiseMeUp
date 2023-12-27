@@ -15,7 +15,8 @@ protocol TimerOutput: AnyObject {
 class RestTimer {
     weak var output: TimerOutput?
     var timer: Timer?
-    var remainingTime: Int = 90
+    private let restTime = 5
+    lazy var remainingTime: Int = restTime
     
     var isOn: Bool {
         return timer != nil 
@@ -35,7 +36,7 @@ class RestTimer {
         } else {
             timer?.invalidate()
             timer = nil
-            remainingTime = 90
+            remainingTime = restTime
             output?.timerDidFinish()
         }
     }
