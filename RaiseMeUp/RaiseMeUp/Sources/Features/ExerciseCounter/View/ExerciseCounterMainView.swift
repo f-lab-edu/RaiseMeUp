@@ -32,6 +32,16 @@ final class ExerciseCounterMainView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .largeTitle)
         label.text = "2"
+        label.isHidden = true 
+        return label
+    }()
+    
+    let timerLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 50, weight: .semibold)
+        label.text = "00:00"
+        label.isHidden = true 
         return label
     }()
     
@@ -56,6 +66,7 @@ final class ExerciseCounterMainView: UIView {
     private func addSubviews() {
         self.addSubview(startButton)
         self.addSubview(countLabel)
+        self.addSubview(timerLabel)
     }
     
     // MARK: - Layout
@@ -65,7 +76,10 @@ final class ExerciseCounterMainView: UIView {
             startButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
             countLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
+            timerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            timerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
     
