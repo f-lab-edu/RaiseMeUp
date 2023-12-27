@@ -27,10 +27,11 @@ class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDa
     
     var presenter: ExerciseCounterPresentationLogic?
     var worker: ExerciseCounterWorker?
-    // MARK: Do something
     private var currentRep: Int = 0
     
     func pullNextRep(request: ExerciseCounter.CountRep.Request) {
+        guard routine.isEmpty == false else { return }
+        
         currentRep = routine.removeFirst()
         let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
         presenter?.presentCurrentRep(response: response)
