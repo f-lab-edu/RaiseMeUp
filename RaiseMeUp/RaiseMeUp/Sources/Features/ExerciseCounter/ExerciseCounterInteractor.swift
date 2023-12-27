@@ -27,6 +27,7 @@ class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDa
     
     var presenter: ExerciseCounterPresentationLogic?
     var worker: ExerciseCounterWorker?
+    var timer: RestTimer?
     private var currentRep: Int = 0
     
     func pullNextRep(request: ExerciseCounter.CountRep.Request) {
@@ -44,6 +45,7 @@ class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDa
     }
     
     func countOnePullUp() {
+        guard (timer?.isOn == false) else { return }
         currentRep -= 1
         if currentRep <= 0 {
             startTimer()
@@ -54,12 +56,17 @@ class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDa
     }
     
     func startTimer() {
-        print("여기 타이머가 시작됩니다~!")
-        let response = ExerciseCounter.Timer.Response(currentTime: "00:01")
+        timer?.startTimer()
+    }
+}
+
+extension ExerciseCounterInteractor: TimerOutput {
+    func timerDidUpdate(time: String) {
+        let response = ExerciseCounter.Timer.Response(currentTime: time)
         presenter?.presentCurrentRestTime(response: response)
     }
     
-    func endTimer() {
+    func timerDidFinish() {
         pullNextRep(request: ExerciseCounter.CountRep.Request())
     }
 }

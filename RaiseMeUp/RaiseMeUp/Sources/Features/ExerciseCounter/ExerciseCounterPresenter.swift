@@ -30,6 +30,6 @@ class ExerciseCounterPresenter: ExerciseCounterPresentationLogic {
     
     func presentCurrentRestTime(response: ExerciseCounter.Timer.Response) {
         let viewModel = ExerciseCounter.Timer.ViewModel(currentTime: response.currentTime)
-        viewController?.displayNextTimer(viewModel: viewModel)
+        viewController?.displayRemainingRestTime(viewModel: viewModel)
     }
 }

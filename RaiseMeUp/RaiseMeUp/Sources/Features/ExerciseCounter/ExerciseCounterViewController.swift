@@ -14,7 +14,7 @@ import UIKit
 
 protocol ExerciseCounterDisplayLogic: AnyObject {
     func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel)
-    func displayNextTimer(viewModel: ExerciseCounter.Timer.ViewModel)
+    func displayRemainingRestTime(viewModel: ExerciseCounter.Timer.ViewModel)
 }
 
 class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLogic {
@@ -45,13 +45,17 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         let router = ExerciseCounterRouter()
         
         interactor.routine = router.dataStore?.routine ?? []
-        
+        let timer = RestTimer()
+
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
+        interactor.timer = timer
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+        
+        timer.output = interactor
     }
     
     // MARK: Routing
@@ -92,9 +96,11 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.mainView.countLabel.text = "\(viewModel.rep)"
     }
     
-    func displayNextTimer(viewModel: ExerciseCounter.Timer.ViewModel) {
+    func displayRemainingRestTime(viewModel: ExerciseCounter.Timer.ViewModel) {
         self.mainView.countLabel.isHidden = true
         self.mainView.timerLabel.isHidden = false
+        
+        self.mainView.timerLabel.text = viewModel.currentTime
     }
 }
 
