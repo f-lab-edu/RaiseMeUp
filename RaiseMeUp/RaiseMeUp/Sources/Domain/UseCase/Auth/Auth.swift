@@ -23,7 +23,7 @@ struct Auth: AuthUseCase {
             return .failure(.invalidTokenEncoding)
         }
         
-        guard KeychainManager().save(key: .accessToken, data: idTokenString) else {
+        guard KeychainManager.shared.save(key: .accessToken, data: idTokenString) else {
             return .failure(.unhandledError)
         }
         
