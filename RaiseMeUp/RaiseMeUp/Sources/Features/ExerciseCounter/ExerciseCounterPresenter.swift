@@ -14,9 +14,11 @@ import UIKit
 
 protocol ExerciseCounterPresentationLogic {
     func presentCurrentRep(response: ExerciseCounter.CountRep.Response)
+    func presentCurrentRestTime(response: ExerciseCounter.Timer.Response)
 }
 
 class ExerciseCounterPresenter: ExerciseCounterPresentationLogic {
+    
     weak var viewController: ExerciseCounterDisplayLogic?
     
     // MARK: Do something
@@ -24,5 +26,10 @@ class ExerciseCounterPresenter: ExerciseCounterPresentationLogic {
     func presentCurrentRep(response: ExerciseCounter.CountRep.Response) {
         let viewModel = ExerciseCounter.CountRep.ViewModel(rep: response.currentRep)
         viewController?.displayNextExercise(viewModel: viewModel)
+    }
+    
+    func presentCurrentRestTime(response: ExerciseCounter.Timer.Response) {
+        let viewModel = ExerciseCounter.Timer.ViewModel(currentTime: response.currentTime)
+        viewController?.displayNextTimer(viewModel: viewModel)
     }
 }

@@ -30,4 +30,16 @@ enum ExerciseCounter
             let rep: Int
         }
     }
+    
+    enum Timer {
+        struct Request {
+            
+        }
+        struct Response {
+            let currentTime: String
+        }
+        struct ViewModel {
+            let currentTime: String
+        }
+    }
 }

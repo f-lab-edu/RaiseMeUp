@@ -46,9 +46,20 @@ class ExerciseCounterInteractor: ExerciseCounterBusinessLogic, ExerciseCounterDa
     func countOnePullUp() {
         currentRep -= 1
         if currentRep <= 0 {
-            pullNextRep(request: ExerciseCounter.CountRep.Request())
+            startTimer()
+        } else {
+            let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
+            presenter?.presentCurrentRep(response: response)
         }
-        let response = ExerciseCounter.CountRep.Response(currentRep: currentRep)
-        presenter?.presentCurrentRep(response: response)
+    }
+    
+    func startTimer() {
+        print("여기 타이머가 시작됩니다~!")
+        let response = ExerciseCounter.Timer.Response(currentTime: "00:01")
+        presenter?.presentCurrentRestTime(response: response)
+    }
+    
+    func endTimer() {
+        pullNextRep(request: ExerciseCounter.CountRep.Request())
     }
 }

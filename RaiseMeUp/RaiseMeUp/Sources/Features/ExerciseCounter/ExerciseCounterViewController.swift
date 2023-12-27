@@ -14,6 +14,7 @@ import UIKit
 
 protocol ExerciseCounterDisplayLogic: AnyObject {
     func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel)
+    func displayNextTimer(viewModel: ExerciseCounter.Timer.ViewModel)
 }
 
 class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLogic {
@@ -79,12 +80,21 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
     func startButtonTapped() {
         self.mainView.startButton.isHidden = true
         self.mainView.countLabel.isHidden = false
+        self.mainView.timerLabel.isHidden = true
         
         interactor?.startButtonTapped()
     }
     
     func displayNextExercise(viewModel: ExerciseCounter.CountRep.ViewModel) {
+        self.mainView.countLabel.isHidden = false
+        self.mainView.timerLabel.isHidden = true
+        
         self.mainView.countLabel.text = "\(viewModel.rep)"
+    }
+    
+    func displayNextTimer(viewModel: ExerciseCounter.Timer.ViewModel) {
+        self.mainView.countLabel.isHidden = true
+        self.mainView.timerLabel.isHidden = false
     }
 }
 
