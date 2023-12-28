@@ -7,39 +7,50 @@
 
 import Foundation
 
-enum LocalError: Error {
-    case noFile
-    case parsingError
-}
-
 struct TrainingDataSource: TrainingDataSourceProtocol {
-    func trainingProgram() -> Result<PullUpProgramDTO, LocalError> {
-        guard let data = self.load() else {
-            return .failure(.noFile)
-        }
-        
+    private let provider: Provider
+    
+    public init() {
+        self.provider = Provider()
+    }
+    
+    func trainingProgram(completion: @escaping (Result<PullUpProgramDTO, Error>) -> Void) {
         do {
-            let program = try JSONDecoder().decode(PullUpProgramDTO.self, from: data)
-            return .success(program)
+            let urlRequest = try TrainingTarget.program.asURLRequest()
+            provider.request(urlRequest) { result in
+                completion(result)
+            }
         } catch {
-            return .failure(LocalError.parsingError)
+            completion(.failure(error))
         }
     }
 }
 
-extension TrainingDataSource {
-    fileprivate func load() -> Data? {
-        let fileName = "Program"
-        let extensionType = "json"
-        
-        guard let fileLocation = Bundle.main.url(forResource: fileName, withExtension: extensionType) else {
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: fileLocation)
-            return data
-        } catch {
+enum TrainingTarget {
+    case program
+}
+
+extension TrainingTarget: TargetType {
+    var baseURL: String {
+        return "https://my-json-server.typicode.com/"
+    }
+    
+    var method: HTTPMethod {
+        return "GET"
+    }
+    
+    var headers: HTTPHeaders {
+        let headers = HTTPHeaders()
+        return headers
+    }
+    
+    var path: String {
+        return "Peter1119/PullUp_DB/db"
+    }
+    
+    var parameters: RequestParams? {
+        switch self {
+        case .program:
             return nil
         }
     }
