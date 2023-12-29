@@ -15,27 +15,8 @@ final class ExerciseCounterMainView: UIView {
     
     weak var lister: ExerciseCounterMainViewLister?
     
-    lazy var startButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        let attributedString = AttributedString(
-            "Start",
-            attributes: AttributeContainer([
-                .font: UIFont.systemFont(ofSize: 50, weight: .semibold),
-                .foregroundColor: UIColor.white
-            ])
-        )
-        config.attributedTitle = attributedString
-        config.contentInsets = .init(
-            top: 16,
-            leading: 32,
-            bottom: 16,
-            trailing: 32
-        )
-        let button = UIButton(configuration: config)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.masksToBounds = true
-        button.layer.cornerCurve = .continuous
-        button.backgroundColor = .red
+    var startButton: RUButton = {
+        let button = RUButton(style: .start)
         return button
     }()
     
@@ -57,25 +38,8 @@ final class ExerciseCounterMainView: UIView {
         return label
     }()
     
-    let endButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        let attributedString = AttributedString(
-            "End",
-            attributes: AttributeContainer([
-                .font: UIFont.systemFont(ofSize: 50, weight: .semibold),
-                .foregroundColor: UIColor.white
-            ])
-        )
-        config.attributedTitle = attributedString
-        config.contentInsets = .init(
-            top: 16,
-            leading: 32,
-            bottom: 16,
-            trailing: 32
-        )
-        let button = UIButton(configuration: config)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .blue
+    let endButton: RUButton = {
+        let button = RUButton(style: .end)
         button.isHidden = true
         return button
     }()
@@ -89,13 +53,6 @@ final class ExerciseCounterMainView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        startButton.layer.cornerRadius = startButton.bounds.height / 2
-        endButton.layer.cornerRadius = endButton.bounds.height / 2
     }
     
     override func updateConstraints() {
