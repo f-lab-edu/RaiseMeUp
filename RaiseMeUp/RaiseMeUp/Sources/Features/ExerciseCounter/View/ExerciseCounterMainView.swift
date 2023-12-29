@@ -15,15 +15,8 @@ final class ExerciseCounterMainView: UIView {
     
     weak var lister: ExerciseCounterMainViewLister?
     
-    let startButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        config.title = "Start"
-        config.contentInsets = .init(top: 8, leading: 16, bottom: 8, trailing: 16)
-        let button = UIButton(configuration: config)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.darkGray, for: .normal)
-        button.titleLabel?.font = .preferredFont(forTextStyle: .largeTitle)
-        button.backgroundColor = .yellow
+    var startButton: RUButton = {
+        let button = RUButton(style: .start)
         return button
     }()
     
@@ -45,15 +38,8 @@ final class ExerciseCounterMainView: UIView {
         return label
     }()
     
-    let endButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        config.title = "End"
-        config.contentInsets = .init(top: 8, leading: 16, bottom: 8, trailing: 16)
-        let button = UIButton(configuration: config)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.darkGray, for: .normal)
-        button.titleLabel?.font = .preferredFont(forTextStyle: .largeTitle)
-        button.backgroundColor = .blue
+    let endButton: RUButton = {
+        let button = RUButton(style: .end)
         button.isHidden = true
         return button
     }()
