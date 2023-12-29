@@ -56,22 +56,34 @@ final class MainViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(
+        _ tableView: UITableView,
+        viewForHeaderInSection section: Int
+    ) -> UIView? {
         let headerView = ProgramTableHeaderView()
         let section = viewModel.section(at: section)
         headerView.bind(section.name, subTitle: section.description)
         return headerView
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        heightForHeaderInSection section: Int
+    ) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        estimatedHeightForHeaderInSection section: Int
+    ) -> CGFloat {
         return 50
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
         viewModel.didSelectRowAt(at: indexPath)
     }
 }
@@ -82,12 +94,22 @@ extension MainViewController: UITableViewDataSource {
         return viewModel.numberOfSection()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         return viewModel.numberOfRowsInSection(section)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgramTableViewCell.defaultReuseIdentifier) as? ProgramTableViewCell else { return UITableViewCell() }
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: ProgramTableViewCell.defaultReuseIdentifier
+        ) as? ProgramTableViewCell else {
+            return UITableViewCell()
+        }
         let section = viewModel.section(at: indexPath.section)
         let item = section.routine[indexPath.row]
         let cellModel = ProgramTableViewCellModel(item)
