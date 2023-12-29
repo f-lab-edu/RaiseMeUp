@@ -15,15 +15,27 @@ final class ExerciseCounterMainView: UIView {
     
     weak var lister: ExerciseCounterMainViewLister?
     
-    let startButton: UIButton = {
+    lazy var startButton: UIButton = {
         var config = UIButton.Configuration.plain()
-        config.title = "Start"
-        config.contentInsets = .init(top: 8, leading: 16, bottom: 8, trailing: 16)
+        let attributedString = AttributedString(
+            "Start",
+            attributes: AttributeContainer([
+                .font: UIFont.systemFont(ofSize: 50, weight: .semibold),
+                .foregroundColor: UIColor.white
+            ])
+        )
+        config.attributedTitle = attributedString
+        config.contentInsets = .init(
+            top: 16,
+            leading: 32,
+            bottom: 16,
+            trailing: 32
+        )
         let button = UIButton(configuration: config)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.darkGray, for: .normal)
-        button.titleLabel?.font = .preferredFont(forTextStyle: .largeTitle)
-        button.backgroundColor = .yellow
+        button.layer.masksToBounds = true
+        button.layer.cornerCurve = .continuous
+        button.backgroundColor = .red
         return button
     }()
     
@@ -47,12 +59,22 @@ final class ExerciseCounterMainView: UIView {
     
     let endButton: UIButton = {
         var config = UIButton.Configuration.plain()
-        config.title = "End"
-        config.contentInsets = .init(top: 8, leading: 16, bottom: 8, trailing: 16)
+        let attributedString = AttributedString(
+            "End",
+            attributes: AttributeContainer([
+                .font: UIFont.systemFont(ofSize: 50, weight: .semibold),
+                .foregroundColor: UIColor.white
+            ])
+        )
+        config.attributedTitle = attributedString
+        config.contentInsets = .init(
+            top: 16,
+            leading: 32,
+            bottom: 16,
+            trailing: 32
+        )
         let button = UIButton(configuration: config)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.darkGray, for: .normal)
-        button.titleLabel?.font = .preferredFont(forTextStyle: .largeTitle)
         button.backgroundColor = .blue
         button.isHidden = true
         return button
@@ -67,6 +89,13 @@ final class ExerciseCounterMainView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        startButton.layer.cornerRadius = startButton.bounds.height / 2
+        endButton.layer.cornerRadius = endButton.bounds.height / 2
     }
     
     override func updateConstraints() {
