@@ -7,19 +7,28 @@
 
 import Foundation
 import OSLog
+import Combine
 
 final class MainViewModel {
     private let useCase: TrainingUseCase
     
-    private var program: [TrainingLevel] = []
+    @Published public var program: [TrainingLevel] = []
+    private var cancellables = Set<AnyCancellable>()
+    
     public weak var coordinator: MainCoordinatorProtocol?
     
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
         
+        loadPrograms()
+    }
+    
+    private func loadPrograms() {
         Task {
             let result = await loadData()
-            self.program = result
+            DispatchQueue.main.async {
+                self.program = result
+            }
         }
     }
     

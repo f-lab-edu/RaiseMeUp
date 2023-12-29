@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class MainViewController: UIViewController {
     
@@ -14,6 +15,7 @@ final class MainViewController: UIViewController {
     }
     
     private let viewModel: MainViewModel
+    private var cancellables = Set<AnyCancellable>()
     
     private let titleLocalized = String(localized: "MAIN_TITLE_LABEL",
     defaultValue: "Just Do It!",
@@ -38,6 +40,17 @@ final class MainViewController: UIViewController {
         
         mainView.programTableView.delegate = self
         mainView.programTableView.dataSource = self
+        
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        viewModel.$program
+            .receive(on: RunLoop.main)
+            .sink { [weak self] _ in
+                self?.mainView.programTableView.reloadData()
+            }
+            .store(in: &cancellables)
     }
 }
 
