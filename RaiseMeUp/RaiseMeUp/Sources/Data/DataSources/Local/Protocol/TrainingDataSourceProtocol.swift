@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TrainingDataSourceProtocol {
-    func trainingProgram(completion: @escaping (Result<PullUpProgramDTO, Error>) -> Void)
+    func trainingProgram() async throws -> PullUpProgramDTO
 }

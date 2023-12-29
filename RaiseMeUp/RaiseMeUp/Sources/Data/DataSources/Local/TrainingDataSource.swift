@@ -14,15 +14,9 @@ struct TrainingDataSource: TrainingDataSourceProtocol {
         self.provider = Provider()
     }
     
-    func trainingProgram(completion: @escaping (Result<PullUpProgramDTO, Error>) -> Void) {
-        do {
-            let urlRequest = try TrainingTarget.program.asURLRequest()
-            provider.request(urlRequest) { result in
-                completion(result)
-            }
-        } catch {
-            completion(.failure(error))
-        }
+    func trainingProgram() async throws -> PullUpProgramDTO {
+        let urlRequest = try TrainingTarget.program.asURLRequest()
+        return try await provider.request(urlRequest)
     }
 }
 

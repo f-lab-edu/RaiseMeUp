@@ -15,9 +15,8 @@ public enum NetworkError: Error {
     case unknown
 }
 
-
 protocol ProviderProtocol {
-    func request<T: Decodable>(_ urlRequest: URLRequest, completion: @escaping(Result<T, Error>) -> Void)
+    func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T
 }
 
 class Provider: ProviderProtocol {
@@ -27,31 +26,19 @@ class Provider: ProviderProtocol {
         self.session = session
     }
     
-    public func request<T: Decodable>(_ urlRequest: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
-        let task = session.dataTask(with: urlRequest) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                  200..<300 ~= httpResponse.statusCode else {
-                completion(.failure(NetworkError.invalidStatusCode))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(NetworkError.noData))
-                return
-            }
-            
-            do {
-                let decodedObject = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(decodedObject))
-            } catch {
-                completion(.failure(error))
-            }
+    public func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T {
+        let (data, response) = try await session.data(for: urlRequest)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              200..<300 ~= httpResponse.statusCode
+        else {
+            throw NetworkError.invalidStatusCode
         }
-        task.resume()
+        
+        guard data.isEmpty == false else {
+            throw NetworkError.noData
+        }
+        
+        return try JSONDecoder().decode(T.self, from: data)
     }
 }
