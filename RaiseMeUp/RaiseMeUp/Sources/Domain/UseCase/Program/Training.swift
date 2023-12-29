@@ -15,7 +15,7 @@ struct Training: TrainingUseCase {
         self.repository = repository
     }
     
-    func getProgramList() -> Result<PullUpTrainingPlan, LocalError> {
-        return repository.trainingProgram()
+    func getProgramList() async throws -> PullUpTrainingPlan {
+        return try await repository.trainingProgram()
     }
 }

@@ -25,6 +25,8 @@
 		3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
 		3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
 		3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
+		355DFB912B3DAF090025EB89 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
+		355DFB942B3DB0AC0025EB89 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -49,7 +51,6 @@
 		357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
 		357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
 		357A358E2B143A1600F991B6 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358D2B143A1600F991B6 /* CoordinatorType.swift */; };
-		357F1DB42B14841E006F9CFB /* Program.json in Resources */ = {isa = PBXBuildFile; fileRef = 357F1DB32B14841E006F9CFB /* Program.json */; };
 		357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
 		357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
 		357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
@@ -107,6 +108,8 @@
 		355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterMainView.swift; sourceTree = "<group>"; };
 		3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		355DFB902B3DAF090025EB89 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		355DFB932B3DB0AC0025EB89 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +138,6 @@
 		357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
 		357A358B2B1431A200F991B6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		357A358D2B143A1600F991B6 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
-		357F1DB32B14841E006F9CFB /* Program.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Program.json; sourceTree = "<group>"; };
 		357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgramDTO.swift; sourceTree = "<group>"; };
 		357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		357F1DBA2B14872D006F9CFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -231,6 +233,15 @@
 				355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		355DFB8F2B3D9F4A0025EB89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				355DFB902B3DAF090025EB89 /* TargetType.swift */,
+				355DFB932B3DB0AC0025EB89 /* Provider.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3563A7432AF085270037C029 = {
@@ -492,7 +503,6 @@
 				3563A75D2AF085270037C029 /* LaunchScreen.storyboard */,
 				35F90B702AF63171003C96D7 /* GoogleService-Info.plist */,
 				3563A7602AF085270037C029 /* Info.plist */,
-				357F1DB32B14841E006F9CFB /* Program.json */,
 				351871AC2B20348500E79C4F /* Localizable.xcstrings */,
 			);
 			path = Resources;
@@ -510,6 +520,7 @@
 		35F90B6E2AF62579003C96D7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				355DFB8F2B3D9F4A0025EB89 /* Network */,
 				35F90B6D2AF62566003C96D7 /* Application */,
 				35C90D002B0ED5250055FA62 /* Core */,
 				35C90CFF2B0ED51E0055FA62 /* Data */,
@@ -649,7 +660,6 @@
 				351871AD2B20348500E79C4F /* Localizable.xcstrings in Resources */,
 				35F90B712AF63171003C96D7 /* GoogleService-Info.plist in Resources */,
 				3563A75C2AF085270037C029 /* Assets.xcassets in Resources */,
-				357F1DB42B14841E006F9CFB /* Program.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,11 +747,13 @@
 				357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */,
 				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
 				358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */,
+				355DFB942B3DB0AC0025EB89 /* Provider.swift in Sources */,
 				35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */,
 				350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */,
 				350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */,
 				350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */,
 				3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */,
+				355DFB912B3DAF090025EB89 /* TargetType.swift in Sources */,
 				3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
 				35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */,
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,

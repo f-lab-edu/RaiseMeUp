@@ -15,8 +15,7 @@ struct TrainingRepository: TrainingRepositoryProtocol {
         self.trainingDataSource = trainingDataSource
     }
     
-    func trainingProgram() -> Result<PullUpTrainingPlan, LocalError> {
-        self.trainingDataSource.trainingProgram()
-            .map { $0.toDomain() }
+    func trainingProgram() async throws -> PullUpTrainingPlan {
+        return try await trainingDataSource.trainingProgram().toDomain()
     }
 }
