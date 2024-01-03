@@ -71,4 +71,14 @@ class MockViewModelTests: XCTestCase {
         XCTAssertEqual(trainingPlan.count, expectedTrainingPlan.levels.count, "예상하는 데이터가 들어왔다.")
     }
     
+    func test_섹션의갯수가유즈케이스에있는데이터의갯수와동일하다() {
+        // Given
+        let expectedSectionCount = mockTrainingPlan.levels.count
+        
+        // When
+        let sectionCount = viewModel.numberOfSection()
+        
+        XCTAssertTrue(mockUseCase.getProgramListCalled, "프로그램 호출 메서드가 불렸다.")
+        XCTAssertEqual(expectedSectionCount, sectionCount, "리스트의 섹션 갯수가 동일하게 떨어진다.")
+    }
 }
