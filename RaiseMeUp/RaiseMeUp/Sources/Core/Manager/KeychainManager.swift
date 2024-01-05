@@ -8,6 +8,10 @@
 import Foundation
 
 struct KeychainManager {
+    public static let shared: KeychainManager = KeychainManager()
+    
+    private init() { }
+    
     private let serviceName: String = "RaiseMeUp"
     
     public func save(key: KeychainType, data: String) -> Bool {

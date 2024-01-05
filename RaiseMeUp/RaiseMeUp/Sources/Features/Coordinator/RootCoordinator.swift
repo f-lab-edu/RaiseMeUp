@@ -20,10 +20,14 @@ final class RootCoordinator: RootCoordinatorProtocol {
     }
     
     func start() {
-        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
-        loginCoordinator.finishDelegate = self
-        self.childCoordinators.append(loginCoordinator)
-        loginCoordinator.start()
+        if KeychainManager.shared.load(key: .accessToken)?.isEmpty == true {
+            let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+            loginCoordinator.finishDelegate = self
+            self.childCoordinators.append(loginCoordinator)
+            loginCoordinator.start()
+        } else {
+            openMainCoordinator()
+        }
     }
     
     func finish() {

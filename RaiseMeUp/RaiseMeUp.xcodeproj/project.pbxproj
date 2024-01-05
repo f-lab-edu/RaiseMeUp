@@ -16,6 +16,15 @@
 		350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
 		350FCFB42B15CCDA00B4738A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */; };
 		351871AD2B20348500E79C4F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 351871AC2B20348500E79C4F /* Localizable.xcstrings */; };
+		355744122B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
+		355744132B2A7DBB00ED2637 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
+		355744142B2A7DBB00ED2637 /* ExerciseCounterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */; };
+		355744152B2A7DBB00ED2637 /* ExerciseCounterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */; };
+		355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */; };
+		355744172B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */; };
+		3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
+		3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
+		3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -52,6 +61,7 @@
 		35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
 		35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D072B0ED7160055FA62 /* LoginViewModel.swift */; };
 		35C90D0B2B0EE2A90055FA62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D0A2B0EE2A90055FA62 /* User.swift */; };
+		35D50EAE2B3BB4C7008BFB70 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */; };
 		35F90B712AF63171003C96D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
 		35F90B7B2AF6329A003C96D7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 35F90B7A2AF6329A003C96D7 /* FirebaseAnalytics */; };
 		35F90B7D2AF6329A003C96D7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 35F90B7C2AF6329A003C96D7 /* FirebaseAppCheck */; };
@@ -88,6 +98,15 @@
 		350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		351871AC2B20348500E79C4F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		351871AE2B2034EB00E79C4F /* ko-KR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ko-KR"; path = "ko-KR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterPresenter.swift; sourceTree = "<group>"; };
+		3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterWorker.swift; sourceTree = "<group>"; };
+		3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterRouter.swift; sourceTree = "<group>"; };
+		3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterModels.swift; sourceTree = "<group>"; };
+		355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterViewController.swift; sourceTree = "<group>"; };
+		355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterInteractor.swift; sourceTree = "<group>"; };
+		355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterMainView.swift; sourceTree = "<group>"; };
+		3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +148,7 @@
 		35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainView.swift; sourceTree = "<group>"; };
 		35C90D072B0ED7160055FA62 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		35C90D0A2B0EE2A90055FA62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimer.swift; sourceTree = "<group>"; };
 		35F90B702AF63171003C96D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +206,29 @@
 				350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */,
 				356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */,
 				356792C32B186CAE005B83D5 /* ProgramTableHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3557440B2B2A7CB700ED2637 /* ExerciseCounter */ = {
+			isa = PBXGroup;
+			children = (
+				35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */,
+				355744182B2A852200ED2637 /* View */,
+				3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */,
+				3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */,
+				3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */,
+				3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */,
+				355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */,
+				355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */,
+			);
+			path = ExerciseCounter;
+			sourceTree = "<group>";
+		};
+		355744182B2A852200ED2637 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +331,8 @@
 			children = (
 				357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */,
 				357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */,
+				3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */,
+				3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -343,6 +388,7 @@
 				357A357F2B1417B100F991B6 /* Coordinator */,
 				35B0BCD32B0CEA9700F6F99B /* Root */,
 				35F90B6F2AF62697003C96D7 /* Main */,
+				3557440B2B2A7CB700ED2637 /* ExerciseCounter */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -655,15 +701,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355744132B2A7DBB00ED2637 /* ExerciseCounterWorker.swift in Sources */,
 				350A4B9B2B1FF3EA009E988C /* OSLog+Extension.swift in Sources */,
 				357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */,
 				350A4B9D2B1FF5D2009E988C /* ErrorTableViewCell.swift in Sources */,
 				3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */,
 				357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */,
+				355744122B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift in Sources */,
 				3568E3242B156B230026F6FD /* MainView.swift in Sources */,
+				35D50EAE2B3BB4C7008BFB70 /* RestTimer.swift in Sources */,
 				357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */,
 				358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */,
+				3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */,
 				356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */,
+				355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				358673172B15B83600AAE6C7 /* Training.swift in Sources */,
@@ -675,11 +726,13 @@
 				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
 				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
+				355744152B2A7DBB00ED2637 /* ExerciseCounterModels.swift in Sources */,
 				357A35832B142D3300F991B6 /* MainCoordinator.swift in Sources */,
 				35C90D0B2B0EE2A90055FA62 /* User.swift in Sources */,
 				357A357A2B140AF000F991B6 /* KeychainError.swift in Sources */,
 				357A358E2B143A1600F991B6 /* CoordinatorType.swift in Sources */,
 				35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */,
+				355744172B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift in Sources */,
 				356792C42B186CAE005B83D5 /* ProgramTableHeaderView.swift in Sources */,
 				357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */,
 				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
@@ -688,8 +741,11 @@
 				350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */,
 				350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */,
 				350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */,
+				3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */,
+				3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
 				35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */,
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,
+				355744142B2A7DBB00ED2637 /* ExerciseCounterRouter.swift in Sources */,
 				357A35782B13821F00F991B6 /* Auth.swift in Sources */,
 				357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */,
 				350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */,

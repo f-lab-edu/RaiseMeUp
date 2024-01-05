@@ -11,4 +11,5 @@ enum CoordinatorType {
     case root
     case login
     case main
+    case exerciseCounter
 }
