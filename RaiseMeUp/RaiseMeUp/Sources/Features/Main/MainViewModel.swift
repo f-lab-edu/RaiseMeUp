@@ -23,7 +23,7 @@ final class MainViewModel {
         loadPrograms()
     }
     
-    private func loadPrograms() {
+    func loadPrograms() {
         Task {
             let result = await loadData()
             DispatchQueue.main.async {

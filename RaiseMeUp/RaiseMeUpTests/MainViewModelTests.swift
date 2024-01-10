@@ -52,6 +52,14 @@ class MockViewModelTests: XCTestCase {
         
         mockUseCase = MockTrainingUseCase()
         viewModel = MainViewModel(useCase: mockUseCase)
+        
+        viewModel.loadPrograms()
+        let expectation = XCTestExpectation(description: "Load programs")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
     }
     
     override func tearDown() {
@@ -78,6 +86,7 @@ class MockViewModelTests: XCTestCase {
         // When
         let sectionCount = viewModel.numberOfSection()
         
+        // Then
         XCTAssertTrue(mockUseCase.getProgramListCalled, "프로그램 호출 메서드가 불렸다.")
         XCTAssertEqual(expectedSectionCount, sectionCount, "리스트의 섹션 갯수가 동일하게 떨어진다.")
     }
