@@ -1,5 +1,5 @@
 //
-//  ProgramTableViewCell.swift
+//  ProgramCollectionViewCell.swift
 //  RaiseMeUp
 //
 //  Created by 홍석현 on 11/28/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProgramTableViewCell: UITableViewCell {
+final class ProgramCollectionViewCell: UICollectionView {
     
     private enum Metric {
         static let horizontalMargin = 16.0

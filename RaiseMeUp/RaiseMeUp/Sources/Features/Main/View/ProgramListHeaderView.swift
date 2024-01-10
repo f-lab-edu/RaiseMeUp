@@ -1,5 +1,5 @@
 //
-//  ProgramTableHeaderView.swift
+//  ProgramListHeaderView.swift
 //  RaiseMeUp
 //
 //  Created by 홍석현 on 11/30/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProgramTableHeaderView: UITableViewHeaderFooterView {
+final class ProgramListHeaderView: UICollectionReusableView {
     
     private enum Metric {
         static let horizontalMargin: CGFloat = 16
@@ -33,11 +33,8 @@ final class ProgramTableHeaderView: UITableViewHeaderFooterView {
         return label
     }()
     
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
-        
-        addSubviews()
-        layout()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     required init?(coder: NSCoder) {

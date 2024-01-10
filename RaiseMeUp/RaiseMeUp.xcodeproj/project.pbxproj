@@ -14,7 +14,7 @@
 		350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
 		350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
 		350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
-		350FCFB42B15CCDA00B4738A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */; };
+		350FCFB42B15CCDA00B4738A /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */; };
 		351871AD2B20348500E79C4F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 351871AC2B20348500E79C4F /* Localizable.xcstrings */; };
 		3528C4372B3F06BC004148AB /* RUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528C4362B3F06BC004148AB /* RUButton.swift */; };
 		355744122B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
@@ -36,7 +36,7 @@
 		3563A7742AF085270037C029 /* RaiseMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */; };
 		3563A7762AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */; };
 		356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
-		356792C42B186CAE005B83D5 /* ProgramTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramTableHeaderView.swift */; };
+		356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
 		3568E3242B156B230026F6FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
 		357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
 		357A35722B13803400F991B6 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
@@ -97,7 +97,7 @@
 		350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSource.swift; sourceTree = "<group>"; };
 		350FCFB12B15C93500B4738A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCollectionViewCell.swift; sourceTree = "<group>"; };
 		351871AC2B20348500E79C4F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		351871AE2B2034EB00E79C4F /* ko-KR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ko-KR"; path = "ko-KR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		3528C4362B3F06BC004148AB /* RUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUButton.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITests.swift; sourceTree = "<group>"; };
 		3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseMeUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCellModel.swift; sourceTree = "<group>"; };
-		356792C32B186CAE005B83D5 /* ProgramTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableHeaderView.swift; sourceTree = "<group>"; };
+		356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListHeaderView.swift; sourceTree = "<group>"; };
 		3568E3232B156B230026F6FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		357A356E2B137D0000F991B6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		357A35712B13803400F991B6 /* KeychainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainType.swift; sourceTree = "<group>"; };
@@ -207,9 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				3568E3232B156B230026F6FD /* MainView.swift */,
-				350FCFB32B15CCDA00B4738A /* ProgramTableViewCell.swift */,
+				350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */,
 				356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */,
-				356792C32B186CAE005B83D5 /* ProgramTableHeaderView.swift */,
+				356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -736,7 +736,7 @@
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
 				350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */,
 				357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */,
-				350FCFB42B15CCDA00B4738A /* ProgramTableViewCell.swift in Sources */,
+				350FCFB42B15CCDA00B4738A /* ProgramCollectionViewCell.swift in Sources */,
 				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
 				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
@@ -747,7 +747,7 @@
 				357A358E2B143A1600F991B6 /* CoordinatorType.swift in Sources */,
 				35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */,
 				355744172B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift in Sources */,
-				356792C42B186CAE005B83D5 /* ProgramTableHeaderView.swift in Sources */,
+				356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */,
 				357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */,
 				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
 				358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */,
