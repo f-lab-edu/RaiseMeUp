@@ -14,12 +14,12 @@ struct ProgramTableViewCellModel {
     
     init(_ model: DailyRoutine) {
         self.day = model.day
-        self.isRestDay = model.program.isEmpty
+        self.isRestDay = model.routine.isEmpty
         
-        if model.program.isEmpty {
+        if model.routine.isEmpty {
             self.routine = "오늘은 쉬는 날"
         } else {
-            let result = model.program.map { String($0) }.joined(separator: "-")
+            let result = model.routine.map { String($0) }.joined(separator: "-")
             self.routine = result
         }
     }

@@ -35,7 +35,7 @@ final class MainViewModel {
     func loadData() async -> [TrainingLevel] {
         do {
             let result = try await useCase.getProgramList()
-            return result.levels
+            return result.program
         } catch {
             OSLog.message(.error, log: .network, error.localizedDescription)
             return [] 
@@ -56,6 +56,6 @@ final class MainViewModel {
     }
     
     func didSelectRowAt(at indexPath: IndexPath) {
-        self.coordinator?.presentExerciseCounter(routine: program[indexPath.section].routine[indexPath.row].program)
+        self.coordinator?.presentExerciseCounter(routine: program[indexPath.section].routine[indexPath.row].routine)
     }
 }

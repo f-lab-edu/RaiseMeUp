@@ -12,9 +12,9 @@ struct PullUpProgramDTO: Decodable {
 }
 
 extension PullUpProgramDTO {
-    func toDomain() -> PullUpTrainingPlan {
-        return PullUpTrainingPlan(
-            levels: programs.map { $0.toDomain() }
+    func toDomain() -> PullUpProgram {
+        return PullUpProgram(
+            program: programs.map { $0.toDomain() }
         )
     }
 }
@@ -31,7 +31,7 @@ extension ProgramDTO {
         let routine = self.schedule.enumerated().map { day, program in
             return DailyRoutine(
                 day: "Day \(day + 1)",
-                program: program.compactMap { $0 }
+                routine: program.compactMap { $0 }
             )
         }
         return TrainingLevel(

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TrainingRepositoryProtocol {
-    func trainingProgram() async throws -> PullUpTrainingPlan
+    func trainingProgram() async throws -> PullUpProgram
 }

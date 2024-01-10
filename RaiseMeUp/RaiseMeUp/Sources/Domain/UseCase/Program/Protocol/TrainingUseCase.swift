@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TrainingUseCase {
-    func getProgramList() async throws -> PullUpTrainingPlan
+    func getProgramList() async throws -> PullUpProgram
 }

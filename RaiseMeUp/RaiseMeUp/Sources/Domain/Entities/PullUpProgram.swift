@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PullUpTrainingPlan {
-    let levels: [TrainingLevel]
+struct PullUpProgram {
+    let program: [TrainingLevel]
 }
 
 struct TrainingLevel {
@@ -20,5 +20,5 @@ struct TrainingLevel {
 
 struct DailyRoutine {
     let day: String
-    let program: [Int]
+    let routine: [Int]
 }
