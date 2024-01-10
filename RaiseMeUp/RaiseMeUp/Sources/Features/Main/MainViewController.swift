@@ -45,7 +45,7 @@ final class MainViewController: UIViewController {
         viewModel.$program
             .receive(on: RunLoop.main)
             .sink { [weak self] _ in
-                self?.mainView.programTableView.reloadData()
+                self?.mainView.programListView.reloadData()
             }
             .store(in: &cancellables)
     }

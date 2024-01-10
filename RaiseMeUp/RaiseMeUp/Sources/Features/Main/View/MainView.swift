@@ -13,7 +13,7 @@ public enum ElementKind {
 
 final class MainView: UIView {
 
-    let programListView: UICollectionView!
+    var programListView: UICollectionView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,21 +37,20 @@ final class MainView: UIView {
     private func configure() {
         programListView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         programListView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        programListView.delegate = self
     }
     
     // MARK: - Add Subviews
     private func addSubviews() {
-        self.addSubview(programTableView)
+        self.addSubview(programListView)
     }
     
     // MARK: - Layout
     private func layout() {
         NSLayoutConstraint.activate([
-            programTableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            programTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-            programTableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
-            programTableView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor)
+            programListView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            programListView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            programListView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
+            programListView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor)
         ])
     }
 }

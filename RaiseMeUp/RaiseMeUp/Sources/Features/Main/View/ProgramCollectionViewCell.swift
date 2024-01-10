@@ -50,15 +50,20 @@ final class ProgramCollectionViewCell: UICollectionView {
         return view
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
         
         addSubviews()
-        layout()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func updateConstraints() {
+        layout()
+        
+        super.updateConstraints()
     }
     
     public func bind(_ cellModel: ProgramTableViewCellModel) {
@@ -74,8 +79,8 @@ final class ProgramCollectionViewCell: UICollectionView {
             .forEach {
                 self.titleStackView.addArrangedSubview($0)
             }
-        self.contentView.addSubview(titleStackView)
-        self.contentView.addSubview(separatorView)
+        self.addSubview(titleStackView)
+        self.addSubview(separatorView)
     }
     
     // MARK: - Layout
