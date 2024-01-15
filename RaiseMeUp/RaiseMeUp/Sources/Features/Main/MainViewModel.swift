@@ -7,36 +7,38 @@
 
 import Foundation
 import OSLog
+import Combine
 
 final class MainViewModel {
     private let useCase: TrainingUseCase
     
-    private var program: [TrainingLevel] = []
+    @Published public var program: [TrainingLevel] = []
+    private var cancellables = Set<AnyCancellable>()
+    
     public weak var coordinator: MainCoordinatorProtocol?
     
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
-
-        initializeData()
-    }
-    
-    private func initializeData() {
-        guard case let .success(plan) = useCase.getProgramList() else { return }
-        self.program = plan.levels
-    }
-    
-    func loadData() -> [TrainingLevel] {
-        let result = useCase.getProgramList()
-        guard case let .success(data) = result else {
-            return []
-        }
         
-        switch result {
-        case .success(let data):
-            return data.levels
-        case .failure(let error):
-            OSLog.message(.error, error.localizedDescription)
-            return []
+        loadPrograms()
+    }
+    
+    private func loadPrograms() {
+        Task {
+            let result = await loadData()
+            DispatchQueue.main.async {
+                self.program = result
+            }
+        }
+    }
+    
+    func loadData() async -> [TrainingLevel] {
+        do {
+            let result = try await useCase.getProgramList()
+            return result.levels
+        } catch {
+            OSLog.message(.error, log: .network, error.localizedDescription)
+            return [] 
         }
     }
     

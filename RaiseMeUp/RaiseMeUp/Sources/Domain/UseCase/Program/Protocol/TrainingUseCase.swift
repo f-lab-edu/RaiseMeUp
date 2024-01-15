@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TrainingUseCase {
-    func getProgramList() -> Result<PullUpTrainingPlan, LocalError>
+    func getProgramList() async throws -> PullUpTrainingPlan
 }
