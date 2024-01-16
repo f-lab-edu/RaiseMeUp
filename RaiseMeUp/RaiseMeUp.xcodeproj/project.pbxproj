@@ -38,6 +38,7 @@
 		356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
 		356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
 		3568E3242B156B230026F6FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
+		357790432B56237000539C0B /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
 		357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
 		357A35722B13803400F991B6 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
 		357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
@@ -126,6 +127,7 @@
 		356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCellModel.swift; sourceTree = "<group>"; };
 		356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListHeaderView.swift; sourceTree = "<group>"; };
 		3568E3232B156B230026F6FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		357790422B56237000539C0B /* AnyModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyModelStore.swift; sourceTree = "<group>"; };
 		357A356E2B137D0000F991B6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		357A35712B13803400F991B6 /* KeychainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainType.swift; sourceTree = "<group>"; };
 		357A35742B13821000F991B6 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				357A35712B13803400F991B6 /* KeychainType.swift */,
 				357A35792B140AF000F991B6 /* KeychainError.swift */,
 				357F1DBA2B14872D006F9CFB /* ReusableView.swift */,
+				357790422B56237000539C0B /* AnyModelStore.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */,
 				357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */,
 				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
+				357790432B56237000539C0B /* AnyModelStore.swift in Sources */,
 				358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */,
 				355DFB942B3DB0AC0025EB89 /* Provider.swift in Sources */,
 				35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */,
