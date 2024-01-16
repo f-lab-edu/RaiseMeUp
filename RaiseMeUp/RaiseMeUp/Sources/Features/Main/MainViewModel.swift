@@ -12,29 +12,34 @@ import Combine
 final class MainViewModel {
     private let useCase: TrainingUseCase
     
-    @Published public var program: [TrainingLevel] = []
+    var sectionStore: AnyModelStore<TrainingLevel> = AnyModelStore([])
+    var routineStore: AnyModelStore<DailyRoutine> = AnyModelStore([])
     private var cancellables = Set<AnyCancellable>()
     
     public weak var coordinator: MainCoordinatorProtocol?
     
+    var isFinishLoaded = PassthroughSubject<[TrainingLevel.ID], NSError>()
+    
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
         
-        loadPrograms()
+        self.loadPrograms()
     }
     
     func loadPrograms() {
         Task {
             let result = await loadData()
-            DispatchQueue.main.async {
-                self.program = result
-            }
+            sectionStore = AnyModelStore(result)
+            routineStore = AnyModelStore(result.flatMap(\.routine))
+            
+            isFinishLoaded.send(result.map(\.id))
         }
     }
     
     func loadData() async -> [TrainingLevel] {
         do {
             let result = try await useCase.getProgramList()
+            OSLog.message(.info, "받아온 데이터 \(result)")
             return result.program
         } catch {
             OSLog.message(.error, log: .network, error.localizedDescription)
@@ -42,20 +47,7 @@ final class MainViewModel {
         }
     }
     
-    func numberOfSection() -> Int {
-        return program.count
-    }
-    
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return program[section].routine.count
-    }
-    
-    func section(at section: Int) -> TrainingLevel {
-        let section = program[section]
-        return section
-    }
-    
     func didSelectRowAt(at indexPath: IndexPath) {
-        self.coordinator?.presentExerciseCounter(routine: program[indexPath.section].routine[indexPath.row].routine)
+        
     }
 }

@@ -11,14 +11,15 @@ struct PullUpProgram {
     let program: [TrainingLevel]
 }
 
-struct TrainingLevel {
+struct TrainingLevel: Identifiable {
     let id: String
     let name: String
     let description: String
     let routine: [DailyRoutine]
 }
 
-struct DailyRoutine {
+struct DailyRoutine: Identifiable {
+    let id: UUID = UUID()
     let day: String
     let routine: [Int]
 }
