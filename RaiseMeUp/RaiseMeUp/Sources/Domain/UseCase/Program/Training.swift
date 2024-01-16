@@ -1,5 +1,5 @@
 //
-//  Tranining.swift
+//  Training.swift
 //  RaiseMeUp
 //
 //  Created by 홍석현 on 11/28/23.
