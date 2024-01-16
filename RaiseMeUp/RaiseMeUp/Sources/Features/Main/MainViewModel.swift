@@ -47,7 +47,8 @@ final class MainViewModel {
         }
     }
     
-    func didSelectRowAt(at indexPath: IndexPath) {
-        
+    func didSelectItemAt(_ itemID: DailyRoutine.ID) {
+        guard let routine = routineStore.fetchByID(itemID) else { return }
+        coordinator?.presentExerciseCounter(routine: routine.routine)
     }
 }

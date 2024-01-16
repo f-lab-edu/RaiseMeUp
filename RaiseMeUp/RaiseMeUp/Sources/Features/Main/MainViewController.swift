@@ -36,6 +36,8 @@ final class MainViewController: UIViewController {
 
     override func loadView() {
         self.view = MainView()
+        
+        mainView.programListView.delegate = self
         configureDataSource()
     }
     
@@ -99,5 +101,15 @@ extension MainViewController {
         dataSource.supplementaryViewProvider = { collectionView, _, indexPath in
             return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
         }
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        guard let selectedItemIdentifier = dataSource.itemIdentifier(for: indexPath) else { return }
+        self.viewModel.didSelectItemAt(selectedItemIdentifier)
     }
 }
