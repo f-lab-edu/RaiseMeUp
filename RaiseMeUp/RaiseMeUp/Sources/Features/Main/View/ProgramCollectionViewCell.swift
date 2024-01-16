@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProgramCollectionViewCell: UICollectionView {
+final class ProgramCollectionViewCell: UICollectionViewCell {
     
     private enum Metric {
         static let horizontalMargin = 16.0
@@ -50,10 +50,11 @@ final class ProgramCollectionViewCell: UICollectionView {
         return view
     }()
     
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(frame: frame, collectionViewLayout: layout)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         addSubviews()
+        layout()
     }
     
     required init?(coder: NSCoder) {
@@ -61,8 +62,6 @@ final class ProgramCollectionViewCell: UICollectionView {
     }
     
     override func updateConstraints() {
-        layout()
-        
         super.updateConstraints()
     }
     
@@ -71,6 +70,7 @@ final class ProgramCollectionViewCell: UICollectionView {
         self.routineLabel.text = cellModel.routine
         
         self.routineLabel.textColor = cellModel.isRestDay ? .systemGreen : .label
+        self.isUserInteractionEnabled = cellModel.isRestDay == false
     }
     
     // MARK: - Add Subviews

@@ -35,6 +35,9 @@ final class ProgramListHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        addSubviews()
+        layout()
     }
     
     required init?(coder: NSCoder) {

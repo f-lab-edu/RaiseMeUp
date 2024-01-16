@@ -36,6 +36,7 @@ final class MainView: UIView {
     
     private func configure() {
         programListView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        programListView.translatesAutoresizingMaskIntoConstraints = false 
         programListView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
