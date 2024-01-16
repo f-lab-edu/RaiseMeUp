@@ -9,6 +9,7 @@ import UIKit
 
 public enum ElementKind {
     static public let sectionHeader = "section-header-element-kind"
+    static public let backgroundDecoration = "backgroundDecoration"
 }
 
 final class MainView: UIView {
@@ -36,7 +37,7 @@ final class MainView: UIView {
     
     private func configure() {
         programListView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-        programListView.translatesAutoresizingMaskIntoConstraints = false 
+        programListView.translatesAutoresizingMaskIntoConstraints = false
         programListView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
@@ -77,8 +78,13 @@ extension MainView {
                 subitem: item,
                 count: 1
             )
+            let backgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: ElementKind.backgroundDecoration)
+            backgroundDecoration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 40, trailing: 16)
             
             let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0)
+            section.decorationItems = [backgroundDecoration]
+            
             let headerSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1.0),
                 heightDimension: .estimated(70)
@@ -97,6 +103,10 @@ extension MainView {
         let layout = UICollectionViewCompositionalLayout(
             sectionProvider: sectionProvider,
             configuration: config
+        )
+        layout.register(
+            RoundedBackgroundView.self,
+            forDecorationViewOfKind: ElementKind.backgroundDecoration
         )
         return layout
     }

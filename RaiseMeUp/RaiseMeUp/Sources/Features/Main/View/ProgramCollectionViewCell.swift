@@ -10,17 +10,16 @@ import UIKit
 final class ProgramCollectionViewCell: UICollectionViewCell {
     
     private enum Metric {
-        static let horizontalMargin = 16.0
-        static let verticalMargin = 8.0
-        static let spacing = 4.0
-        static let dayLabelWidth = 70.0
+        static let horizontalMargin = 32.0
+        static let verticalMargin = 16.0
+        static let spacing = 8.0
     }
     
     private let dayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .label
-        label.font = .preferredFont(forTextStyle: .caption1)
+        label.font = .monospacedDigitSystemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .left
         return label
     }()
@@ -29,7 +28,8 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false 
         label.textColor = .label
-        label.font = .preferredFont(forTextStyle: .body)
+        label.font = .monospacedDigitSystemFont(ofSize: 20, weight: .regular)
+        label.textAlignment = .right
         return label
     }()
     
@@ -39,7 +39,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         stack.axis = .horizontal
         stack.spacing = Metric.spacing
         stack.alignment = .center
-        stack.distribution = .fillProportionally
+        stack.distribution = .fill
         return stack
     }()
     
@@ -60,11 +60,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    override func updateConstraints() {
-        super.updateConstraints()
-    }
-    
+
     public func bind(_ cellModel: ProgramTableViewCellModel) {
         self.dayLabel.text = cellModel.day
         self.routineLabel.text = cellModel.routine
@@ -87,8 +83,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     private func layout() {
         NSLayoutConstraint.activate([
             dayLabel.topAnchor.constraint(equalTo: self.titleStackView.topAnchor),
-            dayLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor),
-            dayLabel.widthAnchor.constraint(equalToConstant: Metric.dayLabelWidth)
+            dayLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([

@@ -10,8 +10,8 @@ import UIKit
 final class ProgramListHeaderView: UICollectionReusableView {
     
     private enum Metric {
-        static let horizontalMargin: CGFloat = 16
-        static let verticalMargin: CGFloat = 4
+        static let horizontalMargin: CGFloat = 32
+        static let verticalMargin: CGFloat = 16
         static let labelsSpacing: CGFloat = 8
     }
     

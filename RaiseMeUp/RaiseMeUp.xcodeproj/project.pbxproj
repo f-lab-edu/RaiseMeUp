@@ -16,6 +16,7 @@
 		350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
 		350FCFB42B15CCDA00B4738A /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */; };
 		351871AD2B20348500E79C4F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 351871AC2B20348500E79C4F /* Localizable.xcstrings */; };
+		351BBE122B565D2A00F91898 /* RoundedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */; };
 		3528C4372B3F06BC004148AB /* RUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528C4362B3F06BC004148AB /* RUButton.swift */; };
 		355744122B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
 		355744132B2A7DBB00ED2637 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
@@ -101,6 +102,7 @@
 		350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCollectionViewCell.swift; sourceTree = "<group>"; };
 		351871AC2B20348500E79C4F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		351871AE2B2034EB00E79C4F /* ko-KR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ko-KR"; path = "ko-KR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackgroundView.swift; sourceTree = "<group>"; };
 		3528C4362B3F06BC004148AB /* RUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUButton.swift; sourceTree = "<group>"; };
 		3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterPresenter.swift; sourceTree = "<group>"; };
 		3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterWorker.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */,
 				356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */,
 				356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */,
+				351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */,
 				355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
+				351BBE122B565D2A00F91898 /* RoundedBackgroundView.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				358673172B15B83600AAE6C7 /* Training.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
