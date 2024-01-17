@@ -23,12 +23,7 @@ final class MainView: UIView {
         
         configure()
         addSubviews()
-    }
-    
-    override func updateConstraints() {
         layout()
-        
-        super.updateConstraints()
     }
     
     required init?(coder: NSCoder) {
