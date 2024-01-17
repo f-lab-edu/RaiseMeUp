@@ -29,12 +29,14 @@ struct ProgramDTO: Decodable {
 extension ProgramDTO {
     func toDomain() -> TrainingLevel {
         let routine = self.schedule.enumerated().map { day, program in
-            var dayString: String
-            if day < 9 {
-                dayString = "Day 0\(day + 1)"
-            } else {
-                dayString = "Day \(day + 1)"
+            var dayString: String {
+                if day < 9 {
+                    return "Day 0\(day + 1)"
+                } else {
+                    return "Day \(day + 1)"
+                }
             }
+            
             return DailyRoutine(
                 day: dayString,
                 routine: program.compactMap { $0 }
