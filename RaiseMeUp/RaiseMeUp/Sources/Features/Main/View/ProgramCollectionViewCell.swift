@@ -1,5 +1,5 @@
 //
-//  ProgramTableViewCell.swift
+//  ProgramCollectionViewCell.swift
 //  RaiseMeUp
 //
 //  Created by 홍석현 on 11/28/23.
@@ -7,20 +7,19 @@
 
 import UIKit
 
-final class ProgramTableViewCell: UITableViewCell {
+final class ProgramCollectionViewCell: UICollectionViewCell {
     
     private enum Metric {
-        static let horizontalMargin = 16.0
-        static let verticalMargin = 8.0
-        static let spacing = 4.0
-        static let dayLabelWidth = 70.0
+        static let horizontalMargin = 32.0
+        static let verticalMargin = 16.0
+        static let spacing = 8.0
     }
     
     private let dayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .label
-        label.font = .preferredFont(forTextStyle: .caption1)
+        label.font = .monospacedDigitSystemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .left
         return label
     }()
@@ -29,7 +28,8 @@ final class ProgramTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false 
         label.textColor = .label
-        label.font = .preferredFont(forTextStyle: .body)
+        label.font = .monospacedDigitSystemFont(ofSize: 20, weight: .regular)
+        label.textAlignment = .right
         return label
     }()
     
@@ -39,7 +39,7 @@ final class ProgramTableViewCell: UITableViewCell {
         stack.axis = .horizontal
         stack.spacing = Metric.spacing
         stack.alignment = .center
-        stack.distribution = .fillProportionally
+        stack.distribution = .fill
         return stack
     }()
     
@@ -50,8 +50,8 @@ final class ProgramTableViewCell: UITableViewCell {
         return view
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         addSubviews()
         layout()
@@ -60,12 +60,13 @@ final class ProgramTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+
     public func bind(_ cellModel: ProgramTableViewCellModel) {
         self.dayLabel.text = cellModel.day
         self.routineLabel.text = cellModel.routine
         
         self.routineLabel.textColor = cellModel.isRestDay ? .systemGreen : .label
+        self.isUserInteractionEnabled = cellModel.isRestDay == false
     }
     
     // MARK: - Add Subviews
@@ -74,16 +75,15 @@ final class ProgramTableViewCell: UITableViewCell {
             .forEach {
                 self.titleStackView.addArrangedSubview($0)
             }
-        self.contentView.addSubview(titleStackView)
-        self.contentView.addSubview(separatorView)
+        self.addSubview(titleStackView)
+        self.addSubview(separatorView)
     }
     
     // MARK: - Layout
     private func layout() {
         NSLayoutConstraint.activate([
             dayLabel.topAnchor.constraint(equalTo: self.titleStackView.topAnchor),
-            dayLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor),
-            dayLabel.widthAnchor.constraint(equalToConstant: Metric.dayLabelWidth)
+            dayLabel.bottomAnchor.constraint(equalTo: self.titleStackView.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([

@@ -10,7 +10,7 @@ import Foundation
 
 @testable import RaiseMeUp
 
-let mockTrainingPlan = PullUpTrainingPlan(levels: [
+let mockTrainingPlan = PullUpProgram(levels: [
     TrainingLevel(id: "0", name: "비기너", description: "시작하는 사람들을 위한 운동 플랜", routine: [
         DailyRoutine(day: "1일차", program: [3, 2, 2, 1]),
         DailyRoutine(day: "2일차", program: [4, 3, 2, 1]),
@@ -34,9 +34,9 @@ let mockTrainingPlan = PullUpTrainingPlan(levels: [
 
 class MockTrainingUseCase: TrainingUseCase {
     var getProgramListCalled = false
-    var mockProgramListResult: PullUpTrainingPlan = mockTrainingPlan
+    var mockProgramListResult: PullUpProgram = mockTrainingPlan
     
-    func getProgramList() async throws -> PullUpTrainingPlan {
+    func getProgramList() async throws -> PullUpProgram {
         getProgramListCalled = true
         return mockProgramListResult
     }
@@ -76,12 +76,12 @@ class MockViewModelTests: XCTestCase {
         let trainingPlan = await viewModel.loadData()
         
         XCTAssertTrue(mockUseCase.getProgramListCalled, "프로그램 호출 메서드가 불렸다.")
-        XCTAssertEqual(trainingPlan.count, expectedTrainingPlan.levels.count, "예상하는 데이터가 들어왔다.")
+        XCTAssertEqual(trainingPlan.count, expectedTrainingPlan.program.count, "예상하는 데이터가 들어왔다.")
     }
     
     func test_섹션의갯수가유즈케이스에있는데이터의갯수와동일하다() {
         // Given
-        let expectedSectionCount = mockTrainingPlan.levels.count
+        let expectedSectionCount = mockTrainingPlan.program.count
         
         // When
         let sectionCount = viewModel.numberOfSection()

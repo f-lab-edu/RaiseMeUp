@@ -7,19 +7,23 @@
 
 import UIKit
 import Combine
+import OSLog
 
 final class MainViewController: UIViewController {
+    typealias TrainingDataSource = UICollectionViewDiffableDataSource<TrainingLevel.ID, DailyRoutine.ID>
     
     private var mainView: MainView {
         return self.view as! MainView
     }
-    
+
     private let viewModel: MainViewModel
     private var cancellables = Set<AnyCancellable>()
     
     private let titleLocalized = String(localized: "MAIN_TITLE_LABEL",
     defaultValue: "Just Do It!",
     comment: "메인 화면의 타이틀 텍스트")
+    
+    var dataSource: TrainingDataSource!
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
@@ -33,89 +37,80 @@ final class MainViewController: UIViewController {
 
     override func loadView() {
         self.view = MainView()
+        
+        mainView.programListView.delegate = self
+        configureDataSource()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.programTableView.delegate = self
-        mainView.programTableView.dataSource = self
-        
         bindViewModel()
     }
     
     private func bindViewModel() {
-        viewModel.$program
-            .receive(on: RunLoop.main)
-            .sink { [weak self] _ in
-                self?.mainView.programTableView.reloadData()
+        viewModel.isFinishLoaded
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    OSLog.message(.info, log: .info, "Stream completed successfully.")
+                case .failure(let error):
+                    OSLog.message(.error, log: .error, "Stream encountered an error: \(error)")
+                }
+            } receiveValue: { [weak self] value in
+                self?.apply(value)
             }
             .store(in: &cancellables)
     }
-}
-
-// MARK: - UITableViewDelegate
-extension MainViewController: UITableViewDelegate {
-    func tableView(
-        _ tableView: UITableView,
-        viewForHeaderInSection section: Int
-    ) -> UIView? {
-        let headerView = ProgramTableHeaderView()
-        let section = viewModel.section(at: section)
-        headerView.bind(section.name, subTitle: section.description)
-        return headerView
-    }
     
-    func tableView(
-        _ tableView: UITableView,
-        heightForHeaderInSection section: Int
-    ) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    func tableView(
-        _ tableView: UITableView,
-        estimatedHeightForHeaderInSection section: Int
-    ) -> CGFloat {
-        return 50
-    }
-    
-    func tableView(
-        _ tableView: UITableView,
-        didSelectRowAt indexPath: IndexPath
-    ) {
-        viewModel.didSelectRowAt(at: indexPath)
-    }
-}
-
-// MARK: - UITableViewDataSource
-extension MainViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSection()
-    }
-    
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
-        return viewModel.numberOfRowsInSection(section)
-    }
-    
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: ProgramTableViewCell.defaultReuseIdentifier
-        ) as? ProgramTableViewCell else {
-            return UITableViewCell()
+    func apply(_ sectionIdentifiers: [TrainingLevel.ID]) {
+        var currentSnapshot = dataSource.snapshot()
+        
+        for sectionIdentifier in sectionIdentifiers {
+            currentSnapshot.appendSections([sectionIdentifier])
+            guard let section = self.viewModel.sectionStore.fetchByID(sectionIdentifier) else { return }
+            let items = section.routine
+            currentSnapshot.appendItems(items.map(\.id))
         }
-        let section = viewModel.section(at: indexPath.section)
-        let item = section.routine[indexPath.row]
-        let cellModel = ProgramTableViewCellModel(item)
+        dataSource.apply(currentSnapshot, animatingDifferences: true)
+    }
+}
+
+extension MainViewController {
+    private func configureDataSource() {
+        let headerRegistration = UICollectionView.SupplementaryRegistration<ProgramListHeaderView>(elementKind: ElementKind.sectionHeader) { [weak self] supplementaryView, _, indexPath in
+            
+            guard let sectionID = self?.dataSource.snapshot().sectionIdentifiers[indexPath.section],
+                  let section = self?.viewModel.sectionStore.fetchByID(sectionID)
+            else { return }
+            
+            supplementaryView.bind(
+                section.name,
+                subTitle: section.description
+            )
+        }
+        let cellRegistration = UICollectionView.CellRegistration<ProgramCollectionViewCell, DailyRoutine.ID> { [weak self] cell, indexPath, routineID in
+            guard let routine = self?.viewModel.routineStore.fetchByID(routineID) else { return }
+            let viewModel = ProgramTableViewCellModel(routine)
+            cell.bind(viewModel)
+        }
         
-        cell.bind(cellModel)
+        dataSource = UICollectionViewDiffableDataSource<TrainingLevel.ID, DailyRoutine.ID>(collectionView: mainView.programListView) { collectionView, indexPath, identifier in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
+        }
         
-        return cell
+        dataSource.supplementaryViewProvider = { collectionView, _, indexPath in
+            return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
+        }
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        guard let selectedItemIdentifier = dataSource.itemIdentifier(for: indexPath) else { return }
+        self.viewModel.didSelectItemAt(selectedItemIdentifier)
     }
 }

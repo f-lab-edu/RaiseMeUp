@@ -15,7 +15,7 @@ struct TrainingRepository: TrainingRepositoryProtocol {
         self.trainingDataSource = trainingDataSource
     }
     
-    func trainingProgram() async throws -> PullUpTrainingPlan {
+    func trainingProgram() async throws -> PullUpProgram {
         return try await trainingDataSource.trainingProgram().toDomain()
     }
 }

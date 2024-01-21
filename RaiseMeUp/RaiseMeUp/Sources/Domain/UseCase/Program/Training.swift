@@ -15,7 +15,7 @@ struct Training: TrainingUseCase {
         self.repository = repository
     }
     
-    func getProgramList() async throws -> PullUpTrainingPlan {
+    func getProgramList() async throws -> PullUpProgram {
         return try await repository.trainingProgram()
     }
 }
