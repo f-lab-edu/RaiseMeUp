@@ -14,5 +14,5 @@ public enum TrainingError: Error {
 }
 
 protocol TrainingUseCase {
-    func getProgramList() async throws -> PullUpProgram
+    func getProgramList() async -> Result<PullUpProgram, TrainingError>
 }
