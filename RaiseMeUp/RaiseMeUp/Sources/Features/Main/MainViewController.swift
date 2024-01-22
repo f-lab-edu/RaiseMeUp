@@ -10,6 +10,7 @@ import Combine
 import OSLog
 
 final class MainViewController: UIViewController {
+    typealias TrainingDataSource = UICollectionViewDiffableDataSource<TrainingLevel.ID, DailyRoutine.ID>
     
     private var mainView: MainView {
         return self.view as! MainView
@@ -22,7 +23,7 @@ final class MainViewController: UIViewController {
     defaultValue: "Just Do It!",
     comment: "메인 화면의 타이틀 텍스트")
     
-    var dataSource: UICollectionViewDiffableDataSource<TrainingLevel.ID, DailyRoutine.ID>!
+    var dataSource: TrainingDataSource!
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel

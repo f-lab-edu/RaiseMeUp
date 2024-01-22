@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoundedBackgroundView: UICollectionReusableView {
+final class RoundedBackgroundView: UICollectionReusableView {
     static let backgroundDecorationIdentifier = "backgroundDecoration"
     override init(frame: CGRect) {
         super.init(frame: frame)
