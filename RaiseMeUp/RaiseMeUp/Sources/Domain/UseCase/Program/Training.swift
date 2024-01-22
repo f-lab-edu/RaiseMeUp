@@ -18,6 +18,8 @@ public struct Training: TrainingUseCase {
     public func getProgramList() async -> Result<PullUpProgram, TrainingError> {
         do {
             let program = try await repository.trainingProgram()
+            guard !program.program.isEmpty else { return .failure(.emptyData) }
+            
             return .success(program)
         } catch let error as NetworkError {
             switch error {
