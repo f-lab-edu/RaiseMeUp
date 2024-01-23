@@ -9,6 +9,7 @@ import Foundation
 
 protocol ModelStore {
     associatedtype Model: Identifiable
+    var isEmpty: Bool
     
     func fetchByID(_ id: Model.ID) -> Model?
 }
@@ -16,6 +17,9 @@ protocol ModelStore {
 class AnyModelStore<Model: Identifiable>: ModelStore {
     
     private var models = [Model.ID: Model]()
+    var isEmpty: Bool {
+        return models.isEmpty
+    }
     
     init(_ models: [Model]) {
         self.models = models.groupingByUniqueID()
