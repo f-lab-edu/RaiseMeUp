@@ -20,6 +20,7 @@ final class MainViewModel {
     
     var isFinishLoaded = PassthroughSubject<[TrainingLevel.ID], NSError>()
     var showEmptyViewSubject = PassthroughSubject<Bool, Never>()
+    var showErrorAlertSubject = PassthroughSubject<String, Never>()
     
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
@@ -51,7 +52,7 @@ final class MainViewModel {
             case .emptyData:
                 showEmptyView()
             case .notConnected, .unknown:
-                OSLog.message(.error, "인터넷 연결이 불안정합니다.\n다시 시도해주세요.")
+                showErrorAlert()
             }
             return []
         }
@@ -64,5 +65,9 @@ final class MainViewModel {
     
     func showEmptyView() {
         showEmptyViewSubject.send(true)
+    }
+    
+    func showErrorAlert() {
+        showErrorAlertSubject.send("인터넷 연결이 불안정합니다.\n다시 시도해주세요.")
     }
 }

@@ -76,4 +76,41 @@ class MockViewModelTests: XCTestCase {
         showEmptyViewSubscriber.cancel()
     }
     
+    func test_notConnected에러일경우_showErrorAlertSubject에이벤트가방출된다() async {
+        // given
+        let mockUseCase = MockTrainingUseCase(result: .failure(.notConnected))
+        let viewModel = MainViewModel(useCase: mockUseCase)
+        var didShowErrorAlert = false
+        let showErrorAlertSubscriber = viewModel.showErrorAlertSubject
+            .sink { _ in
+                didShowErrorAlert = true
+            }
+        
+        // when
+        _ = await viewModel.loadData()
+        
+        // then
+        XCTAssertTrue(didShowErrorAlert, "에러 알럿이 방출되지 않음")
+        
+        showErrorAlertSubscriber.cancel()
+    }
+    
+    func test_unknown에러일경우_showErrorAlertSubject에이벤트가방출된다() async {
+        // given
+        let mockUseCase = MockTrainingUseCase(result: .failure(.unknown))
+        let viewModel = MainViewModel(useCase: mockUseCase)
+        var didShowErrorAlert = false
+        let showErrorAlertSubscriber = viewModel.showErrorAlertSubject
+            .sink { _ in
+                didShowErrorAlert = true
+            }
+        
+        // when
+        _ = await viewModel.loadData()
+        
+        // then
+        XCTAssertTrue(didShowErrorAlert, "에러 알럿이 방출되지 않음")
+        
+        showErrorAlertSubscriber.cancel()
+    }
 }
