@@ -19,6 +19,7 @@ final class MainViewModel {
     public weak var coordinator: MainCoordinatorProtocol?
     
     var isFinishLoaded = PassthroughSubject<[TrainingLevel.ID], NSError>()
+    var showEmptyViewSubject = PassthroughSubject<Bool, Never>()
     
     init(useCase: TrainingUseCase) {
         self.useCase = useCase
@@ -40,11 +41,15 @@ final class MainViewModel {
         let result = await useCase.getProgramList()
         switch result {
         case .success(let data):
+            if data.program.isEmpty {
+                showEmptyView()
+                return []
+            }
             return data.program
         case .failure(let error):
             switch error {
             case .emptyData:
-                OSLog.message(.error, "데이터가 없음")
+                showEmptyView()
             case .notConnected, .unknown:
                 OSLog.message(.error, "인터넷 연결이 불안정합니다.\n다시 시도해주세요.")
             }
@@ -55,5 +60,9 @@ final class MainViewModel {
     func didSelectItemAt(_ itemID: DailyRoutine.ID) {
         guard let routine = routineStore.fetchByID(itemID) else { return }
         coordinator?.presentExerciseCounter(routine: routine.routine)
+    }
+    
+    func showEmptyView() {
+        showEmptyViewSubject.send(true)
     }
 }
