@@ -57,4 +57,23 @@ class MockViewModelTests: XCTestCase {
         showEmptyViewSubscriber.cancel()
     }
     
+    func test_emptyData에러가일경우_showEmptyView에true이벤트를보낸다() async {
+        // given
+        let mockUseCase = MockTrainingUseCase(result: .failure(.emptyData))
+        let viewModel = MainViewModel(useCase: mockUseCase)
+        var didShowEmptyView = false
+        let showEmptyViewSubscriber = viewModel.showEmptyViewSubject
+            .sink (receiveValue: { value in
+                didShowEmptyView = value
+            })
+
+        // when
+        _ = await viewModel.loadData()
+        
+        // then
+        XCTAssertTrue(didShowEmptyView, "데이터가 비었을 경우 showEmptyView가 호출되지 않음")
+        
+        showEmptyViewSubscriber.cancel()
+    }
+    
 }
