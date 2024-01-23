@@ -113,4 +113,54 @@ class MockViewModelTests: XCTestCase {
         
         showErrorAlertSubscriber.cancel()
     }
+    
+    func test_데이터가들어갔을경우에_sectionStore의데이터가empty가아니다() async {
+        // given
+        let mockUseCase = MockTrainingUseCase(result: .success(PullUpProgram(program: [
+            TrainingLevel(
+                id: "321532",
+                name: "11",
+                description: "dkjlf",
+                routine: [
+                    DailyRoutine(day: "1", routine: [1,2,3]),
+                    DailyRoutine(day: "1", routine: [1,2,3]),
+                    DailyRoutine(day: "1", routine: [1,2,3])
+                ]
+            ),
+            TrainingLevel(
+                id: "6546547",
+                name: "11",
+                description: "dkjlf",
+                routine: [
+                    DailyRoutine(day: "1", routine: [1,2,3]),
+                    DailyRoutine(day: "1", routine: [1,2,3]),
+                    DailyRoutine(day: "1", routine: [1,2,3])
+                ]
+            ),
+            TrainingLevel(
+                id: "234535",
+                name: "11",
+                description: "dkjlf",
+                routine: [
+                    DailyRoutine(day: "1", routine: [1,2,3]),
+                    DailyRoutine(day: "1", routine: [1,2,3]),
+                    DailyRoutine(day: "1", routine: [1,2,3])
+                ]
+            )
+        ])))
+        let viewModel = MainViewModel(useCase: mockUseCase)
+        let expectation = XCTestExpectation(description: "loadPrograms 완료")
+
+        // when
+        viewModel.loadPrograms()
+        
+        
+        
+        // then
+        XCTAssertFalse(viewModel.sectionStore.isEmpty, "section의 모델이 제대로 들어가지 않았다.")
+    }
+    
+    func test_데이터가들어갔을경우에_routineStore의데이터가empty가아니다() async {
+        
+    }
 }

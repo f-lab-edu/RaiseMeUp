@@ -9,7 +9,7 @@ import Foundation
 
 protocol ModelStore {
     associatedtype Model: Identifiable
-    var isEmpty: Bool
+    var isEmpty: Bool { get }
     
     func fetchByID(_ id: Model.ID) -> Model?
 }
