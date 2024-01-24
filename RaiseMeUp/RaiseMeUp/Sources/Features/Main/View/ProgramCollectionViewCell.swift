@@ -53,6 +53,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.isAccessibilityElement = true
         addSubviews()
         layout()
     }
@@ -67,6 +68,9 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         
         self.routineLabel.textColor = cellModel.isRestDay ? .systemGreen : .label
         self.isUserInteractionEnabled = cellModel.isRestDay == false
+        
+        self.accessibilityLabel = "오늘의 운동\(cellModel.day), 운동 순서는 \(cellModel.routine)입니다."
+        self.accessibilityHint = "더블탭하여 운동을 시작해보세요."
     }
     
     // MARK: - Add Subviews
