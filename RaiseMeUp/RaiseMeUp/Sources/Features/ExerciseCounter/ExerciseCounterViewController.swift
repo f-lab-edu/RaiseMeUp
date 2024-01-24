@@ -105,6 +105,8 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.mainView.timerLabel.isHidden = false
         
         self.mainView.timerLabel.text = viewModel.currentTime
+    
+        UIAccessibility.post(notification: .announcement, argument: "\(viewModel.currentTime.last!)초")
     }
     
     func displayEndExercise() {
