@@ -8,11 +8,79 @@
 import SwiftUI
 
 struct ExerciseList: View {
+    @StateObject var viewModel: ExerciseViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(viewModel.program) { program in
+                Section(
+                    header: ExerciseListHeader(
+                        title: program.name,
+                        subTitle: program.description
+                    )
+                ) {
+                    ForEach(program.routine) { routine in
+                        let rowModel = ProgramTableViewCellModel(routine)
+                        ExerciseRow(
+                            routine: rowModel
+                        )
+                    }
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ExerciseList()
+    ExerciseList(viewModel: MockViewModel())
+}
+
+final class MockViewModel: ExerciseViewModel {
+    init() {
+        super.init(
+            useCase: Training(
+                repository: TrainingRepository(
+                    trainingDataSource: TrainingDataSource())
+                )
+            )
+        
+        self.program = [
+            TrainingLevel(
+                id: UUID().uuidString,
+                name: "Starter",
+                description: "여긴 해당 설명이 들어갑니다.",
+                routine: [
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1])
+                ]
+            ),
+            TrainingLevel(
+                id: UUID().uuidString,
+                name: "Starter",
+                description: "여긴 해당 설명이 들어갑니다.",
+                routine: [
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1])
+                ]
+            ),
+            TrainingLevel(
+                id: UUID().uuidString,
+                name: "Starter",
+                description: "여긴 해당 설명이 들어갑니다.",
+                routine: [
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1]),
+                    DailyRoutine(day: "Day 01", routine: [3,2,1,1])
+                ]
+            )
+        ]
+    }
 }
