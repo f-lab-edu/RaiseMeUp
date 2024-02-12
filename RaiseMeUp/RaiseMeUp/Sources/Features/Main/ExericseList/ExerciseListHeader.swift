@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct ExerciseListHeader: View {
+    let title: String
+    let subTitle: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(
+            alignment: .leading,
+            spacing: 8
+        ) {
+            Text(title)
+                .font(.headline)
+                .foregroundStyle(.black)
+            Text(subTitle)
+                .font(.subheadline)
+                .foregroundStyle(.gray)
+        }
     }
 }
 
 #Preview {
-    ExerciseListHeader()
+    ExerciseListHeader(
+        title: "Starter",
+        subTitle: "한번에 턱걸이 최대 3회 이상의 초급자"
+    )
 }
