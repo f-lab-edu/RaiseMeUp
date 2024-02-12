@@ -16,7 +16,10 @@ public enum NetworkError: Error {
 }
 
 protocol ProviderProtocol {
-    func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T
+    func request<T: Decodable>(
+        _ urlRequest: URLRequest,
+        retryCount: Int
+    ) async throws -> T
 }
 
 class Provider: ProviderProtocol {
@@ -26,9 +29,11 @@ class Provider: ProviderProtocol {
         self.session = session
     }
     
-    public func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T {
+    public func request<T: Decodable>(
+        _ urlRequest: URLRequest,
+        retryCount: Int = 3
+    ) async throws -> T {
         var attempts = 0
-        let retryCount = 3
         while attempts < retryCount {
             do {
                 return try await performBasicRequest(urlRequest)
