@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1430"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,47 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3563A74B2AF085270037C029"
-               BuildableName = "RaiseMeUp.app"
-               BlueprintName = "RaiseMeUp"
+               BlueprintIdentifier = "359B111B2B5F7AFB0013DE71"
+               BuildableName = "RaiseMeUp-DEV.app"
+               BlueprintName = "RaiseMeUp-DEV"
                ReferencedContainer = "container:RaiseMeUp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "DEV"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3563A7642AF085270037C029"
-               BuildableName = "RaiseMeUpTests.xctest"
-               BlueprintName = "RaiseMeUpTests"
-               ReferencedContainer = "container:RaiseMeUp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3563A76E2AF085270037C029"
-               BuildableName = "RaiseMeUpUITests.xctest"
-               BlueprintName = "RaiseMeUpUITests"
-               ReferencedContainer = "container:RaiseMeUp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "DEV"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -67,21 +43,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3563A74B2AF085270037C029"
-            BuildableName = "RaiseMeUp.app"
-            BlueprintName = "RaiseMeUp"
+            BlueprintIdentifier = "359B111B2B5F7AFB0013DE71"
+            BuildableName = "RaiseMeUp-DEV.app"
+            BlueprintName = "RaiseMeUp-DEV"
             ReferencedContainer = "container:RaiseMeUp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-FIRDebugEnabled"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "PROD"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -90,18 +60,18 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3563A74B2AF085270037C029"
-            BuildableName = "RaiseMeUp.app"
-            BlueprintName = "RaiseMeUp"
+            BlueprintIdentifier = "359B111B2B5F7AFB0013DE71"
+            BuildableName = "RaiseMeUp-DEV.app"
+            BlueprintName = "RaiseMeUp-DEV"
             ReferencedContainer = "container:RaiseMeUp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "DEV">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "PROD"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
