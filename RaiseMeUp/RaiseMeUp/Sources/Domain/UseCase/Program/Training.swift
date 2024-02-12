@@ -1,5 +1,5 @@
 //
-//  Tranining.swift
+//  Training.swift
 //  RaiseMeUp
 //
 //  Created by 홍석현 on 11/28/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Training: TrainingUseCase {
+public struct Training: TrainingUseCase {
     
     private let repository: TrainingRepositoryProtocol
     
@@ -15,7 +15,23 @@ struct Training: TrainingUseCase {
         self.repository = repository
     }
     
-    func getProgramList() async throws -> PullUpProgram {
-        return try await repository.trainingProgram()
+    public func getProgramList() async -> Result<PullUpProgram, TrainingError> {
+        do {
+            let program = try await repository.trainingProgram()
+            guard !program.program.isEmpty else { return .failure(.emptyData) }
+            
+            return .success(program)
+        } catch let error as NetworkError {
+            switch error {
+            case .invalidStatusCode, .notReachable, .timeOut:
+                return .failure(.notConnected)
+            case .noData:
+                return .failure(.emptyData)
+            case .unknown:
+                return .failure(.unknown)
+            }
+        } catch {
+            return .failure(.unknown)
+        }
     }
 }

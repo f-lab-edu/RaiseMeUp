@@ -16,6 +16,20 @@ struct TrainingRepository: TrainingRepositoryProtocol {
     }
     
     func trainingProgram() async throws -> PullUpProgram {
-        return try await trainingDataSource.trainingProgram().toDomain()
+        do {
+            return try await trainingDataSource.trainingProgram().toDomain()
+        } catch let error as NetworkError {
+            switch error {
+            case .invalidStatusCode, .notReachable, .timeOut:
+                throw TrainingError.notConnected
+            case .noData:
+                throw TrainingError.emptyData
+            case .unknown:
+                throw TrainingError.unknown
+            }
+        } catch {
+            throw TrainingError.unknown
+        }
+        
     }
 }

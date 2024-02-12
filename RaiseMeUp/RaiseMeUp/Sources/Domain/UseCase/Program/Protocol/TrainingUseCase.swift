@@ -7,6 +7,12 @@
 
 import Foundation
 
+public enum TrainingError: Error {
+    case emptyData
+    case notConnected
+    case unknown
+}
+
 protocol TrainingUseCase {
-    func getProgramList() async throws -> PullUpProgram
+    func getProgramList() async -> Result<PullUpProgram, TrainingError>
 }
