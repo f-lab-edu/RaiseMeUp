@@ -20,6 +20,7 @@ public protocol TargetType {
 
 public enum RequestParams {
     case query(_ parameter: Encodable?)
+    case body(_ parameter: Encodable?)
 }
 
 public extension TargetType {
@@ -48,6 +49,18 @@ public extension TargetType {
             var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
             components?.queryItems = queryItems
             urlRequest.url = components?.url
+        case .body(let request):
+            guard let request = request
+            else {
+                throw URLError(.badURL)
+            }
+            do {
+                let jsonData = JSONEncoder().encode(request)
+                urlRequest.httpBody = jsonData
+                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            } catch {
+                throw error
+            }
         default:
             break
         }
