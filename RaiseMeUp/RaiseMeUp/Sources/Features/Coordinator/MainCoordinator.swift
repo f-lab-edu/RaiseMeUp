@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate {
     var finishDelegate: CoordinatorFinishDelegate?
@@ -27,6 +28,18 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
         let viewModel = MainViewModel(useCase: useCase)
         viewModel.coordinator = self
         let viewController = MainViewController(viewModel: viewModel)
+        self.navigationController.viewControllers = [viewController]
+    }
+    
+    func startAtSwiftUI() {
+        let dataSource = TrainingDataSource()
+        let repository = TrainingRepository(trainingDataSource: dataSource)
+        let useCase = Training(repository: repository)
+        let viewModel = ExerciseViewModel(useCase: useCase)
+        viewModel.coordinator = self
+        let viewController = UIHostingController(
+            rootView: ExerciseList(viewModel: viewModel)
+        )
         self.navigationController.viewControllers = [viewController]
     }
     

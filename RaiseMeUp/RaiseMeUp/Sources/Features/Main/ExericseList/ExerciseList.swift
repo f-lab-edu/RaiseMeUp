@@ -20,10 +20,14 @@ struct ExerciseList: View {
                     )
                 ) {
                     ForEach(program.routine) { routine in
-                        let rowModel = ProgramTableViewCellModel(routine)
-                        ExerciseRow(
-                            routine: rowModel
-                        )
+                        Button(action: {
+                            viewModel.selectRoutine(routine)
+                        }, label: {
+                            let rowModel = ProgramTableViewCellModel(routine)
+                            ExerciseRow(
+                                routine: rowModel
+                            )
+                        })
                     }
                 }
             }

@@ -38,7 +38,7 @@ final class RootCoordinator: RootCoordinatorProtocol {
         let mainCoordinator = MainCoordinator(navigationController: navigationController)
         self.finishDelegate = self
         self.childCoordinators.append(mainCoordinator)
-        mainCoordinator.start()
+        mainCoordinator.startAtSwiftUI()
     }
     
     func openLoginCoordinator() {

@@ -10,6 +10,7 @@ import OSLog
 
 class ExerciseViewModel: ObservableObject {
     private let useCase: TrainingUseCase
+    public weak var coordinator: MainCoordinatorProtocol?
     
     @Published var program: [TrainingLevel] = []
     
@@ -29,5 +30,9 @@ class ExerciseViewModel: ObservableObject {
                 OSLog.message(.error, error.localizedDescription)
             }
         }
+    }
+    
+    func selectRoutine(_ routine: DailyRoutine) {
+        coordinator?.presentExerciseCounter(routine: routine.routine)
     }
 }
