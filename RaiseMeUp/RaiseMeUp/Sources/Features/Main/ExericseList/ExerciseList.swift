@@ -28,6 +28,7 @@ struct ExerciseList: View {
                                 routine: rowModel
                             )
                         })
+                        .buttonStyle(.plain)
                     }
                 }
             }
