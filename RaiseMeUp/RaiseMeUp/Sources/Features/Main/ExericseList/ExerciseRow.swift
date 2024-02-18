@@ -15,6 +15,7 @@ struct ExerciseRow: View {
             Text(routine.day)
             Spacer()
             Text(routine.routine)
+                .foregroundStyle(routine.isRestDay ? .indigo : .black)
         }
     }
 }
