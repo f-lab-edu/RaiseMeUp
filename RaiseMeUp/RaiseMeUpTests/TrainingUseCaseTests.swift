@@ -8,7 +8,7 @@
 import XCTest
 import Foundation
 
-@testable import RaiseMeUp
+@testable import RaiseMeUp_DEV
 
 class MockTrainingRepository: TrainingRepositoryProtocol {
     var mockProgram: PullUpProgram?
