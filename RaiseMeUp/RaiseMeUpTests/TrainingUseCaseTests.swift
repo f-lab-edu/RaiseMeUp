@@ -47,7 +47,12 @@ class TrainingUseCaseTests: XCTestCase {
         // given
         let expectedName = "예상되는 프로그램 이름"
         repository.mockProgram = PullUpProgram(program: [
-        TrainingLevel(id: "", name: expectedName, description: "", routine: [])
+            TrainingLevel(
+                id: "",
+                name: expectedName,
+                description: "",
+                routine: []
+            )
         ])
         
         // when
