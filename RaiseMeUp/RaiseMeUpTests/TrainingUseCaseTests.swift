@@ -81,8 +81,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_timeOutError시_notConnected에러방출한다() async {
         // given
-        let error = NetworkError.timeOut
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.timeOut)
         
         // when
         let result = await training.getProgramList()
@@ -98,8 +97,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_notReachable시_notConnected에러방출한다() async {
         // given
-        let error = NetworkError.notReachable
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.notReachable)
         
         // when
         let result = await training.getProgramList()
@@ -115,8 +113,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_invalidStatusCode시_notConnected에러방출한다() async {
         // given
-        let error = NetworkError.notReachable
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.notReachable)
         
         // when
         let result = await training.getProgramList()
@@ -132,8 +129,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_noData시_emptyData에러방출한다() async {
         // given
-        let error = NetworkError.noData
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.noData)
         
         // when
         let result = await training.getProgramList()
@@ -149,8 +145,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_unknown시_unknown에러방출한다() async {
         // given
-        let error = NetworkError.unknown
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.unknown)
         
         // when
         let result = await training.getProgramList()
@@ -162,5 +157,11 @@ class TrainingUseCaseTests: XCTestCase {
         case .failure(let error):
             XCTAssertEqual(error, .unknown)
         }
+    }
+}
+
+extension TrainingUseCaseTests {
+    private func setUpWithErrorCase(_ error: NetworkError) {
+        self.repository.mockError = error
     }
 }
