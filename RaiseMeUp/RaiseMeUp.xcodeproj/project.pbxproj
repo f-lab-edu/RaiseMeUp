@@ -214,6 +214,13 @@
 			remoteGlobalIDString = 3563A74B2AF085270037C029;
 			remoteInfo = RaiseMeUp;
 		};
+		35BCFFEA2B82D42B0078D1CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3563A7442AF085270037C029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 359B111B2B5F7AFB0013DE71;
+			remoteInfo = "RaiseMeUp-DEV";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -748,6 +755,7 @@
 			);
 			dependencies = (
 				3563A7672AF085270037C029 /* PBXTargetDependency */,
+				35BCFFEB2B82D42B0078D1CF /* PBXTargetDependency */,
 			);
 			name = RaiseMeUpTests;
 			productName = RaiseMeUpTests;
@@ -837,7 +845,7 @@
 					};
 					3563A7642AF085270037C029 = {
 						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 3563A74B2AF085270037C029;
+						TestTargetID = 359B111B2B5F7AFB0013DE71;
 					};
 					3563A76E2AF085270037C029 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -1208,6 +1216,11 @@
 			target = 3563A74B2AF085270037C029 /* RaiseMeUp-PROD */;
 			targetProxy = 3563A7702AF085270037C029 /* PBXContainerItemProxy */;
 		};
+		35BCFFEB2B82D42B0078D1CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 359B111B2B5F7AFB0013DE71 /* RaiseMeUp-DEV */;
+			targetProxy = 35BCFFEA2B82D42B0078D1CF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1350,7 +1363,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1383,7 +1396,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1422,7 +1435,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp-DEV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp-DEV";
 			};
 			name = DEV;
 		};
@@ -1442,7 +1455,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp-DEV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp-DEV";
 			};
 			name = PROD;
 		};
@@ -1490,7 +1503,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RaiseMeUp-DEV-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1520,7 +1533,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RaiseMeUp-DEV-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1550,7 +1563,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RaiseMeUp-QA-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1580,7 +1593,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RaiseMeUp-QA-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1672,7 +1685,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1705,7 +1718,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RaiseMeUp-DEV-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1735,7 +1748,7 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RaiseMeUp-QA-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -1773,7 +1786,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp-DEV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp-DEV";
 			};
 			name = QA;
 		};
