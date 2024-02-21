@@ -113,8 +113,12 @@ class ExerciseCounterViewController: UIViewController, ExerciseCounterDisplayLog
         self.mainView.countLabel.isHidden = true
         self.mainView.timerLabel.isHidden = true
         self.mainView.endButton.isHidden = false
-        
-        
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            interactor?.countOnePullUp()
+        }
     }
 }
 
