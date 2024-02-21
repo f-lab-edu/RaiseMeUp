@@ -25,7 +25,9 @@ class ExerciseViewModel: ObservableObject {
             let result = await useCase.getProgramList()
             switch result {
             case .success(let data):
-                self.program = data.program
+                DispatchQueue.main.async {
+                    self.program = data.program
+                }
             case .failure(let error):
                 OSLog.message(.error, error.localizedDescription)
             }

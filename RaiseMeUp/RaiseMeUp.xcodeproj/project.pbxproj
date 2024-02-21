@@ -29,6 +29,14 @@
 		3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
 		355DFB912B3DAF090025EB89 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
 		355DFB942B3DB0AC0025EB89 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
+		356275982B86BBC30046D3DF /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962B2B77653800421728 /* ExerciseList.swift */; };
+		356275992B86BBC40046D3DF /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962B2B77653800421728 /* ExerciseList.swift */; };
+		3562759A2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962D2B79A71300421728 /* ExerciseViewModel.swift */; };
+		3562759B2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962D2B79A71300421728 /* ExerciseViewModel.swift */; };
+		3562759C2B86BBCB0046D3DF /* ExerciseListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359596292B775E6900421728 /* ExerciseListHeader.swift */; };
+		3562759D2B86BBCC0046D3DF /* ExerciseListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359596292B775E6900421728 /* ExerciseListHeader.swift */; };
+		3562759E2B86BBCF0046D3DF /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AB4422B71A87B002A3335 /* ExerciseRow.swift */; };
+		3562759F2B86BBCF0046D3DF /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AB4422B71A87B002A3335 /* ExerciseRow.swift */; };
 		3563A7502AF085270037C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
 		3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
@@ -1112,11 +1120,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				359B11232B5F7AFB0013DE71 /* ExerciseCounterWorker.swift in Sources */,
+				3562759E2B86BBCF0046D3DF /* ExerciseRow.swift in Sources */,
+				3562759A2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */,
 				359B11242B5F7AFB0013DE71 /* OSLog+Extension.swift in Sources */,
 				359B11252B5F7AFB0013DE71 /* AuthUseCase.swift in Sources */,
 				359B11262B5F7AFB0013DE71 /* ErrorTableViewCell.swift in Sources */,
 				359B11272B5F7AFB0013DE71 /* RUButton.swift in Sources */,
+				356275982B86BBC30046D3DF /* ExerciseList.swift in Sources */,
 				359B11282B5F7AFB0013DE71 /* RaiseMeUp.xcdatamodeld in Sources */,
+				3562759C2B86BBCB0046D3DF /* ExerciseListHeader.swift in Sources */,
 				359B11292B5F7AFB0013DE71 /* LoginCoordinator.swift in Sources */,
 				359B112A2B5F7AFB0013DE71 /* ExerciseCounterPresenter.swift in Sources */,
 				359B112B2B5F7AFB0013DE71 /* MainView.swift in Sources */,
@@ -1172,11 +1184,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				359B11712B5F7B110013DE71 /* ExerciseCounterWorker.swift in Sources */,
+				3562759F2B86BBCF0046D3DF /* ExerciseRow.swift in Sources */,
+				3562759B2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */,
 				359B11722B5F7B110013DE71 /* OSLog+Extension.swift in Sources */,
 				359B11732B5F7B110013DE71 /* AuthUseCase.swift in Sources */,
 				359B11742B5F7B110013DE71 /* ErrorTableViewCell.swift in Sources */,
 				359B11752B5F7B110013DE71 /* RUButton.swift in Sources */,
+				356275992B86BBC40046D3DF /* ExerciseList.swift in Sources */,
 				359B11762B5F7B110013DE71 /* RaiseMeUp.xcdatamodeld in Sources */,
+				3562759D2B86BBCC0046D3DF /* ExerciseListHeader.swift in Sources */,
 				359B11772B5F7B110013DE71 /* LoginCoordinator.swift in Sources */,
 				359B11782B5F7B110013DE71 /* ExerciseCounterPresenter.swift in Sources */,
 				359B11792B5F7B110013DE71 /* MainView.swift in Sources */,

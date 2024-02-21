@@ -12,10 +12,10 @@ public struct PullUpProgram {
 }
 
 public struct TrainingLevel: Identifiable {
-    public let id: String
-    public let name: String
-    public let description: String
-    public let routine: [DailyRoutine]
+    public var id: String
+    public var name: String
+    public var description: String
+    public var routine: [DailyRoutine]
 }
 
 public struct DailyRoutine: Identifiable {
