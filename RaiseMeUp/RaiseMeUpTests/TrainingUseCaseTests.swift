@@ -68,9 +68,27 @@ class TrainingUseCaseTests: XCTestCase {
         }
     }
     
+    func test_데이터가들어왔을경우에기대하는데이터값과일치한다() async {
+        // given
+        let count = 10
+        self.setMockDataCount(count: count)
+        
+        // when
+        let result = await training.getProgramList()
+        
+        // then
+        switch result {
+        case .success(let data):
+            XCTAssertEqual(data.program.count, count)
+        case .failure(_):
+            XCTFail("에러가 발생함")
+        }
+    }
+    
     func test_프로그램이empty일경우emptyData에러를방출한다() async {
         // given
-        repository.mockProgram = PullUpProgram(program: [])
+        let count = 0
+        self.setMockDataCount(count: count)
         
         // when
         let result = await training.getProgramList()
@@ -168,5 +186,23 @@ class TrainingUseCaseTests: XCTestCase {
 extension TrainingUseCaseTests {
     private func setUpWithErrorCase(_ error: NetworkError) {
         self.repository.mockError = error
+    }
+    
+    private func setMockDataCount(count: Int) {
+        var program: [TrainingLevel] = []
+        for _ in 0..<count {
+            program.append(
+                TrainingLevel(
+                    id: UUID().uuidString,
+                    name: UUID().uuidString,
+                    description: UUID().uuidString,
+                    routine: [
+                        DailyRoutine(day: "1", routine: [1,2,3])
+                    ]
+                )
+            )
+        }
+        
+        self.repository.mockProgram = PullUpProgram(program: program)
     }
 }
