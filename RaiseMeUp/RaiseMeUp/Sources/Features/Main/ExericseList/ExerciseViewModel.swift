@@ -35,6 +35,7 @@ class ExerciseViewModel: ObservableObject {
     }
     
     func selectRoutine(_ routine: DailyRoutine) {
+        guard !routine.routine.isEmpty else { return }
         coordinator?.presentExerciseCounter(routine: routine.routine)
     }
 }
