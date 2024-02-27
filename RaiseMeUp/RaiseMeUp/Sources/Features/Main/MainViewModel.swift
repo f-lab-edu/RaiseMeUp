@@ -5,7 +5,7 @@
 //  Created by 홍석현 on 11/28/23.
 //
 
-import Foundation
+import UIKit
 import OSLog
 import Combine
 
@@ -37,13 +37,18 @@ final class MainViewModel {
     }
     
     func loadData() async -> [TrainingLevel] {
-        do {
-            let result = try await useCase.getProgramList()
-            OSLog.message(.info, "받아온 데이터 \(result)")
-            return result.program
-        } catch {
-            OSLog.message(.error, log: .network, error.localizedDescription)
-            return [] 
+        let result = await useCase.getProgramList()
+        switch result {
+        case .success(let data):
+            return data.program
+        case .failure(let error):
+            switch error {
+            case .emptyData:
+                OSLog.message(.error, "데이터가 없음")
+            case .notConnected, .unknown:
+                OSLog.message(.error, "인터넷 연결이 불안정합니다.\n다시 시도해주세요.")
+            }
+            return []
         }
     }
     

@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct PullUpProgram {
-    let program: [TrainingLevel]
+public struct PullUpProgram {
+    public let program: [TrainingLevel]
 }
 
-struct TrainingLevel: Identifiable {
-    let id: String
-    let name: String
-    let description: String
-    let routine: [DailyRoutine]
+public struct TrainingLevel: Identifiable {
+    public let id: String
+    public let name: String
+    public let description: String
+    public let routine: [DailyRoutine]
 }
 
-struct DailyRoutine: Identifiable {
-    let id: UUID = UUID()
-    let day: String
-    let routine: [Int]
+public struct DailyRoutine: Identifiable {
+    public let id: UUID = UUID()
+    public let day: String
+    public let routine: [Int]
 }
