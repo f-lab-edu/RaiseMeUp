@@ -55,7 +55,7 @@ public extension TargetType {
                 throw URLError(.badURL)
             }
             do {
-                let jsonData = JSONEncoder().encode(request)
+                let jsonData = try JSONEncoder().encode(request)
                 urlRequest.httpBody = jsonData
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             } catch {

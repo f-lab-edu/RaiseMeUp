@@ -59,6 +59,10 @@
 		358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
 		358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
 		358673172B15B83600AAE6C7 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
+		358AB4432B71A87B002A3335 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AB4422B71A87B002A3335 /* ExerciseRow.swift */; };
+		3595962A2B775E6900421728 /* ExerciseListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359596292B775E6900421728 /* ExerciseListHeader.swift */; };
+		3595962C2B77653800421728 /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962B2B77653800421728 /* ExerciseList.swift */; };
+		3595962E2B79A71300421728 /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962D2B79A71300421728 /* ExerciseViewModel.swift */; };
 		359B111A2B5F39C30013DE71 /* TrainingUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */; };
 		359B11232B5F7AFB0013DE71 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
 		359B11242B5F7AFB0013DE71 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */; };
@@ -281,6 +285,10 @@
 		358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUseCase.swift; sourceTree = "<group>"; };
 		358673142B15B06A00AAE6C7 /* PullUpProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgram.swift; sourceTree = "<group>"; };
 		358673162B15B83600AAE6C7 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		358AB4422B71A87B002A3335 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
+		359596292B775E6900421728 /* ExerciseListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListHeader.swift; sourceTree = "<group>"; };
+		3595962B2B77653800421728 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
+		3595962D2B79A71300421728 /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
 		359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUseCaseTests.swift; sourceTree = "<group>"; };
 		359B11672B5F7AFB0013DE71 /* RaiseMeUp-DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RaiseMeUp-DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		359B11682B5F7AFC0013DE71 /* RaiseMeUp-DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RaiseMeUp-DEV-Info.plist"; path = "/Users/shhong/Desktop/RaiseMeUp/RaiseMeUp/RaiseMeUp-DEV-Info.plist"; sourceTree = "<absolute>"; };
@@ -550,6 +558,17 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		358AB4412B71A868002A3335 /* ExericseList */ = {
+			isa = PBXGroup;
+			children = (
+				358AB4422B71A87B002A3335 /* ExerciseRow.swift */,
+				359596292B775E6900421728 /* ExerciseListHeader.swift */,
+				3595962B2B77653800421728 /* ExerciseList.swift */,
+				3595962D2B79A71300421728 /* ExerciseViewModel.swift */,
+			);
+			path = ExericseList;
+			sourceTree = "<group>";
+		};
 		35B0BCD32B0CEA9700F6F99B /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +727,7 @@
 		35F90B6F2AF62697003C96D7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				358AB4412B71A868002A3335 /* ExericseList */,
 				350FCFB52B15CDDF00B4738A /* View */,
 				35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */,
 				350FCFB12B15C93500B4738A /* MainViewModel.swift */,
@@ -1026,16 +1046,20 @@
 				355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */,
 				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				351BBE122B565D2A00F91898 /* RoundedBackgroundView.swift in Sources */,
+				3595962C2B77653800421728 /* ExerciseList.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
 				358673172B15B83600AAE6C7 /* Training.swift in Sources */,
 				35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */,
 				3563A7522AF085270037C029 /* SceneDelegate.swift in Sources */,
 				350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */,
+				3595962A2B775E6900421728 /* ExerciseListHeader.swift in Sources */,
+				358AB4432B71A87B002A3335 /* ExerciseRow.swift in Sources */,
 				357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */,
 				350FCFB42B15CCDA00B4738A /* ProgramCollectionViewCell.swift in Sources */,
 				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
 				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
+				3595962E2B79A71300421728 /* ExerciseViewModel.swift in Sources */,
 				355744152B2A7DBB00ED2637 /* ExerciseCounterModels.swift in Sources */,
 				357A35832B142D3300F991B6 /* MainCoordinator.swift in Sources */,
 				35C90D0B2B0EE2A90055FA62 /* User.swift in Sources */,
@@ -1382,7 +1406,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1414,6 +1438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1704,7 +1729,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = QA;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
