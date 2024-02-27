@@ -59,6 +59,131 @@
 		358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
 		358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
 		358673172B15B83600AAE6C7 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
+		359B111A2B5F39C30013DE71 /* TrainingUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */; };
+		359B11232B5F7AFB0013DE71 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
+		359B11242B5F7AFB0013DE71 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */; };
+		359B11252B5F7AFB0013DE71 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
+		359B11262B5F7AFB0013DE71 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */; };
+		359B11272B5F7AFB0013DE71 /* RUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528C4362B3F06BC004148AB /* RUButton.swift */; };
+		359B11282B5F7AFB0013DE71 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
+		359B11292B5F7AFB0013DE71 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
+		359B112A2B5F7AFB0013DE71 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
+		359B112B2B5F7AFB0013DE71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
+		359B112C2B5F7AFB0013DE71 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */; };
+		359B112D2B5F7AFB0013DE71 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
+		359B112E2B5F7AFB0013DE71 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
+		359B112F2B5F7AFB0013DE71 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
+		359B11302B5F7AFB0013DE71 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
+		359B11312B5F7AFB0013DE71 /* ExerciseCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */; };
+		359B11322B5F7AFB0013DE71 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
+		359B11332B5F7AFB0013DE71 /* RoundedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */; };
+		359B11342B5F7AFB0013DE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
+		359B11352B5F7AFB0013DE71 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
+		359B11362B5F7AFB0013DE71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
+		359B11372B5F7AFB0013DE71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
+		359B11382B5F7AFB0013DE71 /* TrainingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */; };
+		359B11392B5F7AFB0013DE71 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */; };
+		359B113A2B5F7AFB0013DE71 /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */; };
+		359B113B2B5F7AFB0013DE71 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A357D2B14176200F991B6 /* Coordinator.swift */; };
+		359B113C2B5F7AFB0013DE71 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35802B1417D300F991B6 /* RootCoordinator.swift */; };
+		359B113D2B5F7AFB0013DE71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
+		359B113E2B5F7AFB0013DE71 /* ExerciseCounterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */; };
+		359B113F2B5F7AFB0013DE71 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35822B142D3300F991B6 /* MainCoordinator.swift */; };
+		359B11402B5F7AFB0013DE71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D0A2B0EE2A90055FA62 /* User.swift */; };
+		359B11412B5F7AFB0013DE71 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35792B140AF000F991B6 /* KeychainError.swift */; };
+		359B11422B5F7AFB0013DE71 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358D2B143A1600F991B6 /* CoordinatorType.swift */; };
+		359B11432B5F7AFB0013DE71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
+		359B11442B5F7AFB0013DE71 /* ExerciseCounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */; };
+		359B11452B5F7AFB0013DE71 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
+		359B11462B5F7AFB0013DE71 /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
+		359B11472B5F7AFB0013DE71 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
+		359B11482B5F7AFB0013DE71 /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
+		359B11492B5F7AFB0013DE71 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
+		359B114A2B5F7AFB0013DE71 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
+		359B114B2B5F7AFB0013DE71 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
+		359B114C2B5F7AFB0013DE71 /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
+		359B114D2B5F7AFB0013DE71 /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
+		359B114E2B5F7AFB0013DE71 /* TrainingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */; };
+		359B114F2B5F7AFB0013DE71 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
+		359B11502B5F7AFB0013DE71 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
+		359B11512B5F7AFB0013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
+		359B11522B5F7AFB0013DE71 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D072B0ED7160055FA62 /* LoginViewModel.swift */; };
+		359B11532B5F7AFB0013DE71 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
+		359B11542B5F7AFB0013DE71 /* ExerciseCounterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */; };
+		359B11552B5F7AFB0013DE71 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35772B13821F00F991B6 /* Auth.swift */; };
+		359B11562B5F7AFB0013DE71 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
+		359B11572B5F7AFB0013DE71 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
+		359B11592B5F7AFB0013DE71 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 359B111F2B5F7AFB0013DE71 /* FirebaseCrashlytics */; };
+		359B115A2B5F7AFB0013DE71 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 359B11202B5F7AFB0013DE71 /* FirebaseFirestore */; };
+		359B115B2B5F7AFB0013DE71 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 359B111E2B5F7AFB0013DE71 /* FirebaseAppCheck */; };
+		359B115C2B5F7AFB0013DE71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 359B111C2B5F7AFB0013DE71 /* FirebaseAnalytics */; };
+		359B115D2B5F7AFB0013DE71 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 359B11212B5F7AFB0013DE71 /* FirebaseRemoteConfig */; };
+		359B115F2B5F7AFB0013DE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75D2AF085270037C029 /* LaunchScreen.storyboard */; };
+		359B11602B5F7AFB0013DE71 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 351871AC2B20348500E79C4F /* Localizable.xcstrings */; };
+		359B11612B5F7AFB0013DE71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
+		359B11622B5F7AFB0013DE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75B2AF085270037C029 /* Assets.xcassets */; };
+		359B11712B5F7B110013DE71 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
+		359B11722B5F7B110013DE71 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */; };
+		359B11732B5F7B110013DE71 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
+		359B11742B5F7B110013DE71 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */; };
+		359B11752B5F7B110013DE71 /* RUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528C4362B3F06BC004148AB /* RUButton.swift */; };
+		359B11762B5F7B110013DE71 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
+		359B11772B5F7B110013DE71 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
+		359B11782B5F7B110013DE71 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
+		359B11792B5F7B110013DE71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
+		359B117A2B5F7B110013DE71 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */; };
+		359B117B2B5F7B110013DE71 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
+		359B117C2B5F7B110013DE71 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
+		359B117D2B5F7B110013DE71 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
+		359B117E2B5F7B110013DE71 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
+		359B117F2B5F7B110013DE71 /* ExerciseCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */; };
+		359B11802B5F7B110013DE71 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
+		359B11812B5F7B110013DE71 /* RoundedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */; };
+		359B11822B5F7B110013DE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
+		359B11832B5F7B110013DE71 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
+		359B11842B5F7B110013DE71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
+		359B11852B5F7B110013DE71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7512AF085270037C029 /* SceneDelegate.swift */; };
+		359B11862B5F7B110013DE71 /* TrainingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */; };
+		359B11872B5F7B110013DE71 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */; };
+		359B11882B5F7B110013DE71 /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */; };
+		359B11892B5F7B110013DE71 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A357D2B14176200F991B6 /* Coordinator.swift */; };
+		359B118A2B5F7B110013DE71 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35802B1417D300F991B6 /* RootCoordinator.swift */; };
+		359B118B2B5F7B110013DE71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
+		359B118C2B5F7B110013DE71 /* ExerciseCounterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */; };
+		359B118D2B5F7B110013DE71 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35822B142D3300F991B6 /* MainCoordinator.swift */; };
+		359B118E2B5F7B110013DE71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D0A2B0EE2A90055FA62 /* User.swift */; };
+		359B118F2B5F7B110013DE71 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35792B140AF000F991B6 /* KeychainError.swift */; };
+		359B11902B5F7B110013DE71 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358D2B143A1600F991B6 /* CoordinatorType.swift */; };
+		359B11912B5F7B110013DE71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
+		359B11922B5F7B110013DE71 /* ExerciseCounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */; };
+		359B11932B5F7B110013DE71 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
+		359B11942B5F7B110013DE71 /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
+		359B11952B5F7B110013DE71 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
+		359B11962B5F7B110013DE71 /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
+		359B11972B5F7B110013DE71 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
+		359B11982B5F7B110013DE71 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
+		359B11992B5F7B110013DE71 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
+		359B119A2B5F7B110013DE71 /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
+		359B119B2B5F7B110013DE71 /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
+		359B119C2B5F7B110013DE71 /* TrainingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */; };
+		359B119D2B5F7B110013DE71 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
+		359B119E2B5F7B110013DE71 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
+		359B119F2B5F7B110013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
+		359B11A02B5F7B110013DE71 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D072B0ED7160055FA62 /* LoginViewModel.swift */; };
+		359B11A12B5F7B110013DE71 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
+		359B11A22B5F7B110013DE71 /* ExerciseCounterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */; };
+		359B11A32B5F7B110013DE71 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35772B13821F00F991B6 /* Auth.swift */; };
+		359B11A42B5F7B110013DE71 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
+		359B11A52B5F7B110013DE71 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
+		359B11A72B5F7B110013DE71 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116D2B5F7B110013DE71 /* FirebaseCrashlytics */; };
+		359B11A82B5F7B110013DE71 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116E2B5F7B110013DE71 /* FirebaseFirestore */; };
+		359B11A92B5F7B110013DE71 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116C2B5F7B110013DE71 /* FirebaseAppCheck */; };
+		359B11AA2B5F7B110013DE71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116A2B5F7B110013DE71 /* FirebaseAnalytics */; };
+		359B11AB2B5F7B110013DE71 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116F2B5F7B110013DE71 /* FirebaseRemoteConfig */; };
+		359B11AD2B5F7B110013DE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75D2AF085270037C029 /* LaunchScreen.storyboard */; };
+		359B11AE2B5F7B110013DE71 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 351871AC2B20348500E79C4F /* Localizable.xcstrings */; };
+		359B11AF2B5F7B110013DE71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
+		359B11B02B5F7B110013DE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75B2AF085270037C029 /* Assets.xcassets */; };
 		359E19BD2B44E41A0020561F /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359E19BC2B44E41A0020561F /* MainViewModelTests.swift */; };
 		35B0BCD62B0CEB0900F6F99B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */; };
 		35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
@@ -89,6 +214,13 @@
 			remoteGlobalIDString = 3563A74B2AF085270037C029;
 			remoteInfo = RaiseMeUp;
 		};
+		35BCFFEA2B82D42B0078D1CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3563A7442AF085270037C029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 359B111B2B5F7AFB0013DE71;
+			remoteInfo = "RaiseMeUp-DEV";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -115,7 +247,7 @@
 		3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		355DFB902B3DAF090025EB89 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		355DFB932B3DB0AC0025EB89 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		3563A74C2AF085270037C029 /* RaiseMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RaiseMeUp-PROD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3563A7592AF085270037C029 /* RaiseMeUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RaiseMeUp.xcdatamodel; sourceTree = "<group>"; };
@@ -149,6 +281,11 @@
 		358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUseCase.swift; sourceTree = "<group>"; };
 		358673142B15B06A00AAE6C7 /* PullUpProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgram.swift; sourceTree = "<group>"; };
 		358673162B15B83600AAE6C7 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUseCaseTests.swift; sourceTree = "<group>"; };
+		359B11672B5F7AFB0013DE71 /* RaiseMeUp-DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RaiseMeUp-DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		359B11682B5F7AFC0013DE71 /* RaiseMeUp-DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RaiseMeUp-DEV-Info.plist"; path = "/Users/shhong/Desktop/RaiseMeUp/RaiseMeUp/RaiseMeUp-DEV-Info.plist"; sourceTree = "<absolute>"; };
+		359B11B52B5F7B110013DE71 /* RaiseMeUp-QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RaiseMeUp-QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		359B11B62B5F7B110013DE71 /* RaiseMeUp-QA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RaiseMeUp-QA-Info.plist"; path = "/Users/shhong/Desktop/RaiseMeUp/RaiseMeUp/RaiseMeUp-QA-Info.plist"; sourceTree = "<absolute>"; };
 		359E19BC2B44E41A0020561F /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		35B0BCD52B0CEB0900F6F99B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +321,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359B11582B5F7AFB0013DE71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359B11592B5F7AFB0013DE71 /* FirebaseCrashlytics in Frameworks */,
+				359B115A2B5F7AFB0013DE71 /* FirebaseFirestore in Frameworks */,
+				359B115B2B5F7AFB0013DE71 /* FirebaseAppCheck in Frameworks */,
+				359B115C2B5F7AFB0013DE71 /* FirebaseAnalytics in Frameworks */,
+				359B115D2B5F7AFB0013DE71 /* FirebaseRemoteConfig in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359B11A62B5F7B110013DE71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359B11A72B5F7B110013DE71 /* FirebaseCrashlytics in Frameworks */,
+				359B11A82B5F7B110013DE71 /* FirebaseFirestore in Frameworks */,
+				359B11A92B5F7B110013DE71 /* FirebaseAppCheck in Frameworks */,
+				359B11AA2B5F7B110013DE71 /* FirebaseAnalytics in Frameworks */,
+				359B11AB2B5F7B110013DE71 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,15 +420,19 @@
 				3563A7682AF085270037C029 /* RaiseMeUpTests */,
 				3563A7722AF085270037C029 /* RaiseMeUpUITests */,
 				3563A74D2AF085270037C029 /* Products */,
+				359B11682B5F7AFC0013DE71 /* RaiseMeUp-DEV-Info.plist */,
+				359B11B62B5F7B110013DE71 /* RaiseMeUp-QA-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		3563A74D2AF085270037C029 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3563A74C2AF085270037C029 /* RaiseMeUp.app */,
+				3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */,
 				3563A7652AF085270037C029 /* RaiseMeUpTests.xctest */,
 				3563A76F2AF085270037C029 /* RaiseMeUpUITests.xctest */,
+				359B11672B5F7AFB0013DE71 /* RaiseMeUp-DEV.app */,
+				359B11B52B5F7B110013DE71 /* RaiseMeUp-QA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				359E19BC2B44E41A0020561F /* MainViewModelTests.swift */,
+				359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */,
 			);
 			path = RaiseMeUpTests;
 			sourceTree = "<group>";
@@ -552,9 +718,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3563A74B2AF085270037C029 /* RaiseMeUp */ = {
+		3563A74B2AF085270037C029 /* RaiseMeUp-PROD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3563A7792AF085270037C029 /* Build configuration list for PBXNativeTarget "RaiseMeUp" */;
+			buildConfigurationList = 3563A7792AF085270037C029 /* Build configuration list for PBXNativeTarget "RaiseMeUp-PROD" */;
 			buildPhases = (
 				3563A7482AF085270037C029 /* Sources */,
 				3563A7492AF085270037C029 /* Frameworks */,
@@ -565,7 +731,7 @@
 			);
 			dependencies = (
 			);
-			name = RaiseMeUp;
+			name = "RaiseMeUp-PROD";
 			packageProductDependencies = (
 				35F90B7A2AF6329A003C96D7 /* FirebaseAnalytics */,
 				35F90B7C2AF6329A003C96D7 /* FirebaseAppCheck */,
@@ -574,7 +740,7 @@
 				35F90B822AF6329A003C96D7 /* FirebaseRemoteConfig */,
 			);
 			productName = RaiseMeUp;
-			productReference = 3563A74C2AF085270037C029 /* RaiseMeUp.app */;
+			productReference = 3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3563A7642AF085270037C029 /* RaiseMeUpTests */ = {
@@ -589,6 +755,7 @@
 			);
 			dependencies = (
 				3563A7672AF085270037C029 /* PBXTargetDependency */,
+				35BCFFEB2B82D42B0078D1CF /* PBXTargetDependency */,
 			);
 			name = RaiseMeUpTests;
 			productName = RaiseMeUpTests;
@@ -613,6 +780,56 @@
 			productReference = 3563A76F2AF085270037C029 /* RaiseMeUpUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		359B111B2B5F7AFB0013DE71 /* RaiseMeUp-DEV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359B11642B5F7AFB0013DE71 /* Build configuration list for PBXNativeTarget "RaiseMeUp-DEV" */;
+			buildPhases = (
+				359B11222B5F7AFB0013DE71 /* Sources */,
+				359B11582B5F7AFB0013DE71 /* Frameworks */,
+				359B115E2B5F7AFB0013DE71 /* Resources */,
+				359B11632B5F7AFB0013DE71 /* Firebase Crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RaiseMeUp-DEV";
+			packageProductDependencies = (
+				359B111C2B5F7AFB0013DE71 /* FirebaseAnalytics */,
+				359B111E2B5F7AFB0013DE71 /* FirebaseAppCheck */,
+				359B111F2B5F7AFB0013DE71 /* FirebaseCrashlytics */,
+				359B11202B5F7AFB0013DE71 /* FirebaseFirestore */,
+				359B11212B5F7AFB0013DE71 /* FirebaseRemoteConfig */,
+			);
+			productName = RaiseMeUp;
+			productReference = 359B11672B5F7AFB0013DE71 /* RaiseMeUp-DEV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		359B11692B5F7B110013DE71 /* RaiseMeUp-QA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359B11B22B5F7B110013DE71 /* Build configuration list for PBXNativeTarget "RaiseMeUp-QA" */;
+			buildPhases = (
+				359B11702B5F7B110013DE71 /* Sources */,
+				359B11A62B5F7B110013DE71 /* Frameworks */,
+				359B11AC2B5F7B110013DE71 /* Resources */,
+				359B11B12B5F7B110013DE71 /* Firebase Crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RaiseMeUp-QA";
+			packageProductDependencies = (
+				359B116A2B5F7B110013DE71 /* FirebaseAnalytics */,
+				359B116C2B5F7B110013DE71 /* FirebaseAppCheck */,
+				359B116D2B5F7B110013DE71 /* FirebaseCrashlytics */,
+				359B116E2B5F7B110013DE71 /* FirebaseFirestore */,
+				359B116F2B5F7B110013DE71 /* FirebaseRemoteConfig */,
+			);
+			productName = RaiseMeUp;
+			productReference = 359B11B52B5F7B110013DE71 /* RaiseMeUp-QA.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -628,7 +845,7 @@
 					};
 					3563A7642AF085270037C029 = {
 						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 3563A74B2AF085270037C029;
+						TestTargetID = 359B111B2B5F7AFB0013DE71;
 					};
 					3563A76E2AF085270037C029 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -653,7 +870,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3563A74B2AF085270037C029 /* RaiseMeUp */,
+				3563A74B2AF085270037C029 /* RaiseMeUp-PROD */,
+				359B111B2B5F7AFB0013DE71 /* RaiseMeUp-DEV */,
+				359B11692B5F7B110013DE71 /* RaiseMeUp-QA */,
 				3563A7642AF085270037C029 /* RaiseMeUpTests */,
 				3563A76E2AF085270037C029 /* RaiseMeUpUITests */,
 			);
@@ -686,9 +905,79 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		359B115E2B5F7AFB0013DE71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359B115F2B5F7AFB0013DE71 /* LaunchScreen.storyboard in Resources */,
+				359B11602B5F7AFB0013DE71 /* Localizable.xcstrings in Resources */,
+				359B11612B5F7AFB0013DE71 /* GoogleService-Info.plist in Resources */,
+				359B11622B5F7AFB0013DE71 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359B11AC2B5F7B110013DE71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359B11AD2B5F7B110013DE71 /* LaunchScreen.storyboard in Resources */,
+				359B11AE2B5F7B110013DE71 /* Localizable.xcstrings in Resources */,
+				359B11AF2B5F7B110013DE71 /* GoogleService-Info.plist in Resources */,
+				359B11B02B5F7B110013DE71 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		359B11632B5F7AFB0013DE71 /* Firebase Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(SRCROOT)/$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(SRCROOT)/$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Firebase Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		359B11B12B5F7B110013DE71 /* Firebase Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(SRCROOT)/$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(SRCROOT)/$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Firebase Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 		35F90B842AF6335C003C96D7 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -781,6 +1070,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				359E19BD2B44E41A0020561F /* MainViewModelTests.swift in Sources */,
+				359B111A2B5F39C30013DE71 /* TrainingUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,18 +1083,143 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		359B11222B5F7AFB0013DE71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359B11232B5F7AFB0013DE71 /* ExerciseCounterWorker.swift in Sources */,
+				359B11242B5F7AFB0013DE71 /* OSLog+Extension.swift in Sources */,
+				359B11252B5F7AFB0013DE71 /* AuthUseCase.swift in Sources */,
+				359B11262B5F7AFB0013DE71 /* ErrorTableViewCell.swift in Sources */,
+				359B11272B5F7AFB0013DE71 /* RUButton.swift in Sources */,
+				359B11282B5F7AFB0013DE71 /* RaiseMeUp.xcdatamodeld in Sources */,
+				359B11292B5F7AFB0013DE71 /* LoginCoordinator.swift in Sources */,
+				359B112A2B5F7AFB0013DE71 /* ExerciseCounterPresenter.swift in Sources */,
+				359B112B2B5F7AFB0013DE71 /* MainView.swift in Sources */,
+				359B112C2B5F7AFB0013DE71 /* RestTimer.swift in Sources */,
+				359B112D2B5F7AFB0013DE71 /* ReusableView.swift in Sources */,
+				359B112E2B5F7AFB0013DE71 /* PullUpProgram.swift in Sources */,
+				359B112F2B5F7AFB0013DE71 /* ExerciseCounterMainView.swift in Sources */,
+				359B11302B5F7AFB0013DE71 /* ProgramTableViewCellModel.swift in Sources */,
+				359B11312B5F7AFB0013DE71 /* ExerciseCounterViewController.swift in Sources */,
+				359B11322B5F7AFB0013DE71 /* KeychainType.swift in Sources */,
+				359B11332B5F7AFB0013DE71 /* RoundedBackgroundView.swift in Sources */,
+				359B11342B5F7AFB0013DE71 /* AppDelegate.swift in Sources */,
+				359B11352B5F7AFB0013DE71 /* Training.swift in Sources */,
+				359B11362B5F7AFB0013DE71 /* LoginViewController.swift in Sources */,
+				359B11372B5F7AFB0013DE71 /* SceneDelegate.swift in Sources */,
+				359B11382B5F7AFB0013DE71 /* TrainingRepositoryProtocol.swift in Sources */,
+				359B11392B5F7AFB0013DE71 /* LoginCoordinatorProtocol.swift in Sources */,
+				359B113A2B5F7AFB0013DE71 /* ProgramCollectionViewCell.swift in Sources */,
+				359B113B2B5F7AFB0013DE71 /* Coordinator.swift in Sources */,
+				359B113C2B5F7AFB0013DE71 /* RootCoordinator.swift in Sources */,
+				359B113D2B5F7AFB0013DE71 /* KeychainManager.swift in Sources */,
+				359B113E2B5F7AFB0013DE71 /* ExerciseCounterModels.swift in Sources */,
+				359B113F2B5F7AFB0013DE71 /* MainCoordinator.swift in Sources */,
+				359B11402B5F7AFB0013DE71 /* User.swift in Sources */,
+				359B11412B5F7AFB0013DE71 /* KeychainError.swift in Sources */,
+				359B11422B5F7AFB0013DE71 /* CoordinatorType.swift in Sources */,
+				359B11432B5F7AFB0013DE71 /* MainViewController.swift in Sources */,
+				359B11442B5F7AFB0013DE71 /* ExerciseCounterInteractor.swift in Sources */,
+				359B11452B5F7AFB0013DE71 /* ProgramListHeaderView.swift in Sources */,
+				359B11462B5F7AFB0013DE71 /* PullUpProgramDTO.swift in Sources */,
+				359B11472B5F7AFB0013DE71 /* UITableView+Extension.swift in Sources */,
+				359B11482B5F7AFB0013DE71 /* AnyModelStore.swift in Sources */,
+				359B11492B5F7AFB0013DE71 /* TrainingUseCase.swift in Sources */,
+				359B114A2B5F7AFB0013DE71 /* Provider.swift in Sources */,
+				359B114B2B5F7AFB0013DE71 /* LoginMainView.swift in Sources */,
+				359B114C2B5F7AFB0013DE71 /* TrainingDataSourceProtocol.swift in Sources */,
+				359B114D2B5F7AFB0013DE71 /* TrainingDataSource.swift in Sources */,
+				359B114E2B5F7AFB0013DE71 /* TrainingRepository.swift in Sources */,
+				359B114F2B5F7AFB0013DE71 /* MainCoordinatorProtocol.swift in Sources */,
+				359B11502B5F7AFB0013DE71 /* TargetType.swift in Sources */,
+				359B11512B5F7AFB0013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
+				359B11522B5F7AFB0013DE71 /* LoginViewModel.swift in Sources */,
+				359B11532B5F7AFB0013DE71 /* RootCoordinatorProtocol.swift in Sources */,
+				359B11542B5F7AFB0013DE71 /* ExerciseCounterRouter.swift in Sources */,
+				359B11552B5F7AFB0013DE71 /* Auth.swift in Sources */,
+				359B11562B5F7AFB0013DE71 /* CoordinatorFinishDelegate.swift in Sources */,
+				359B11572B5F7AFB0013DE71 /* MainViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359B11702B5F7B110013DE71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359B11712B5F7B110013DE71 /* ExerciseCounterWorker.swift in Sources */,
+				359B11722B5F7B110013DE71 /* OSLog+Extension.swift in Sources */,
+				359B11732B5F7B110013DE71 /* AuthUseCase.swift in Sources */,
+				359B11742B5F7B110013DE71 /* ErrorTableViewCell.swift in Sources */,
+				359B11752B5F7B110013DE71 /* RUButton.swift in Sources */,
+				359B11762B5F7B110013DE71 /* RaiseMeUp.xcdatamodeld in Sources */,
+				359B11772B5F7B110013DE71 /* LoginCoordinator.swift in Sources */,
+				359B11782B5F7B110013DE71 /* ExerciseCounterPresenter.swift in Sources */,
+				359B11792B5F7B110013DE71 /* MainView.swift in Sources */,
+				359B117A2B5F7B110013DE71 /* RestTimer.swift in Sources */,
+				359B117B2B5F7B110013DE71 /* ReusableView.swift in Sources */,
+				359B117C2B5F7B110013DE71 /* PullUpProgram.swift in Sources */,
+				359B117D2B5F7B110013DE71 /* ExerciseCounterMainView.swift in Sources */,
+				359B117E2B5F7B110013DE71 /* ProgramTableViewCellModel.swift in Sources */,
+				359B117F2B5F7B110013DE71 /* ExerciseCounterViewController.swift in Sources */,
+				359B11802B5F7B110013DE71 /* KeychainType.swift in Sources */,
+				359B11812B5F7B110013DE71 /* RoundedBackgroundView.swift in Sources */,
+				359B11822B5F7B110013DE71 /* AppDelegate.swift in Sources */,
+				359B11832B5F7B110013DE71 /* Training.swift in Sources */,
+				359B11842B5F7B110013DE71 /* LoginViewController.swift in Sources */,
+				359B11852B5F7B110013DE71 /* SceneDelegate.swift in Sources */,
+				359B11862B5F7B110013DE71 /* TrainingRepositoryProtocol.swift in Sources */,
+				359B11872B5F7B110013DE71 /* LoginCoordinatorProtocol.swift in Sources */,
+				359B11882B5F7B110013DE71 /* ProgramCollectionViewCell.swift in Sources */,
+				359B11892B5F7B110013DE71 /* Coordinator.swift in Sources */,
+				359B118A2B5F7B110013DE71 /* RootCoordinator.swift in Sources */,
+				359B118B2B5F7B110013DE71 /* KeychainManager.swift in Sources */,
+				359B118C2B5F7B110013DE71 /* ExerciseCounterModels.swift in Sources */,
+				359B118D2B5F7B110013DE71 /* MainCoordinator.swift in Sources */,
+				359B118E2B5F7B110013DE71 /* User.swift in Sources */,
+				359B118F2B5F7B110013DE71 /* KeychainError.swift in Sources */,
+				359B11902B5F7B110013DE71 /* CoordinatorType.swift in Sources */,
+				359B11912B5F7B110013DE71 /* MainViewController.swift in Sources */,
+				359B11922B5F7B110013DE71 /* ExerciseCounterInteractor.swift in Sources */,
+				359B11932B5F7B110013DE71 /* ProgramListHeaderView.swift in Sources */,
+				359B11942B5F7B110013DE71 /* PullUpProgramDTO.swift in Sources */,
+				359B11952B5F7B110013DE71 /* UITableView+Extension.swift in Sources */,
+				359B11962B5F7B110013DE71 /* AnyModelStore.swift in Sources */,
+				359B11972B5F7B110013DE71 /* TrainingUseCase.swift in Sources */,
+				359B11982B5F7B110013DE71 /* Provider.swift in Sources */,
+				359B11992B5F7B110013DE71 /* LoginMainView.swift in Sources */,
+				359B119A2B5F7B110013DE71 /* TrainingDataSourceProtocol.swift in Sources */,
+				359B119B2B5F7B110013DE71 /* TrainingDataSource.swift in Sources */,
+				359B119C2B5F7B110013DE71 /* TrainingRepository.swift in Sources */,
+				359B119D2B5F7B110013DE71 /* MainCoordinatorProtocol.swift in Sources */,
+				359B119E2B5F7B110013DE71 /* TargetType.swift in Sources */,
+				359B119F2B5F7B110013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
+				359B11A02B5F7B110013DE71 /* LoginViewModel.swift in Sources */,
+				359B11A12B5F7B110013DE71 /* RootCoordinatorProtocol.swift in Sources */,
+				359B11A22B5F7B110013DE71 /* ExerciseCounterRouter.swift in Sources */,
+				359B11A32B5F7B110013DE71 /* Auth.swift in Sources */,
+				359B11A42B5F7B110013DE71 /* CoordinatorFinishDelegate.swift in Sources */,
+				359B11A52B5F7B110013DE71 /* MainViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		3563A7672AF085270037C029 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3563A74B2AF085270037C029 /* RaiseMeUp */;
+			target = 3563A74B2AF085270037C029 /* RaiseMeUp-PROD */;
 			targetProxy = 3563A7662AF085270037C029 /* PBXContainerItemProxy */;
 		};
 		3563A7712AF085270037C029 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3563A74B2AF085270037C029 /* RaiseMeUp */;
+			target = 3563A74B2AF085270037C029 /* RaiseMeUp-PROD */;
 			targetProxy = 3563A7702AF085270037C029 /* PBXContainerItemProxy */;
+		};
+		35BCFFEB2B82D42B0078D1CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 359B111B2B5F7AFB0013DE71 /* RaiseMeUp-DEV */;
+			targetProxy = 35BCFFEA2B82D42B0078D1CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -821,7 +1236,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3563A7772AF085270037C029 /* Debug */ = {
+		3563A7772AF085270037C029 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -878,12 +1293,12 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = DEV;
 		};
-		3563A7782AF085270037C029 /* Release */ = {
+		3563A7782AF085270037C029 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -933,13 +1348,14 @@
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = PROD;
 		};
-		3563A77A2AF085270037C029 /* Debug */ = {
+		3563A77A2AF085270037C029 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -947,9 +1363,149 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		3563A77B2AF085270037C029 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		3563A77D2AF085270037C029 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp-DEV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp-DEV";
+			};
+			name = DEV;
+		};
+		3563A77E2AF085270037C029 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp-DEV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp-DEV";
+			};
+			name = PROD;
+		};
+		3563A7802AF085270037C029 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RaiseMeUp;
+			};
+			name = DEV;
+		};
+		3563A7812AF085270037C029 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RaiseMeUp;
+			};
+			name = PROD;
+		};
+		359B11652B5F7AFB0013DE71 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RaiseMeUp-DEV-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -967,9 +1523,9 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = DEV;
 		};
-		3563A77B2AF085270037C029 /* Release */ = {
+		359B11662B5F7AFB0013DE71 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -977,9 +1533,9 @@
 				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DD8KP9C4KQ;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
+				INFOPLIST_FILE = "RaiseMeUp-DEV-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -997,9 +1553,224 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = PROD;
 		};
-		3563A77D2AF085270037C029 /* Debug */ = {
+		359B11B32B5F7B110013DE71 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RaiseMeUp-QA-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		359B11B42B5F7B110013DE71 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RaiseMeUp-QA-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		359B11B72B5F7DFD0013DE71 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = QA;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = QA;
+		};
+		359B11B82B5F7DFD0013DE71 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RaiseMeUp/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = QA;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = QA;
+		};
+		359B11B92B5F7DFD0013DE71 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RaiseMeUp-DEV-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = QA;
+		};
+		359B11BA2B5F7DFD0013DE71 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaiseMeUp/RaiseMeUp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96H5TT55S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RaiseMeUp-QA-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = QA;
+		};
+		359B11BB2B5F7DFD0013DE71 /* QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1015,31 +1786,11 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp-DEV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp-DEV";
 			};
-			name = Debug;
+			name = QA;
 		};
-		3563A77E2AF085270037C029 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96H5TT55S4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMeUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RaiseMeUp";
-			};
-			name = Release;
-		};
-		3563A7802AF085270037C029 /* Debug */ = {
+		359B11BC2B5F7DFD0013DE71 /* QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1055,25 +1806,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RaiseMeUp;
 			};
-			name = Debug;
-		};
-		3563A7812AF085270037C029 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96H5TT55S4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.peter1119.RaiseMeUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RaiseMeUp;
-			};
-			name = Release;
+			name = QA;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1081,42 +1814,82 @@
 		3563A7472AF085270037C029 /* Build configuration list for PBXProject "RaiseMeUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3563A7772AF085270037C029 /* Debug */,
-				3563A7782AF085270037C029 /* Release */,
+				3563A7772AF085270037C029 /* DEV */,
+				359B11B72B5F7DFD0013DE71 /* QA */,
+				3563A7782AF085270037C029 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PROD;
 		};
-		3563A7792AF085270037C029 /* Build configuration list for PBXNativeTarget "RaiseMeUp" */ = {
+		3563A7792AF085270037C029 /* Build configuration list for PBXNativeTarget "RaiseMeUp-PROD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3563A77A2AF085270037C029 /* Debug */,
-				3563A77B2AF085270037C029 /* Release */,
+				3563A77A2AF085270037C029 /* DEV */,
+				359B11B82B5F7DFD0013DE71 /* QA */,
+				3563A77B2AF085270037C029 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PROD;
 		};
 		3563A77C2AF085270037C029 /* Build configuration list for PBXNativeTarget "RaiseMeUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3563A77D2AF085270037C029 /* Debug */,
-				3563A77E2AF085270037C029 /* Release */,
+				3563A77D2AF085270037C029 /* DEV */,
+				359B11BB2B5F7DFD0013DE71 /* QA */,
+				3563A77E2AF085270037C029 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PROD;
 		};
 		3563A77F2AF085270037C029 /* Build configuration list for PBXNativeTarget "RaiseMeUpUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3563A7802AF085270037C029 /* Debug */,
-				3563A7812AF085270037C029 /* Release */,
+				3563A7802AF085270037C029 /* DEV */,
+				359B11BC2B5F7DFD0013DE71 /* QA */,
+				3563A7812AF085270037C029 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PROD;
+		};
+		359B11642B5F7AFB0013DE71 /* Build configuration list for PBXNativeTarget "RaiseMeUp-DEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359B11652B5F7AFB0013DE71 /* DEV */,
+				359B11B92B5F7DFD0013DE71 /* QA */,
+				359B11662B5F7AFB0013DE71 /* PROD */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		359B11B22B5F7B110013DE71 /* Build configuration list for PBXNativeTarget "RaiseMeUp-QA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359B11B32B5F7B110013DE71 /* DEV */,
+				359B11BA2B5F7DFD0013DE71 /* QA */,
+				359B11B42B5F7B110013DE71 /* PROD */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 10.17.0;
+			};
+		};
+		359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 10.17.0;
+			};
+		};
 		35F90B792AF6329A003C96D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1128,6 +1901,56 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		359B111C2B5F7AFB0013DE71 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		359B111E2B5F7AFB0013DE71 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		359B111F2B5F7AFB0013DE71 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		359B11202B5F7AFB0013DE71 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		359B11212B5F7AFB0013DE71 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		359B116A2B5F7B110013DE71 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		359B116C2B5F7B110013DE71 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		359B116D2B5F7B110013DE71 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		359B116E2B5F7B110013DE71 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		359B116F2B5F7B110013DE71 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
 		35F90B7A2AF6329A003C96D7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35F90B792AF6329A003C96D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

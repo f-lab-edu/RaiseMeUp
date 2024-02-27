@@ -47,6 +47,10 @@ final class ProgramListHeaderView: UICollectionReusableView {
     public func bind(_ title: String, subTitle: String) {
         self.titleLabel.text = title
         self.subTitleLabel.text = subTitle
+        
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "이 단계의 레벨은 \(title)입니다.\(subTitle)"
+        self.accessibilityHint = "아래 항목 중에 더블탭으로 선택해서 운동을 시작해보세요"
     }
     
     // MARK: - Add Subviews
