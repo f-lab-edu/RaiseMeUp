@@ -8,7 +8,7 @@
 import XCTest
 import Foundation
 
-@testable import RaiseMeUp
+@testable import RaiseMeUp_DEV
 
 class MockTrainingRepository: TrainingRepositoryProtocol {
     var mockProgram: PullUpProgram?
@@ -47,7 +47,12 @@ class TrainingUseCaseTests: XCTestCase {
         // given
         let expectedName = "예상되는 프로그램 이름"
         repository.mockProgram = PullUpProgram(program: [
-        TrainingLevel(id: "", name: expectedName, description: "", routine: [])
+            TrainingLevel(
+                id: "",
+                name: expectedName,
+                description: "",
+                routine: []
+            )
         ])
         
         // when
@@ -63,9 +68,27 @@ class TrainingUseCaseTests: XCTestCase {
         }
     }
     
+    func test_데이터가들어왔을경우에기대하는데이터값과일치한다() async {
+        // given
+        let count = 10
+        self.setMockDataCount(count: count)
+        
+        // when
+        let result = await training.getProgramList()
+        
+        // then
+        switch result {
+        case .success(let data):
+            XCTAssertEqual(data.program.count, count)
+        case .failure(_):
+            XCTFail("에러가 발생함")
+        }
+    }
+    
     func test_프로그램이empty일경우emptyData에러를방출한다() async {
         // given
-        repository.mockProgram = PullUpProgram(program: [])
+        let count = 0
+        self.setMockDataCount(count: count)
         
         // when
         let result = await training.getProgramList()
@@ -81,8 +104,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_timeOutError시_notConnected에러방출한다() async {
         // given
-        let error = NetworkError.timeOut
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.timeOut)
         
         // when
         let result = await training.getProgramList()
@@ -98,8 +120,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_notReachable시_notConnected에러방출한다() async {
         // given
-        let error = NetworkError.notReachable
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.notReachable)
         
         // when
         let result = await training.getProgramList()
@@ -115,8 +136,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_invalidStatusCode시_notConnected에러방출한다() async {
         // given
-        let error = NetworkError.notReachable
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.notReachable)
         
         // when
         let result = await training.getProgramList()
@@ -132,8 +152,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_noData시_emptyData에러방출한다() async {
         // given
-        let error = NetworkError.noData
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.noData)
         
         // when
         let result = await training.getProgramList()
@@ -149,8 +168,7 @@ class TrainingUseCaseTests: XCTestCase {
     
     func test_unknown시_unknown에러방출한다() async {
         // given
-        let error = NetworkError.unknown
-        repository.mockError = error
+        self.setUpWithErrorCase(NetworkError.unknown)
         
         // when
         let result = await training.getProgramList()
@@ -162,5 +180,29 @@ class TrainingUseCaseTests: XCTestCase {
         case .failure(let error):
             XCTAssertEqual(error, .unknown)
         }
+    }
+}
+
+extension TrainingUseCaseTests {
+    private func setUpWithErrorCase(_ error: NetworkError) {
+        self.repository.mockError = error
+    }
+    
+    private func setMockDataCount(count: Int) {
+        var program: [TrainingLevel] = []
+        for _ in 0..<count {
+            program.append(
+                TrainingLevel(
+                    id: UUID().uuidString,
+                    name: UUID().uuidString,
+                    description: UUID().uuidString,
+                    routine: [
+                        DailyRoutine(day: "1", routine: [1,2,3])
+                    ]
+                )
+            )
+        }
+        
+        self.repository.mockProgram = PullUpProgram(program: program)
     }
 }
