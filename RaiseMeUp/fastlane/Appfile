@@ -1,5 +1,5 @@
 app_identifier("com.peter1119.RaiseMeUp") # The bundle identifier of your app
-apple_id("ghdtjrgus333@gmail.com") # Your Apple Developer Portal username
+apple_id("ghdtjrgus333@naver.com") # Your Apple Developer Portal username
 
 team_id("96H5TT55S4")
 team_name("SEOKHYEON HONG")

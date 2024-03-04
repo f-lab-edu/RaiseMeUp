@@ -16,8 +16,8 @@ xcuserdata/
 *.dSYM
 
 ## Puby Bundler
-/.bundle/
-/vendor/bundle
+*/.bundle/
+*/vendor/bundle
 
 
 # Swift Package Manager
