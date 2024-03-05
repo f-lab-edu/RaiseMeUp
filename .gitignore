@@ -19,6 +19,9 @@ xcuserdata/
 */.bundle/
 */vendor/bundle
 
+## fastlane
+.env
+
 
 # Swift Package Manager
 #

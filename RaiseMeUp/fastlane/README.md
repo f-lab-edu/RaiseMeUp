@@ -13,26 +13,15 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### tests
-
-```sh
-[bundle exec] fastlane tests
-```
-
-Runs all the tests
-
-----
-
-
 ## iOS
 
-### ios custom_lane
+### ios distribute_testflight
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios distribute_testflight
 ```
 
-Description of what the lane does
+Distribute app to TestFlight
 
 ----
 
