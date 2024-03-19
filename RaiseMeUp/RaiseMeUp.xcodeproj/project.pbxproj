@@ -30,8 +30,6 @@
 		355D64852B8E2EF10055DB35 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 355D64842B8E2EF10055DB35 /* FirebaseAnalytics */; };
 		355D64872B8E2EF10055DB35 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 355D64862B8E2EF10055DB35 /* FirebaseAuth */; };
 		355D64892B8E2EF10055DB35 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 355D64882B8E2EF10055DB35 /* FirebaseCrashlytics */; };
-		355DFB912B3DAF090025EB89 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
-		355DFB942B3DB0AC0025EB89 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
 		356275982B86BBC30046D3DF /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962B2B77653800421728 /* ExerciseList.swift */; };
 		356275992B86BBC40046D3DF /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962B2B77653800421728 /* ExerciseList.swift */; };
 		3562759A2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962D2B79A71300421728 /* ExerciseViewModel.swift */; };
@@ -50,6 +48,7 @@
 		356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
 		356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
 		3568E3242B156B230026F6FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
+		356D7E912BA9B32700A98677 /* RMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 356D7E902BA9B32700A98677 /* RMNetwork */; };
 		357790432B56237000539C0B /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
 		357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
 		357A35722B13803400F991B6 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
@@ -114,13 +113,11 @@
 		359B11472B5F7AFB0013DE71 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
 		359B11482B5F7AFB0013DE71 /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
 		359B11492B5F7AFB0013DE71 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
-		359B114A2B5F7AFB0013DE71 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
 		359B114B2B5F7AFB0013DE71 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
 		359B114C2B5F7AFB0013DE71 /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
 		359B114D2B5F7AFB0013DE71 /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
 		359B114E2B5F7AFB0013DE71 /* TrainingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */; };
 		359B114F2B5F7AFB0013DE71 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
-		359B11502B5F7AFB0013DE71 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
 		359B11512B5F7AFB0013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
 		359B11522B5F7AFB0013DE71 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D072B0ED7160055FA62 /* LoginViewModel.swift */; };
 		359B11532B5F7AFB0013DE71 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
@@ -176,13 +173,11 @@
 		359B11952B5F7B110013DE71 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
 		359B11962B5F7B110013DE71 /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
 		359B11972B5F7B110013DE71 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
-		359B11982B5F7B110013DE71 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB932B3DB0AC0025EB89 /* Provider.swift */; };
 		359B11992B5F7B110013DE71 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
 		359B119A2B5F7B110013DE71 /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
 		359B119B2B5F7B110013DE71 /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAF2B15C74800B4738A /* TrainingDataSource.swift */; };
 		359B119C2B5F7B110013DE71 /* TrainingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */; };
 		359B119D2B5F7B110013DE71 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */; };
-		359B119E2B5F7B110013DE71 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355DFB902B3DAF090025EB89 /* TargetType.swift */; };
 		359B119F2B5F7B110013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */; };
 		359B11A02B5F7B110013DE71 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D072B0ED7160055FA62 /* LoginViewModel.swift */; };
 		359B11A12B5F7B110013DE71 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
@@ -255,8 +250,6 @@
 		355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterMainView.swift; sourceTree = "<group>"; };
 		3557441B2B2A911100ED2637 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCounterCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		355DFB902B3DAF090025EB89 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
-		355DFB932B3DB0AC0025EB89 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RaiseMeUp-PROD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563A74F2AF085270037C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3563A7512AF085270037C029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +264,11 @@
 		356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCellModel.swift; sourceTree = "<group>"; };
 		356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListHeaderView.swift; sourceTree = "<group>"; };
 		3568E3232B156B230026F6FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		356D7E892BA9B0D500A98677 /* RMNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RMNetwork; sourceTree = "<group>"; };
+		356D7E8A2BA9B0F500A98677 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
+		356D7E8C2BA9B15000A98677 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
+		356D7E8D2BA9B15F00A98677 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		356D7E8E2BA9B1C700A98677 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
 		357790422B56237000539C0B /* AnyModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyModelStore.swift; sourceTree = "<group>"; };
 		357A356E2B137D0000F991B6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		357A35712B13803400F991B6 /* KeychainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainType.swift; sourceTree = "<group>"; };
@@ -318,6 +316,7 @@
 			files = (
 				355D64892B8E2EF10055DB35 /* FirebaseCrashlytics in Frameworks */,
 				355D64852B8E2EF10055DB35 /* FirebaseAnalytics in Frameworks */,
+				356D7E912BA9B32700A98677 /* RMNetwork in Frameworks */,
 				355D64872B8E2EF10055DB35 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,24 +415,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		355DFB8F2B3D9F4A0025EB89 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				355DFB902B3DAF090025EB89 /* TargetType.swift */,
-				355DFB932B3DB0AC0025EB89 /* Provider.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		3563A7432AF085270037C029 = {
 			isa = PBXGroup;
 			children = (
+				356D7E8E2BA9B1C700A98677 /* Features */,
+				356D7E8D2BA9B15F00A98677 /* Domain */,
+				356D7E8C2BA9B15000A98677 /* Data */,
+				356D7E8A2BA9B0F500A98677 /* Shared */,
+				356D7E892BA9B0D500A98677 /* RMNetwork */,
 				3563A74E2AF085270037C029 /* RaiseMeUp */,
 				3563A7682AF085270037C029 /* RaiseMeUpTests */,
 				3563A7722AF085270037C029 /* RaiseMeUpUITests */,
 				3563A74D2AF085270037C029 /* Products */,
 				359B11682B5F7AFC0013DE71 /* RaiseMeUp-DEV-Info.plist */,
 				359B11B62B5F7B110013DE71 /* RaiseMeUp-QA-Info.plist */,
+				356D7E8F2BA9B32700A98677 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -475,6 +471,13 @@
 				3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */,
 			);
 			path = RaiseMeUpUITests;
+			sourceTree = "<group>";
+		};
+		356D7E8F2BA9B32700A98677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		357A356D2B137CF100F991B6 /* Manager */ = {
@@ -718,7 +721,6 @@
 		35F90B6E2AF62579003C96D7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				355DFB8F2B3D9F4A0025EB89 /* Network */,
 				35F90B6D2AF62566003C96D7 /* Application */,
 				35C90D002B0ED5250055FA62 /* Core */,
 				35C90CFF2B0ED51E0055FA62 /* Data */,
@@ -760,6 +762,7 @@
 				355D64842B8E2EF10055DB35 /* FirebaseAnalytics */,
 				355D64862B8E2EF10055DB35 /* FirebaseAuth */,
 				355D64882B8E2EF10055DB35 /* FirebaseCrashlytics */,
+				356D7E902BA9B32700A98677 /* RMNetwork */,
 			);
 			productName = RaiseMeUp;
 			productReference = 3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */;
@@ -1074,13 +1077,11 @@
 				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
 				357790432B56237000539C0B /* AnyModelStore.swift in Sources */,
 				358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */,
-				355DFB942B3DB0AC0025EB89 /* Provider.swift in Sources */,
 				35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */,
 				350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */,
 				350FCFB02B15C74800B4738A /* TrainingDataSource.swift in Sources */,
 				350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */,
 				3557441C2B2A911100ED2637 /* MainCoordinatorProtocol.swift in Sources */,
-				355DFB912B3DAF090025EB89 /* TargetType.swift in Sources */,
 				3557441E2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
 				35C90D082B0ED7160055FA62 /* LoginViewModel.swift in Sources */,
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,
@@ -1156,13 +1157,11 @@
 				359B11472B5F7AFB0013DE71 /* UITableView+Extension.swift in Sources */,
 				359B11482B5F7AFB0013DE71 /* AnyModelStore.swift in Sources */,
 				359B11492B5F7AFB0013DE71 /* TrainingUseCase.swift in Sources */,
-				359B114A2B5F7AFB0013DE71 /* Provider.swift in Sources */,
 				359B114B2B5F7AFB0013DE71 /* LoginMainView.swift in Sources */,
 				359B114C2B5F7AFB0013DE71 /* TrainingDataSourceProtocol.swift in Sources */,
 				359B114D2B5F7AFB0013DE71 /* TrainingDataSource.swift in Sources */,
 				359B114E2B5F7AFB0013DE71 /* TrainingRepository.swift in Sources */,
 				359B114F2B5F7AFB0013DE71 /* MainCoordinatorProtocol.swift in Sources */,
-				359B11502B5F7AFB0013DE71 /* TargetType.swift in Sources */,
 				359B11512B5F7AFB0013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
 				359B11522B5F7AFB0013DE71 /* LoginViewModel.swift in Sources */,
 				359B11532B5F7AFB0013DE71 /* RootCoordinatorProtocol.swift in Sources */,
@@ -1220,13 +1219,11 @@
 				359B11952B5F7B110013DE71 /* UITableView+Extension.swift in Sources */,
 				359B11962B5F7B110013DE71 /* AnyModelStore.swift in Sources */,
 				359B11972B5F7B110013DE71 /* TrainingUseCase.swift in Sources */,
-				359B11982B5F7B110013DE71 /* Provider.swift in Sources */,
 				359B11992B5F7B110013DE71 /* LoginMainView.swift in Sources */,
 				359B119A2B5F7B110013DE71 /* TrainingDataSourceProtocol.swift in Sources */,
 				359B119B2B5F7B110013DE71 /* TrainingDataSource.swift in Sources */,
 				359B119C2B5F7B110013DE71 /* TrainingRepository.swift in Sources */,
 				359B119D2B5F7B110013DE71 /* MainCoordinatorProtocol.swift in Sources */,
-				359B119E2B5F7B110013DE71 /* TargetType.swift in Sources */,
 				359B119F2B5F7B110013DE71 /* ExerciseCounterCoordinatorProtocol.swift in Sources */,
 				359B11A02B5F7B110013DE71 /* LoginViewModel.swift in Sources */,
 				359B11A12B5F7B110013DE71 /* RootCoordinatorProtocol.swift in Sources */,
@@ -1977,6 +1974,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 355D64832B8E2EF10055DB35 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		356D7E902BA9B32700A98677 /* RMNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RMNetwork;
 		};
 		359B111C2B5F7AFB0013DE71 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

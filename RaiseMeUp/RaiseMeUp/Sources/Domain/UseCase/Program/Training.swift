@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RMNetwork
 
 public struct Training: TrainingUseCase {
     

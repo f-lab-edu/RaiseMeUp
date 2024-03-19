@@ -15,17 +15,17 @@ public enum NetworkError: Error {
     case unknown
 }
 
-protocol ProviderProtocol {
+public protocol ProviderProtocol {
     func request<T: Decodable>(
         _ urlRequest: URLRequest,
         retryCount: Int
     ) async throws -> T
 }
 
-class Provider: ProviderProtocol {
+public final class Provider: ProviderProtocol {
     private let session: URLSession
     
-    init(session: URLSession = .shared) {
+    public init(session: URLSession = .shared) {
         self.session = session
     }
     

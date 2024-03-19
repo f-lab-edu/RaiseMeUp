@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RMNetwork
 
 struct TrainingRepository: TrainingRepositoryProtocol {
     
