@@ -7,6 +7,7 @@
 
 import Foundation
 import AuthenticationServices
+import Shared
 
 struct Auth: AuthUseCase {
     func saveAppleIDToken(with credential: ASAuthorizationAppleIDCredential) -> Result<User, KeychainError> {

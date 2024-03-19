@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Shared
 
 final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate {
     var finishDelegate: CoordinatorFinishDelegate?

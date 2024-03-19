@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Shared
 
 protocol ExerciseCounterRoutingLogic {
     func dismiss()

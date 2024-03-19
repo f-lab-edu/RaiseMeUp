@@ -6,5 +6,6 @@
 //
 
 import UIKit
+import Shared
 
 protocol LoginCoordinatorProtocol: Coordinator { }

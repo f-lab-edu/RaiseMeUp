@@ -6,5 +6,6 @@
 //
 
 import Foundation
+import Shared
 
 protocol ExerciseCounterCoordinatorProtocol: Coordinator { }

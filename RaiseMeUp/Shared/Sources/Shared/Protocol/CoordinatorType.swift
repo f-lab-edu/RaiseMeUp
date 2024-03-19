@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CoordinatorType {
+public enum CoordinatorType {
     case root
     case login
     case main

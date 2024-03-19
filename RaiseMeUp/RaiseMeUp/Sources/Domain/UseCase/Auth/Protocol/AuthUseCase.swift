@@ -7,6 +7,8 @@
 
 import Foundation
 import AuthenticationServices
+import Shared
+import RMNetwork
 
 protocol AuthUseCase {
     func saveAppleIDToken(with credential: ASAuthorizationAppleIDCredential) -> Result<User, KeychainError>

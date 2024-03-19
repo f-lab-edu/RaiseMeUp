@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum KeychainError: Error {
+public enum KeychainError: Error {
     case noIdentityToken
     case unexpectedPasswordData
     case invalidTokenEncoding

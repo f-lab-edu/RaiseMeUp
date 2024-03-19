@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct KeychainManager {
+public struct KeychainManager {
     public static let shared: KeychainManager = KeychainManager()
     
     private init() { }

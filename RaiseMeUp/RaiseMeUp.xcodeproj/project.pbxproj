@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		350A4B9B2B1FF3EA009E988C /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */; };
-		350A4B9D2B1FF5D2009E988C /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */; };
 		350FCFA92B15BB2F00B4738A /* TrainingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */; };
 		350FCFAB2B15C65F00B4738A /* TrainingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */; };
 		350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
@@ -49,23 +47,15 @@
 		356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
 		3568E3242B156B230026F6FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
 		356D7E912BA9B32700A98677 /* RMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 356D7E902BA9B32700A98677 /* RMNetwork */; };
-		357790432B56237000539C0B /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
-		357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
-		357A35722B13803400F991B6 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
+		356D7E932BA9B55300A98677 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 356D7E922BA9B55300A98677 /* Shared */; };
 		357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
 		357A35782B13821F00F991B6 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35772B13821F00F991B6 /* Auth.swift */; };
-		357A357A2B140AF000F991B6 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35792B140AF000F991B6 /* KeychainError.swift */; };
-		357A357E2B14176200F991B6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A357D2B14176200F991B6 /* Coordinator.swift */; };
 		357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35802B1417D300F991B6 /* RootCoordinator.swift */; };
 		357A35832B142D3300F991B6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35822B142D3300F991B6 /* MainCoordinator.swift */; };
 		357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
 		357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */; };
-		357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
 		357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
-		357A358E2B143A1600F991B6 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358D2B143A1600F991B6 /* CoordinatorType.swift */; };
 		357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
-		357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
-		357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
 		358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
 		358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
 		358673172B15B83600AAE6C7 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
@@ -75,21 +65,17 @@
 		3595962E2B79A71300421728 /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595962D2B79A71300421728 /* ExerciseViewModel.swift */; };
 		359B111A2B5F39C30013DE71 /* TrainingUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */; };
 		359B11232B5F7AFB0013DE71 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
-		359B11242B5F7AFB0013DE71 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */; };
 		359B11252B5F7AFB0013DE71 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
-		359B11262B5F7AFB0013DE71 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */; };
 		359B11272B5F7AFB0013DE71 /* RUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528C4362B3F06BC004148AB /* RUButton.swift */; };
 		359B11282B5F7AFB0013DE71 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
 		359B11292B5F7AFB0013DE71 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
 		359B112A2B5F7AFB0013DE71 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
 		359B112B2B5F7AFB0013DE71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
 		359B112C2B5F7AFB0013DE71 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */; };
-		359B112D2B5F7AFB0013DE71 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
 		359B112E2B5F7AFB0013DE71 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
 		359B112F2B5F7AFB0013DE71 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
 		359B11302B5F7AFB0013DE71 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
 		359B11312B5F7AFB0013DE71 /* ExerciseCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */; };
-		359B11322B5F7AFB0013DE71 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
 		359B11332B5F7AFB0013DE71 /* RoundedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */; };
 		359B11342B5F7AFB0013DE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		359B11352B5F7AFB0013DE71 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
@@ -98,20 +84,14 @@
 		359B11382B5F7AFB0013DE71 /* TrainingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */; };
 		359B11392B5F7AFB0013DE71 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */; };
 		359B113A2B5F7AFB0013DE71 /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */; };
-		359B113B2B5F7AFB0013DE71 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A357D2B14176200F991B6 /* Coordinator.swift */; };
 		359B113C2B5F7AFB0013DE71 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35802B1417D300F991B6 /* RootCoordinator.swift */; };
-		359B113D2B5F7AFB0013DE71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
 		359B113E2B5F7AFB0013DE71 /* ExerciseCounterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */; };
 		359B113F2B5F7AFB0013DE71 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35822B142D3300F991B6 /* MainCoordinator.swift */; };
 		359B11402B5F7AFB0013DE71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D0A2B0EE2A90055FA62 /* User.swift */; };
-		359B11412B5F7AFB0013DE71 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35792B140AF000F991B6 /* KeychainError.swift */; };
-		359B11422B5F7AFB0013DE71 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358D2B143A1600F991B6 /* CoordinatorType.swift */; };
 		359B11432B5F7AFB0013DE71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
 		359B11442B5F7AFB0013DE71 /* ExerciseCounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */; };
 		359B11452B5F7AFB0013DE71 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
 		359B11462B5F7AFB0013DE71 /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
-		359B11472B5F7AFB0013DE71 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
-		359B11482B5F7AFB0013DE71 /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
 		359B11492B5F7AFB0013DE71 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
 		359B114B2B5F7AFB0013DE71 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
 		359B114C2B5F7AFB0013DE71 /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
@@ -123,7 +103,6 @@
 		359B11532B5F7AFB0013DE71 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
 		359B11542B5F7AFB0013DE71 /* ExerciseCounterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */; };
 		359B11552B5F7AFB0013DE71 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35772B13821F00F991B6 /* Auth.swift */; };
-		359B11562B5F7AFB0013DE71 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
 		359B11572B5F7AFB0013DE71 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
 		359B11592B5F7AFB0013DE71 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 359B111F2B5F7AFB0013DE71 /* FirebaseCrashlytics */; };
 		359B115A2B5F7AFB0013DE71 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 359B11202B5F7AFB0013DE71 /* FirebaseFirestore */; };
@@ -135,21 +114,17 @@
 		359B11612B5F7AFB0013DE71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
 		359B11622B5F7AFB0013DE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75B2AF085270037C029 /* Assets.xcassets */; };
 		359B11712B5F7B110013DE71 /* ExerciseCounterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440D2B2A7DBB00ED2637 /* ExerciseCounterWorker.swift */; };
-		359B11722B5F7B110013DE71 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */; };
 		359B11732B5F7B110013DE71 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35742B13821000F991B6 /* AuthUseCase.swift */; };
-		359B11742B5F7B110013DE71 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */; };
 		359B11752B5F7B110013DE71 /* RUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528C4362B3F06BC004148AB /* RUButton.swift */; };
 		359B11762B5F7B110013DE71 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
 		359B11772B5F7B110013DE71 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358B2B1431A200F991B6 /* LoginCoordinator.swift */; };
 		359B11782B5F7B110013DE71 /* ExerciseCounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440C2B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift */; };
 		359B11792B5F7B110013DE71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568E3232B156B230026F6FD /* MainView.swift */; };
 		359B117A2B5F7B110013DE71 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D50EAD2B3BB4C7008BFB70 /* RestTimer.swift */; };
-		359B117B2B5F7B110013DE71 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DBA2B14872D006F9CFB /* ReusableView.swift */; };
 		359B117C2B5F7B110013DE71 /* PullUpProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673142B15B06A00AAE6C7 /* PullUpProgram.swift */; };
 		359B117D2B5F7B110013DE71 /* ExerciseCounterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744192B2A853D00ED2637 /* ExerciseCounterMainView.swift */; };
 		359B117E2B5F7B110013DE71 /* ProgramTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C12B186804005B83D5 /* ProgramTableViewCellModel.swift */; };
 		359B117F2B5F7B110013DE71 /* ExerciseCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744102B2A7DBB00ED2637 /* ExerciseCounterViewController.swift */; };
-		359B11802B5F7B110013DE71 /* KeychainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35712B13803400F991B6 /* KeychainType.swift */; };
 		359B11812B5F7B110013DE71 /* RoundedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BBE112B565D2A00F91898 /* RoundedBackgroundView.swift */; };
 		359B11822B5F7B110013DE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
 		359B11832B5F7B110013DE71 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673162B15B83600AAE6C7 /* Training.swift */; };
@@ -158,20 +133,14 @@
 		359B11862B5F7B110013DE71 /* TrainingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */; };
 		359B11872B5F7B110013DE71 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */; };
 		359B11882B5F7B110013DE71 /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB32B15CCDA00B4738A /* ProgramCollectionViewCell.swift */; };
-		359B11892B5F7B110013DE71 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A357D2B14176200F991B6 /* Coordinator.swift */; };
 		359B118A2B5F7B110013DE71 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35802B1417D300F991B6 /* RootCoordinator.swift */; };
-		359B118B2B5F7B110013DE71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A356E2B137D0000F991B6 /* KeychainManager.swift */; };
 		359B118C2B5F7B110013DE71 /* ExerciseCounterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440F2B2A7DBB00ED2637 /* ExerciseCounterModels.swift */; };
 		359B118D2B5F7B110013DE71 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35822B142D3300F991B6 /* MainCoordinator.swift */; };
 		359B118E2B5F7B110013DE71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90D0A2B0EE2A90055FA62 /* User.swift */; };
-		359B118F2B5F7B110013DE71 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35792B140AF000F991B6 /* KeychainError.swift */; };
-		359B11902B5F7B110013DE71 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A358D2B143A1600F991B6 /* CoordinatorType.swift */; };
 		359B11912B5F7B110013DE71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0BCD72B0CEB5300F6F99B /* MainViewController.swift */; };
 		359B11922B5F7B110013DE71 /* ExerciseCounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355744112B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift */; };
 		359B11932B5F7B110013DE71 /* ProgramListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356792C32B186CAE005B83D5 /* ProgramListHeaderView.swift */; };
 		359B11942B5F7B110013DE71 /* PullUpProgramDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */; };
-		359B11952B5F7B110013DE71 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */; };
-		359B11962B5F7B110013DE71 /* AnyModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357790422B56237000539C0B /* AnyModelStore.swift */; };
 		359B11972B5F7B110013DE71 /* TrainingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */; };
 		359B11992B5F7B110013DE71 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C90CFB2B0EC9D70055FA62 /* LoginMainView.swift */; };
 		359B119A2B5F7B110013DE71 /* TrainingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */; };
@@ -183,7 +152,6 @@
 		359B11A12B5F7B110013DE71 /* RootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */; };
 		359B11A22B5F7B110013DE71 /* ExerciseCounterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557440E2B2A7DBB00ED2637 /* ExerciseCounterRouter.swift */; };
 		359B11A32B5F7B110013DE71 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35772B13821F00F991B6 /* Auth.swift */; };
-		359B11A42B5F7B110013DE71 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */; };
 		359B11A52B5F7B110013DE71 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350FCFB12B15C93500B4738A /* MainViewModel.swift */; };
 		359B11A72B5F7B110013DE71 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116D2B5F7B110013DE71 /* FirebaseCrashlytics */; };
 		359B11A82B5F7B110013DE71 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 359B116E2B5F7B110013DE71 /* FirebaseFirestore */; };
@@ -229,8 +197,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
-		350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
 		350FCFA82B15BB2F00B4738A /* TrainingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRepositoryProtocol.swift; sourceTree = "<group>"; };
 		350FCFAA2B15C65F00B4738A /* TrainingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRepository.swift; sourceTree = "<group>"; };
 		350FCFAD2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSourceProtocol.swift; sourceTree = "<group>"; };
@@ -269,23 +235,14 @@
 		356D7E8C2BA9B15000A98677 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		356D7E8D2BA9B15F00A98677 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		356D7E8E2BA9B1C700A98677 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
-		357790422B56237000539C0B /* AnyModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyModelStore.swift; sourceTree = "<group>"; };
-		357A356E2B137D0000F991B6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
-		357A35712B13803400F991B6 /* KeychainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainType.swift; sourceTree = "<group>"; };
 		357A35742B13821000F991B6 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		357A35772B13821F00F991B6 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		357A35792B140AF000F991B6 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
-		357A357D2B14176200F991B6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		357A35802B1417D300F991B6 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		357A35822B142D3300F991B6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		357A35852B142DB800F991B6 /* RootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		357A35872B14302C00F991B6 /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
 		357A358B2B1431A200F991B6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		357A358D2B143A1600F991B6 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		357F1DB52B1485E4006F9CFB /* PullUpProgramDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgramDTO.swift; sourceTree = "<group>"; };
-		357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		357F1DBA2B14872D006F9CFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		358673122B15B03A00AAE6C7 /* TrainingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUseCase.swift; sourceTree = "<group>"; };
 		358673142B15B06A00AAE6C7 /* PullUpProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpProgram.swift; sourceTree = "<group>"; };
 		358673162B15B83600AAE6C7 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
@@ -314,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356D7E932BA9B55300A98677 /* Shared in Frameworks */,
 				355D64892B8E2EF10055DB35 /* FirebaseCrashlytics in Frameworks */,
 				355D64852B8E2EF10055DB35 /* FirebaseAnalytics in Frameworks */,
 				356D7E912BA9B32700A98677 /* RMNetwork in Frameworks */,
@@ -480,25 +438,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		357A356D2B137CF100F991B6 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				357A356E2B137D0000F991B6 /* KeychainManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		357A35702B13802200F991B6 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				357A35712B13803400F991B6 /* KeychainType.swift */,
-				357A35792B140AF000F991B6 /* KeychainError.swift */,
-				357F1DBA2B14872D006F9CFB /* ReusableView.swift */,
-				357790422B56237000539C0B /* AnyModelStore.swift */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
 		357A35732B1381FA00F991B6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,16 +475,6 @@
 				3557441D2B2AA2BF00ED2637 /* ExerciseCounterCoordinatorProtocol.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		357F1DB72B1486FF006F9CFB /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				350A4B9A2B1FF3EA009E988C /* OSLog+Extension.swift */,
-				357F1DB82B14870E006F9CFB /* UITableView+Extension.swift */,
-				350A4B9C2B1FF5D2009E988C /* ErrorTableViewCell.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		358673102B15B01E00AAE6C7 /* Program */ = {
@@ -625,17 +554,6 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		35C90D002B0ED5250055FA62 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				357F1DB72B1486FF006F9CFB /* Extension */,
-				357A35702B13802200F991B6 /* Constant */,
-				357A356D2B137CF100F991B6 /* Manager */,
-				35C90D092B0EDBB90055FA62 /* Protocol */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		35C90D012B0ED5520055FA62 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,16 +604,6 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		35C90D092B0EDBB90055FA62 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				357A357D2B14176200F991B6 /* Coordinator.swift */,
-				357A35892B14305500F991B6 /* CoordinatorFinishDelegate.swift */,
-				357A358D2B143A1600F991B6 /* CoordinatorType.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		35F90B6C2AF624D6003C96D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,7 +630,6 @@
 			isa = PBXGroup;
 			children = (
 				35F90B6D2AF62566003C96D7 /* Application */,
-				35C90D002B0ED5250055FA62 /* Core */,
 				35C90CFF2B0ED51E0055FA62 /* Data */,
 				35C90CFE2B0ED5010055FA62 /* Domain */,
 				35C90CFD2B0ED4E60055FA62 /* Features */,
@@ -763,6 +670,7 @@
 				355D64862B8E2EF10055DB35 /* FirebaseAuth */,
 				355D64882B8E2EF10055DB35 /* FirebaseCrashlytics */,
 				356D7E902BA9B32700A98677 /* RMNetwork */,
+				356D7E922BA9B55300A98677 /* Shared */,
 			);
 			productName = RaiseMeUp;
 			productReference = 3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */;
@@ -1035,21 +943,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				355744132B2A7DBB00ED2637 /* ExerciseCounterWorker.swift in Sources */,
-				350A4B9B2B1FF3EA009E988C /* OSLog+Extension.swift in Sources */,
 				357A35752B13821000F991B6 /* AuthUseCase.swift in Sources */,
-				350A4B9D2B1FF5D2009E988C /* ErrorTableViewCell.swift in Sources */,
 				3528C4372B3F06BC004148AB /* RUButton.swift in Sources */,
 				3563A75A2AF085270037C029 /* RaiseMeUp.xcdatamodeld in Sources */,
 				357A358C2B1431A200F991B6 /* LoginCoordinator.swift in Sources */,
 				355744122B2A7DBB00ED2637 /* ExerciseCounterPresenter.swift in Sources */,
 				3568E3242B156B230026F6FD /* MainView.swift in Sources */,
 				35D50EAE2B3BB4C7008BFB70 /* RestTimer.swift in Sources */,
-				357F1DBB2B14872D006F9CFB /* ReusableView.swift in Sources */,
 				358673152B15B06A00AAE6C7 /* PullUpProgram.swift in Sources */,
 				3557441A2B2A853D00ED2637 /* ExerciseCounterMainView.swift in Sources */,
 				356792C22B186804005B83D5 /* ProgramTableViewCellModel.swift in Sources */,
 				355744162B2A7DBB00ED2637 /* ExerciseCounterViewController.swift in Sources */,
-				357A35722B13803400F991B6 /* KeychainType.swift in Sources */,
 				351BBE122B565D2A00F91898 /* RoundedBackgroundView.swift in Sources */,
 				3595962C2B77653800421728 /* ExerciseList.swift in Sources */,
 				3563A7502AF085270037C029 /* AppDelegate.swift in Sources */,
@@ -1061,21 +965,15 @@
 				358AB4432B71A87B002A3335 /* ExerciseRow.swift in Sources */,
 				357A35882B14302C00F991B6 /* LoginCoordinatorProtocol.swift in Sources */,
 				350FCFB42B15CCDA00B4738A /* ProgramCollectionViewCell.swift in Sources */,
-				357A357E2B14176200F991B6 /* Coordinator.swift in Sources */,
 				357A35812B1417D300F991B6 /* RootCoordinator.swift in Sources */,
-				357A356F2B137D0000F991B6 /* KeychainManager.swift in Sources */,
 				3595962E2B79A71300421728 /* ExerciseViewModel.swift in Sources */,
 				355744152B2A7DBB00ED2637 /* ExerciseCounterModels.swift in Sources */,
 				357A35832B142D3300F991B6 /* MainCoordinator.swift in Sources */,
 				35C90D0B2B0EE2A90055FA62 /* User.swift in Sources */,
-				357A357A2B140AF000F991B6 /* KeychainError.swift in Sources */,
-				357A358E2B143A1600F991B6 /* CoordinatorType.swift in Sources */,
 				35B0BCD82B0CEB5300F6F99B /* MainViewController.swift in Sources */,
 				355744172B2A7DBB00ED2637 /* ExerciseCounterInteractor.swift in Sources */,
 				356792C42B186CAE005B83D5 /* ProgramListHeaderView.swift in Sources */,
 				357F1DB62B1485E4006F9CFB /* PullUpProgramDTO.swift in Sources */,
-				357F1DB92B14870E006F9CFB /* UITableView+Extension.swift in Sources */,
-				357790432B56237000539C0B /* AnyModelStore.swift in Sources */,
 				358673132B15B03A00AAE6C7 /* TrainingUseCase.swift in Sources */,
 				35C90CFC2B0EC9D70055FA62 /* LoginMainView.swift in Sources */,
 				350FCFAE2B15C6BE00B4738A /* TrainingDataSourceProtocol.swift in Sources */,
@@ -1087,7 +985,6 @@
 				357A35862B142DB800F991B6 /* RootCoordinatorProtocol.swift in Sources */,
 				355744142B2A7DBB00ED2637 /* ExerciseCounterRouter.swift in Sources */,
 				357A35782B13821F00F991B6 /* Auth.swift in Sources */,
-				357A358A2B14305500F991B6 /* CoordinatorFinishDelegate.swift in Sources */,
 				350FCFB22B15C93500B4738A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1117,9 +1014,7 @@
 				359B11232B5F7AFB0013DE71 /* ExerciseCounterWorker.swift in Sources */,
 				3562759E2B86BBCF0046D3DF /* ExerciseRow.swift in Sources */,
 				3562759A2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */,
-				359B11242B5F7AFB0013DE71 /* OSLog+Extension.swift in Sources */,
 				359B11252B5F7AFB0013DE71 /* AuthUseCase.swift in Sources */,
-				359B11262B5F7AFB0013DE71 /* ErrorTableViewCell.swift in Sources */,
 				359B11272B5F7AFB0013DE71 /* RUButton.swift in Sources */,
 				356275982B86BBC30046D3DF /* ExerciseList.swift in Sources */,
 				359B11282B5F7AFB0013DE71 /* RaiseMeUp.xcdatamodeld in Sources */,
@@ -1128,12 +1023,10 @@
 				359B112A2B5F7AFB0013DE71 /* ExerciseCounterPresenter.swift in Sources */,
 				359B112B2B5F7AFB0013DE71 /* MainView.swift in Sources */,
 				359B112C2B5F7AFB0013DE71 /* RestTimer.swift in Sources */,
-				359B112D2B5F7AFB0013DE71 /* ReusableView.swift in Sources */,
 				359B112E2B5F7AFB0013DE71 /* PullUpProgram.swift in Sources */,
 				359B112F2B5F7AFB0013DE71 /* ExerciseCounterMainView.swift in Sources */,
 				359B11302B5F7AFB0013DE71 /* ProgramTableViewCellModel.swift in Sources */,
 				359B11312B5F7AFB0013DE71 /* ExerciseCounterViewController.swift in Sources */,
-				359B11322B5F7AFB0013DE71 /* KeychainType.swift in Sources */,
 				359B11332B5F7AFB0013DE71 /* RoundedBackgroundView.swift in Sources */,
 				359B11342B5F7AFB0013DE71 /* AppDelegate.swift in Sources */,
 				359B11352B5F7AFB0013DE71 /* Training.swift in Sources */,
@@ -1142,20 +1035,14 @@
 				359B11382B5F7AFB0013DE71 /* TrainingRepositoryProtocol.swift in Sources */,
 				359B11392B5F7AFB0013DE71 /* LoginCoordinatorProtocol.swift in Sources */,
 				359B113A2B5F7AFB0013DE71 /* ProgramCollectionViewCell.swift in Sources */,
-				359B113B2B5F7AFB0013DE71 /* Coordinator.swift in Sources */,
 				359B113C2B5F7AFB0013DE71 /* RootCoordinator.swift in Sources */,
-				359B113D2B5F7AFB0013DE71 /* KeychainManager.swift in Sources */,
 				359B113E2B5F7AFB0013DE71 /* ExerciseCounterModels.swift in Sources */,
 				359B113F2B5F7AFB0013DE71 /* MainCoordinator.swift in Sources */,
 				359B11402B5F7AFB0013DE71 /* User.swift in Sources */,
-				359B11412B5F7AFB0013DE71 /* KeychainError.swift in Sources */,
-				359B11422B5F7AFB0013DE71 /* CoordinatorType.swift in Sources */,
 				359B11432B5F7AFB0013DE71 /* MainViewController.swift in Sources */,
 				359B11442B5F7AFB0013DE71 /* ExerciseCounterInteractor.swift in Sources */,
 				359B11452B5F7AFB0013DE71 /* ProgramListHeaderView.swift in Sources */,
 				359B11462B5F7AFB0013DE71 /* PullUpProgramDTO.swift in Sources */,
-				359B11472B5F7AFB0013DE71 /* UITableView+Extension.swift in Sources */,
-				359B11482B5F7AFB0013DE71 /* AnyModelStore.swift in Sources */,
 				359B11492B5F7AFB0013DE71 /* TrainingUseCase.swift in Sources */,
 				359B114B2B5F7AFB0013DE71 /* LoginMainView.swift in Sources */,
 				359B114C2B5F7AFB0013DE71 /* TrainingDataSourceProtocol.swift in Sources */,
@@ -1167,7 +1054,6 @@
 				359B11532B5F7AFB0013DE71 /* RootCoordinatorProtocol.swift in Sources */,
 				359B11542B5F7AFB0013DE71 /* ExerciseCounterRouter.swift in Sources */,
 				359B11552B5F7AFB0013DE71 /* Auth.swift in Sources */,
-				359B11562B5F7AFB0013DE71 /* CoordinatorFinishDelegate.swift in Sources */,
 				359B11572B5F7AFB0013DE71 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1179,9 +1065,7 @@
 				359B11712B5F7B110013DE71 /* ExerciseCounterWorker.swift in Sources */,
 				3562759F2B86BBCF0046D3DF /* ExerciseRow.swift in Sources */,
 				3562759B2B86BBC70046D3DF /* ExerciseViewModel.swift in Sources */,
-				359B11722B5F7B110013DE71 /* OSLog+Extension.swift in Sources */,
 				359B11732B5F7B110013DE71 /* AuthUseCase.swift in Sources */,
-				359B11742B5F7B110013DE71 /* ErrorTableViewCell.swift in Sources */,
 				359B11752B5F7B110013DE71 /* RUButton.swift in Sources */,
 				356275992B86BBC40046D3DF /* ExerciseList.swift in Sources */,
 				359B11762B5F7B110013DE71 /* RaiseMeUp.xcdatamodeld in Sources */,
@@ -1190,12 +1074,10 @@
 				359B11782B5F7B110013DE71 /* ExerciseCounterPresenter.swift in Sources */,
 				359B11792B5F7B110013DE71 /* MainView.swift in Sources */,
 				359B117A2B5F7B110013DE71 /* RestTimer.swift in Sources */,
-				359B117B2B5F7B110013DE71 /* ReusableView.swift in Sources */,
 				359B117C2B5F7B110013DE71 /* PullUpProgram.swift in Sources */,
 				359B117D2B5F7B110013DE71 /* ExerciseCounterMainView.swift in Sources */,
 				359B117E2B5F7B110013DE71 /* ProgramTableViewCellModel.swift in Sources */,
 				359B117F2B5F7B110013DE71 /* ExerciseCounterViewController.swift in Sources */,
-				359B11802B5F7B110013DE71 /* KeychainType.swift in Sources */,
 				359B11812B5F7B110013DE71 /* RoundedBackgroundView.swift in Sources */,
 				359B11822B5F7B110013DE71 /* AppDelegate.swift in Sources */,
 				359B11832B5F7B110013DE71 /* Training.swift in Sources */,
@@ -1204,20 +1086,14 @@
 				359B11862B5F7B110013DE71 /* TrainingRepositoryProtocol.swift in Sources */,
 				359B11872B5F7B110013DE71 /* LoginCoordinatorProtocol.swift in Sources */,
 				359B11882B5F7B110013DE71 /* ProgramCollectionViewCell.swift in Sources */,
-				359B11892B5F7B110013DE71 /* Coordinator.swift in Sources */,
 				359B118A2B5F7B110013DE71 /* RootCoordinator.swift in Sources */,
-				359B118B2B5F7B110013DE71 /* KeychainManager.swift in Sources */,
 				359B118C2B5F7B110013DE71 /* ExerciseCounterModels.swift in Sources */,
 				359B118D2B5F7B110013DE71 /* MainCoordinator.swift in Sources */,
 				359B118E2B5F7B110013DE71 /* User.swift in Sources */,
-				359B118F2B5F7B110013DE71 /* KeychainError.swift in Sources */,
-				359B11902B5F7B110013DE71 /* CoordinatorType.swift in Sources */,
 				359B11912B5F7B110013DE71 /* MainViewController.swift in Sources */,
 				359B11922B5F7B110013DE71 /* ExerciseCounterInteractor.swift in Sources */,
 				359B11932B5F7B110013DE71 /* ProgramListHeaderView.swift in Sources */,
 				359B11942B5F7B110013DE71 /* PullUpProgramDTO.swift in Sources */,
-				359B11952B5F7B110013DE71 /* UITableView+Extension.swift in Sources */,
-				359B11962B5F7B110013DE71 /* AnyModelStore.swift in Sources */,
 				359B11972B5F7B110013DE71 /* TrainingUseCase.swift in Sources */,
 				359B11992B5F7B110013DE71 /* LoginMainView.swift in Sources */,
 				359B119A2B5F7B110013DE71 /* TrainingDataSourceProtocol.swift in Sources */,
@@ -1229,7 +1105,6 @@
 				359B11A12B5F7B110013DE71 /* RootCoordinatorProtocol.swift in Sources */,
 				359B11A22B5F7B110013DE71 /* ExerciseCounterRouter.swift in Sources */,
 				359B11A32B5F7B110013DE71 /* Auth.swift in Sources */,
-				359B11A42B5F7B110013DE71 /* CoordinatorFinishDelegate.swift in Sources */,
 				359B11A52B5F7B110013DE71 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1978,6 +1853,10 @@
 		356D7E902BA9B32700A98677 /* RMNetwork */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RMNetwork;
+		};
+		356D7E922BA9B55300A98677 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
 		};
 		359B111C2B5F7AFB0013DE71 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

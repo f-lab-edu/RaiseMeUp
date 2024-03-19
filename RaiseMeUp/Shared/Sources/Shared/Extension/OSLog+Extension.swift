@@ -8,7 +8,7 @@
 import Foundation
 import OSLog
 
-extension OSLog {
+public extension OSLog {
     private static let subSystem = Bundle.main.bundleIdentifier!
     
     static let ui = OSLog(subsystem: subSystem, category: "UI")

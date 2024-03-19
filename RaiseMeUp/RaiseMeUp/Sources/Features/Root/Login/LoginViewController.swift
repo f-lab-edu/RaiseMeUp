@@ -8,6 +8,7 @@
 import UIKit
 import AuthenticationServices
 import Combine
+import Shared
 
 import OSLog
 

@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import OSLog
+import Shared
 
 final class MainViewController: UIViewController {
     typealias TrainingDataSource = UICollectionViewDiffableDataSource<TrainingLevel.ID, DailyRoutine.ID>
@@ -70,7 +71,7 @@ final class MainViewController: UIViewController {
             currentSnapshot.appendSections([sectionIdentifier])
             guard let section = self.viewModel.sectionStore.fetchByID(sectionIdentifier) else { return }
             let items = section.routine
-            currentSnapshot.appendItems(items.map(\.id))
+            currentSnapshot.appendItems(items.map { $0.id })
         }
         dataSource.apply(currentSnapshot, animatingDifferences: true)
     }

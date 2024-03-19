@@ -8,6 +8,7 @@
 import UIKit
 import OSLog
 import Combine
+import Shared
 
 final class MainViewModel {
     private let useCase: TrainingUseCase

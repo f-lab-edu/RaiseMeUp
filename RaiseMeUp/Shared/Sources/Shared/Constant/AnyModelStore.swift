@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol ModelStore {
+public protocol ModelStore {
     associatedtype Model: Identifiable
     var isEmpty: Bool { get }
     
     func fetchByID(_ id: Model.ID) -> Model?
 }
 
-class AnyModelStore<Model: Identifiable>: ModelStore {
+public final class AnyModelStore<Model: Identifiable>: ModelStore {
     
     private var models = [Model.ID: Model]()
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return models.isEmpty
     }
     
-    init(_ models: [Model]) {
+    public init(_ models: [Model]) {
         self.models = models.groupingByUniqueID()
     }
     
-    func fetchByID(_ id: Model.ID) -> Model? {
+    public func fetchByID(_ id: Model.ID) -> Model? {
         return self.models[id]
     }
 }

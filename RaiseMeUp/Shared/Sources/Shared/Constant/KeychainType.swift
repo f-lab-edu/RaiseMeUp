@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum KeychainType {
+public enum KeychainType {
     case accessToken
     
     var keychainIdentifier: String {
