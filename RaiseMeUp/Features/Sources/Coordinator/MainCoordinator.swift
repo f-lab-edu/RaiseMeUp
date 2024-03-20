@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Shared
+import Domain
 
 final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate {
     var finishDelegate: CoordinatorFinishDelegate?

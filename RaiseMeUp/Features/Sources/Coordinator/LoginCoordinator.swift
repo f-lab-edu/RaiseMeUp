@@ -7,6 +7,7 @@
 
 import UIKit
 import Shared
+import Domain
 
 final class LoginCoordinator: LoginCoordinatorProtocol {
     var navigationController: UINavigationController

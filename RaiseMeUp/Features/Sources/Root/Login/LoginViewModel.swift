@@ -9,6 +9,7 @@ import Foundation
 import AuthenticationServices
 import Shared
 import OSLog
+import Domain
 
 final class LoginViewModel {
     private let useCase: AuthUseCase

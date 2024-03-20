@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Domain
 
 struct ExerciseRow: View {
     var routine: ProgramTableViewCellModel

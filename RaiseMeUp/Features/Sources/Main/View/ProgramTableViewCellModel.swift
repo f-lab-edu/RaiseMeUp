@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 struct ProgramTableViewCellModel {
     let day: String

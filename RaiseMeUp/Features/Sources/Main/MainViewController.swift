@@ -9,6 +9,7 @@ import UIKit
 import Combine
 import OSLog
 import Shared
+import Domain
 
 final class MainViewController: UIViewController {
     typealias TrainingDataSource = UICollectionViewDiffableDataSource<TrainingLevel.ID, DailyRoutine.ID>

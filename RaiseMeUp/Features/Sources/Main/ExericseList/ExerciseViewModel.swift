@@ -8,6 +8,7 @@
 import Foundation
 import OSLog
 import Shared
+import Domain
 
 class ExerciseViewModel: ObservableObject {
     private let useCase: TrainingUseCase
