@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol TrainingDataSourceProtocol {
+public protocol TrainingDataSourceProtocol {
     func trainingProgram() async throws -> PullUpProgramDTO
 }

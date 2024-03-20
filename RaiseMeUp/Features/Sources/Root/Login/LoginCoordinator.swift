@@ -8,6 +8,7 @@
 import UIKit
 import Shared
 import Domain
+import Coordinator
 
 final class LoginCoordinator: LoginCoordinatorProtocol {
     var navigationController: UINavigationController

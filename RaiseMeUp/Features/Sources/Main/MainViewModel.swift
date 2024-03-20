@@ -10,6 +10,7 @@ import OSLog
 import Combine
 import Shared
 import Domain
+import Coordinator
 
 final class MainViewModel {
     private let useCase: TrainingUseCase

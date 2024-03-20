@@ -9,6 +9,7 @@ import Foundation
 import OSLog
 import Shared
 import Domain
+import Coordinator
 
 class ExerciseViewModel: ObservableObject {
     private let useCase: TrainingUseCase

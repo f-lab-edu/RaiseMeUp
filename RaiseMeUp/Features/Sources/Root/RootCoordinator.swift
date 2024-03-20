@@ -7,20 +7,22 @@
 
 import UIKit
 import Shared
+import Coordinator
+import Main
 
-final class RootCoordinator: RootCoordinatorProtocol {
+final public class RootCoordinator: RootCoordinatorProtocol {
 
-    var childCoordinators: [Coordinator] = []
-    var navigationController: UINavigationController
-    weak var finishDelegate: CoordinatorFinishDelegate?
+    public var childCoordinators: [Coordinator] = []
+    public var navigationController: UINavigationController
+    public weak var finishDelegate: CoordinatorFinishDelegate?
     
-    var type: CoordinatorType { .root }
+    public var type: CoordinatorType { .root }
 
-    init(navigationController: UINavigationController) {
+    public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
+    public func start() {
         if KeychainManager.shared.load(key: .accessToken)?.isEmpty == true {
             let loginCoordinator = LoginCoordinator(navigationController: navigationController)
             loginCoordinator.finishDelegate = self
@@ -31,18 +33,18 @@ final class RootCoordinator: RootCoordinatorProtocol {
         }
     }
     
-    func finish() {
+    public func finish() {
         
     }
 
-    func openMainCoordinator() {
+    public func openMainCoordinator() {
         let mainCoordinator = MainCoordinator(navigationController: navigationController)
         self.finishDelegate = self
         self.childCoordinators.append(mainCoordinator)
         mainCoordinator.startAtSwiftUI()
     }
     
-    func openLoginCoordinator() {
+    public func openLoginCoordinator() {
         let loginCoordinator = LoginCoordinator(navigationController: navigationController)
         loginCoordinator.finishDelegate = self
         self.childCoordinators.append(loginCoordinator)
@@ -51,7 +53,7 @@ final class RootCoordinator: RootCoordinatorProtocol {
 }
 
 extension RootCoordinator: CoordinatorFinishDelegate {
-    func coordinatorDidFinish(childCoordinator: Coordinator) {
+    public func coordinatorDidFinish(childCoordinator: Coordinator) {
         self.navigationController.viewControllers.removeAll()
         self.childCoordinators.removeAll()
         

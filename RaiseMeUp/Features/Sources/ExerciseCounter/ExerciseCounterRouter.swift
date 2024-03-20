@@ -12,6 +12,7 @@
 
 import UIKit
 import Shared
+import Coordinator
 
 protocol ExerciseCounterRoutingLogic {
     func dismiss()
@@ -22,22 +23,22 @@ protocol ExerciseCounterDataPassing
     var dataStore: ExerciseCounterDataStore? { get }
 }
 
-class ExerciseCounterRouter: NSObject, ExerciseCounterRoutingLogic, ExerciseCounterDataPassing, ExerciseCounterCoordinatorProtocol
+public class ExerciseCounterRouter: NSObject, ExerciseCounterRoutingLogic, ExerciseCounterDataPassing, ExerciseCounterCoordinatorProtocol
 {
     
     weak var viewController: ExerciseCounterViewController?
     var dataStore: ExerciseCounterDataStore?
     
-    var navigationController: UINavigationController
+    public var navigationController: UINavigationController
     
-    var finishDelegate: CoordinatorFinishDelegate?
+    public var finishDelegate: CoordinatorFinishDelegate?
     
-    var childCoordinators: [Coordinator] = []
+    public var childCoordinators: [Coordinator] = []
     
-    var type: CoordinatorType { .exerciseCounter }
+    public var type: CoordinatorType { .exerciseCounter }
     private var routine: [Int]
     
-    init(
+    public init(
         navigationController: UINavigationController,
         routine: [Int]
     ) {
@@ -45,7 +46,7 @@ class ExerciseCounterRouter: NSObject, ExerciseCounterRoutingLogic, ExerciseCoun
         self.routine = routine
     }
     
-    func start() {
+    public func start() {
         let viewController = ExerciseCounterViewController()
         let router = self
         viewController.router = self
@@ -57,7 +58,7 @@ class ExerciseCounterRouter: NSObject, ExerciseCounterRoutingLogic, ExerciseCoun
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
-    func finish() {
+    public func finish() {
         self.finishDelegate?.coordinatorDidFinish(childCoordinator: self)
     }
     

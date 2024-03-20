@@ -9,15 +9,15 @@ import UIKit
 import Shared
 import Domain
 
-struct TrainingRepository: TrainingRepositoryProtocol {
+public struct TrainingRepository: TrainingRepositoryProtocol {
     
     private let trainingDataSource: TrainingDataSourceProtocol
     
-    init(trainingDataSource: TrainingDataSourceProtocol) {
+    public init(trainingDataSource: TrainingDataSourceProtocol) {
         self.trainingDataSource = trainingDataSource
     }
     
-    func trainingProgram() async throws -> PullUpProgram {
+    public func trainingProgram() async throws -> PullUpProgram {
         do {
             return try await trainingDataSource.trainingProgram().toDomain()
         } catch let error as NetworkError {

@@ -10,6 +10,7 @@ import AuthenticationServices
 import Shared
 import OSLog
 import Domain
+import Coordinator
 
 final class LoginViewModel {
     private let useCase: AuthUseCase

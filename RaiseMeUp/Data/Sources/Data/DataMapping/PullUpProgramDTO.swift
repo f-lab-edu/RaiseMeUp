@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Domain
 
-struct PullUpProgramDTO: Decodable {
-    var programs: [ProgramDTO]
+public struct PullUpProgramDTO: Decodable {
+    private var programs: [ProgramDTO]
 }
 
 extension PullUpProgramDTO {

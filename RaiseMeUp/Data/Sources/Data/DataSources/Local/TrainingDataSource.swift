@@ -7,15 +7,16 @@
 
 import Foundation
 import Shared
+import RMNetwork
 
-struct TrainingDataSource: TrainingDataSourceProtocol {
+public struct TrainingDataSource: TrainingDataSourceProtocol {
     private let provider: Provider
     
     public init() {
         self.provider = Provider()
     }
     
-    func trainingProgram() async throws -> PullUpProgramDTO {
+    public func trainingProgram() async throws -> PullUpProgramDTO {
         let urlRequest = try TrainingTarget.program.asURLRequest()
         return try await provider.request(urlRequest)
     }

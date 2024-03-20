@@ -3,7 +3,7 @@
   "strings" : {
     "MAIN_TITLE_LABEL" : {
       "comment" : "메인 화면의 타이틀 텍스트",
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

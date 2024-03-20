@@ -9,21 +9,24 @@ import UIKit
 import SwiftUI
 import Shared
 import Domain
+import Coordinator
+import Data
+import ExerciseCounter
 
-final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate {
-    var finishDelegate: CoordinatorFinishDelegate?
+final public class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate {
+    public var finishDelegate: CoordinatorFinishDelegate?
 
-    var childCoordinators: [Coordinator] = []
+    public var childCoordinators: [Coordinator] = []
     
-    var navigationController: UINavigationController
+    public var navigationController: UINavigationController
     
-    var type: CoordinatorType { .main }
+    public var type: CoordinatorType { .main }
     
-    init(navigationController: UINavigationController) {
+    public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
+    public func start() {
         let dataSource = TrainingDataSource()
         let repository = TrainingRepository(trainingDataSource: dataSource)
         let useCase = Training(repository: repository)
@@ -33,7 +36,7 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
         self.navigationController.viewControllers = [viewController]
     }
     
-    func startAtSwiftUI() {
+    public func startAtSwiftUI() {
         let dataSource = TrainingDataSource()
         let repository = TrainingRepository(trainingDataSource: dataSource)
         let useCase = Training(repository: repository)
@@ -45,7 +48,7 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
         self.navigationController.viewControllers = [viewController]
     }
     
-    func presentExerciseCounter(routine: [Int]) {
+    public func presentExerciseCounter(routine: [Int]) {
         let coordinator = ExerciseCounterRouter(
             navigationController: navigationController,
             routine: routine
@@ -55,7 +58,7 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
         coordinator.start()
     }
     
-    func coordinatorDidFinish(childCoordinator: Coordinator) {
+    public func coordinatorDidFinish(childCoordinator: Coordinator) {
         guard case .exerciseCounter = childCoordinator.type else {
             return
         }
@@ -63,7 +66,7 @@ final class MainCoordinator: MainCoordinatorProtocol, CoordinatorFinishDelegate 
         self.navigationController.popViewController(animated: true)
     }
     
-    func finish() {
+    public func finish() {
         
     }
 }
