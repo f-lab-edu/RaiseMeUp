@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import RMNetwork
+import Shared
+import Domain
 
 struct TrainingRepository: TrainingRepositoryProtocol {
     

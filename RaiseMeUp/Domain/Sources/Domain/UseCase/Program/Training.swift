@@ -6,13 +6,13 @@
 //
 
 import Foundation
-import RMNetwork
+import Shared
 
 public struct Training: TrainingUseCase {
     
     private let repository: TrainingRepositoryProtocol
     
-    init(repository: TrainingRepositoryProtocol) {
+    public init(repository: TrainingRepositoryProtocol) {
         self.repository = repository
     }
     

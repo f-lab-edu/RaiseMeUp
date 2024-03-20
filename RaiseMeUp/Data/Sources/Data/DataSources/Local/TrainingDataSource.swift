@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RMNetwork
+import Shared
 
 struct TrainingDataSource: TrainingDataSourceProtocol {
     private let provider: Provider

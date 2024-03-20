@@ -9,8 +9,11 @@ import Foundation
 import AuthenticationServices
 import Shared
 
-struct Auth: AuthUseCase {
-    func saveAppleIDToken(with credential: ASAuthorizationAppleIDCredential) -> Result<User, KeychainError> {
+public struct Auth: AuthUseCase {
+    
+    public init() {}
+    
+    public func saveAppleIDToken(with credential: ASAuthorizationAppleIDCredential) -> Result<User, KeychainError> {
         let familyName = credential.fullName?.familyName ?? String()
         let givenName = credential.fullName?.givenName ?? String()
         let fullName = familyName + givenName

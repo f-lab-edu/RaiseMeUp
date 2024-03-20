@@ -13,6 +13,6 @@ public enum TrainingError: Error {
     case unknown
 }
 
-protocol TrainingUseCase {
+public protocol TrainingUseCase {
     func getProgramList() async -> Result<PullUpProgram, TrainingError>
 }
