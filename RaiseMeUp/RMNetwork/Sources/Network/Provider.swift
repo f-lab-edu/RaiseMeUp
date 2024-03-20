@@ -7,14 +7,6 @@
 
 import Foundation
 
-public enum NetworkError: Error {
-    case invalidStatusCode
-    case noData
-    case notReachable
-    case timeOut
-    case unknown
-}
-
 public protocol ProviderProtocol {
     func request<T: Decodable>(
         _ urlRequest: URLRequest,
