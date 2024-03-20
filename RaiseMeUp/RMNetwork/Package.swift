@@ -12,8 +12,13 @@ let package = Package(
             targets: ["RMNetwork"]
         )
     ],
+    dependencies: [
+        .package(path: "../Shared")
+    ],
     targets: [
         .target(
-            name: "RMNetwork")
+            name: "RMNetwork",
+            dependencies: [.product(name: "Shared", package: "Shared")]
+        )
     ]
 )
