@@ -8,6 +8,6 @@
 import Foundation
 import Shared
 
-protocol MainCoordinatorProtocol: Coordinator {
+public protocol MainCoordinatorProtocol: Coordinator {
     func presentExerciseCounter(routine: [Int]) 
 }

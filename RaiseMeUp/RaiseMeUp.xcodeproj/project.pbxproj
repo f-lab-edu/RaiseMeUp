@@ -18,7 +18,6 @@
 		3563A75F2AF085270037C029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75D2AF085270037C029 /* LaunchScreen.storyboard */; };
 		3563A7742AF085270037C029 /* RaiseMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7732AF085270037C029 /* RaiseMeUpUITests.swift */; };
 		3563A7762AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7752AF085270037C029 /* RaiseMeUpUITestsLaunchTests.swift */; };
-		356D7E992BAA5E0F00A98677 /* Features in Frameworks */ = {isa = PBXBuildFile; productRef = 356D7E982BAA5E0F00A98677 /* Features */; };
 		359B111A2B5F39C30013DE71 /* TrainingUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B11192B5F39C30013DE71 /* TrainingUseCaseTests.swift */; };
 		359B11282B5F7AFB0013DE71 /* RaiseMeUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3563A7582AF085270037C029 /* RaiseMeUp.xcdatamodeld */; };
 		359B11342B5F7AFB0013DE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563A74F2AF085270037C029 /* AppDelegate.swift */; };
@@ -45,6 +44,14 @@
 		359B11AF2B5F7B110013DE71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
 		359B11B02B5F7B110013DE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3563A75B2AF085270037C029 /* Assets.xcassets */; };
 		359E19BD2B44E41A0020561F /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359E19BC2B44E41A0020561F /* MainViewModelTests.swift */; };
+		35EE326C2BAAF04E00CDBA0C /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE326B2BAAF04E00CDBA0C /* Coordinator */; };
+		35EE326E2BAAF46B00CDBA0C /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE326D2BAAF46B00CDBA0C /* Data */; };
+		35EE32702BAAF46B00CDBA0C /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE326F2BAAF46B00CDBA0C /* Domain */; };
+		35EE32722BAAF46B00CDBA0C /* ExerciseCounter in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE32712BAAF46B00CDBA0C /* ExerciseCounter */; };
+		35EE32742BAAF46B00CDBA0C /* Main in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE32732BAAF46B00CDBA0C /* Main */; };
+		35EE32762BAAF46B00CDBA0C /* Root in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE32752BAAF46B00CDBA0C /* Root */; };
+		35EE32782BAAF46B00CDBA0C /* RMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE32772BAAF46B00CDBA0C /* RMNetwork */; };
+		35EE327A2BAAF46B00CDBA0C /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE32792BAAF46B00CDBA0C /* Shared */; };
 		35F90B712AF63171003C96D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F90B702AF63171003C96D7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -106,10 +113,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EE32702BAAF46B00CDBA0C /* Domain in Frameworks */,
+				35EE32742BAAF46B00CDBA0C /* Main in Frameworks */,
+				35EE32762BAAF46B00CDBA0C /* Root in Frameworks */,
 				355D64892B8E2EF10055DB35 /* FirebaseCrashlytics in Frameworks */,
+				35EE32782BAAF46B00CDBA0C /* RMNetwork in Frameworks */,
 				355D64852B8E2EF10055DB35 /* FirebaseAnalytics in Frameworks */,
+				35EE326E2BAAF46B00CDBA0C /* Data in Frameworks */,
 				355D64872B8E2EF10055DB35 /* FirebaseAuth in Frameworks */,
-				356D7E992BAA5E0F00A98677 /* Features in Frameworks */,
+				35EE326C2BAAF04E00CDBA0C /* Coordinator in Frameworks */,
+				35EE327A2BAAF46B00CDBA0C /* Shared in Frameworks */,
+				35EE32722BAAF46B00CDBA0C /* ExerciseCounter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +284,14 @@
 				355D64842B8E2EF10055DB35 /* FirebaseAnalytics */,
 				355D64862B8E2EF10055DB35 /* FirebaseAuth */,
 				355D64882B8E2EF10055DB35 /* FirebaseCrashlytics */,
-				356D7E982BAA5E0F00A98677 /* Features */,
+				35EE326B2BAAF04E00CDBA0C /* Coordinator */,
+				35EE326D2BAAF46B00CDBA0C /* Data */,
+				35EE326F2BAAF46B00CDBA0C /* Domain */,
+				35EE32712BAAF46B00CDBA0C /* ExerciseCounter */,
+				35EE32732BAAF46B00CDBA0C /* Main */,
+				35EE32752BAAF46B00CDBA0C /* Root */,
+				35EE32772BAAF46B00CDBA0C /* RMNetwork */,
+				35EE32792BAAF46B00CDBA0C /* Shared */,
 			);
 			productName = RaiseMeUp;
 			productReference = 3563A74C2AF085270037C029 /* RaiseMeUp-PROD.app */;
@@ -1327,10 +1348,6 @@
 			package = 355D64832B8E2EF10055DB35 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
-		356D7E982BAA5E0F00A98677 /* Features */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Features;
-		};
 		359B111C2B5F7AFB0013DE71 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 359B111D2B5F7AFB0013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1380,6 +1397,38 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 359B116B2B5F7B110013DE71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		35EE326B2BAAF04E00CDBA0C /* Coordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coordinator;
+		};
+		35EE326D2BAAF46B00CDBA0C /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		35EE326F2BAAF46B00CDBA0C /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		35EE32712BAAF46B00CDBA0C /* ExerciseCounter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ExerciseCounter;
+		};
+		35EE32732BAAF46B00CDBA0C /* Main */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Main;
+		};
+		35EE32752BAAF46B00CDBA0C /* Root */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Root;
+		};
+		35EE32772BAAF46B00CDBA0C /* RMNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RMNetwork;
+		};
+		35EE32792BAAF46B00CDBA0C /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
 		};
 /* End XCSwiftPackageProductDependency section */
 

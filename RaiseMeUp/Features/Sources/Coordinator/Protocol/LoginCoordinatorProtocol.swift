@@ -8,4 +8,4 @@
 import UIKit
 import Shared
 
-protocol LoginCoordinatorProtocol: Coordinator { }
+public protocol LoginCoordinatorProtocol: Coordinator { }

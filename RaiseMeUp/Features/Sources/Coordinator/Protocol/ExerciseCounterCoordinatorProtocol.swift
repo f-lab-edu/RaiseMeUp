@@ -8,4 +8,4 @@
 import Foundation
 import Shared
 
-protocol ExerciseCounterCoordinatorProtocol: Coordinator { }
+public protocol ExerciseCounterCoordinatorProtocol: Coordinator { }

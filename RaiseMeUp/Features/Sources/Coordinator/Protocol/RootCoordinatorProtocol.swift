@@ -8,7 +8,7 @@
 import UIKit
 import Shared
 
-protocol RootCoordinatorProtocol: Coordinator {
+public protocol RootCoordinatorProtocol: Coordinator {
     func openMainCoordinator()
     func openLoginCoordinator()
 }
