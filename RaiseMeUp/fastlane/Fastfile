@@ -1,0 +1,14 @@
+default_platform(:ios)
+
+KEYCHAIN_NAME = ENV['TEMP_KEYCHAIN_NAME']
+KEYCHAIN_PASSWORD = ENV['TEMP_KEYCHAIN_PASSWORD']
+GIT_BASIC_AUTHORIZATION = ENV['MATCH_GIT_BASIC_AUTHORIZATION']
+ISSUER_ID = ENV['API_ISSUER_ID']
+KEY_ID = ENV['API_KEY_ID']
+KEY_CONTENT = ENV['API_KEY_CONTENT']
+
+lane :beta do
+  sync_code_signing(type: "appstore")    # see code signing guide for more information
+  build_app(scheme: "RaiseMeUp-PROD")
+  upload_to_testflight
+end
