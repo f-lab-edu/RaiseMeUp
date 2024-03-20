@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Coordinator
+import Root
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var rootCoordinator: RootCoordinator?
+    var rootCoordinator: RootCoordinatorProtocol?
     
     func scene(
         _ scene: UIScene,
