@@ -24,26 +24,33 @@ let package = Package(
         .package(path: "../Domain")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Coordinator",
             dependencies: [
-                "Main",
-                "Root",
-                "ExerciseCounter",
-                .product(name: "Data", package: "Data")
+                .product(name: "Domain", package: "Domain")
             ]
-        )
+        ),
+        .target(
+            name: "ExerciseCounter",
+            dependencies: [
+                "Coordinator",
+                .product(name: "Domain", package: "Domain")
+            ]
+        ),
         .target(
             name: "Main",
             dependencies: [
-                "Main",
-                "Root",
+                "Coordinator",
                 "ExerciseCounter",
-                .product(name: "Data", package: "Data")
+                .product(name: "Domain", package: "Domain")
+            ]
+        ),
+        .target(
+            name: "Root",
+            dependencies: [
+                "Main",
+                .product(name: "Domain", package: "Domain")
             ]
         )
-        
     ]
 )
